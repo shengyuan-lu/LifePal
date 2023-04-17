@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8BE29EDB63400D6E25B /* LifePalApp.swift */; };
-		F405A8C129EDB63400D6E25B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8C029EDB63400D6E25B /* ContentView.swift */; };
+		F405A8C129EDB63400D6E25B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8C029EDB63400D6E25B /* MainView.swift */; };
 		F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F405A8C229EDB63500D6E25B /* Assets.xcassets */; };
 		F405A8C629EDB63500D6E25B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F405A8C529EDB63500D6E25B /* Preview Assets.xcassets */; };
+		F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D029EDB8A900D6E25B /* FoodView.swift */; };
+		F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D229EDB8BE00D6E25B /* WaterView.swift */; };
+		F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D429EDB8CF00D6E25B /* SleepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F405A8BB29EDB63400D6E25B /* LifePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405A8BE29EDB63400D6E25B /* LifePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePalApp.swift; sourceTree = "<group>"; };
-		F405A8C029EDB63400D6E25B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F405A8C029EDB63400D6E25B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F405A8C229EDB63500D6E25B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F405A8C529EDB63500D6E25B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F405A8D029EDB8A900D6E25B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		F405A8D229EDB8BE00D6E25B /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		F405A8D429EDB8CF00D6E25B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 		F405A8BD29EDB63400D6E25B /* LifePal */ = {
 			isa = PBXGroup;
 			children = (
+				F405A8CF29EDB89800D6E25B /* Helpers */,
+				F405A8CE29EDB89200D6E25B /* Models */,
+				F405A8CD29EDB88C00D6E25B /* ViewModels */,
+				F405A8CC29EDB88200D6E25B /* Views */,
 				F405A8BE29EDB63400D6E25B /* LifePalApp.swift */,
-				F405A8C029EDB63400D6E25B /* ContentView.swift */,
 				F405A8C229EDB63500D6E25B /* Assets.xcassets */,
 				F405A8C429EDB63500D6E25B /* Preview Content */,
 			);
@@ -65,6 +74,38 @@
 				F405A8C529EDB63500D6E25B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F405A8CC29EDB88200D6E25B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F405A8C029EDB63400D6E25B /* MainView.swift */,
+				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
+				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
+				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F405A8CD29EDB88C00D6E25B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F405A8CE29EDB89200D6E25B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F405A8CF29EDB89800D6E25B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F405A8C129EDB63400D6E25B /* ContentView.swift in Sources */,
+				F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */,
+				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,
+				F405A8C129EDB63400D6E25B /* MainView.swift in Sources */,
+				F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */,
 				F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
