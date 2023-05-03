@@ -51,7 +51,7 @@ class HealthVM: ObservableObject {
     
     func getCalories() -> Void {
         
-        healthStoreManager.getCalories { result, error in
+        healthStoreManager.getActiveCalories { result, error in
             
             if let r = result {
                 self.calories = r

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeView: View {
+struct ProfileView: View {
     
     @StateObject var healthVM: HealthVM
     

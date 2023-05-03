@@ -10,31 +10,41 @@ import SwiftUI
 struct MainView: View {
     
     @ObservedObject var healthVM = HealthVM()
+    
+    @State var selectedTab: Tabs = .profile
 
     var body: some View {
         
-        TabView {
-            FoodView(healthVM: healthVM)
-                .tabItem {
-                    Label("Food", systemImage: "fork.knife")
-                }
+        NavigationView {
+            
+            TabView(selection: $selectedTab) {
+                FoodView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Food", systemImage: "fork.knife")
+                    }
+                    .tag(Tabs.food)
 
-            WaterView(healthVM: healthVM)
-                .tabItem {
-                    Label("Water", systemImage: "drop")
-                }
-            
-            SleepView(healthVM: healthVM)
-                .tabItem {
-                    Label("Sleep", systemImage: "bed.double")
-                }
-            
-            MeView(healthVM: healthVM)
-                .tabItem {
-                    Label("Me", systemImage: "person.fill")
-                }
+                WaterView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Water", systemImage: "drop")
+                    }
+                    .tag(Tabs.water)
+                
+                SleepView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Sleep", systemImage: "bed.double")
+                    }
+                    .tag(Tabs.sleep)
+                
+                ProfileView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+                    .tag(Tabs.profile)
+            }
+            .navigationTitle(selectedTab.rawValue.capitalized)
         }
-        
+    
     }
 }
 

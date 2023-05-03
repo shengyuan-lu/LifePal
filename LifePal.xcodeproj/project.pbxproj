@@ -14,8 +14,9 @@
 		F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D029EDB8A900D6E25B /* FoodView.swift */; };
 		F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D229EDB8BE00D6E25B /* WaterView.swift */; };
 		F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D429EDB8CF00D6E25B /* SleepView.swift */; };
+		F4397F592A01FDCF0065BD75 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4397F582A01FDCF0065BD75 /* Tabs.swift */; };
 		F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */; };
-		F4FD20342A01A694002154A5 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20332A01A694002154A5 /* MeView.swift */; };
+		F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20332A01A694002154A5 /* ProfileView.swift */; };
 		F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20362A01D88E002154A5 /* HealthVM.swift */; };
 		F4FD20392A01E180002154A5 /* MeViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20382A01E180002154A5 /* MeViewDataCell.swift */; };
 /* End PBXBuildFile section */
@@ -29,9 +30,10 @@
 		F405A8D029EDB8A900D6E25B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		F405A8D229EDB8BE00D6E25B /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
 		F405A8D429EDB8CF00D6E25B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		F4397F582A01FDCF0065BD75 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifePal.entitlements; sourceTree = "<group>"; };
 		F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
-		F4FD20332A01A694002154A5 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		F4FD20332A01A694002154A5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4FD20352A01D1F4002154A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F4FD20362A01D88E002154A5 /* HealthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVM.swift; sourceTree = "<group>"; };
 		F4FD20382A01E180002154A5 /* MeViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewDataCell.swift; sourceTree = "<group>"; };
@@ -95,7 +97,7 @@
 				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
 				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
 				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
-				F4FD20332A01A694002154A5 /* MeView.swift */,
+				F4FD20332A01A694002154A5 /* ProfileView.swift */,
 				F4FD20382A01E180002154A5 /* MeViewDataCell.swift */,
 			);
 			path = Views;
@@ -120,6 +122,7 @@
 		F405A8CF29EDB89800D6E25B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F4397F582A01FDCF0065BD75 /* Tabs.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -194,9 +197,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FD20342A01A694002154A5 /* MeView.swift in Sources */,
+				F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */,
 				F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */,
 				F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */,
+				F4397F592A01FDCF0065BD75 /* Tabs.swift in Sources */,
 				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,
 				F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */,
 				F405A8C129EDB63400D6E25B /* MainView.swift in Sources */,

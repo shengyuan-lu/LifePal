@@ -90,7 +90,7 @@ class HealthStoreManager {
         healthStore?.execute(query)
     }
 
-    func getCalories(unit: HKUnit = HKUnit.largeCalorie(), completion: @escaping (Double?, Error?) -> Void) {
+    func getActiveCalories(unit: HKUnit = HKUnit.largeCalorie(), completion: @escaping (Double?, Error?) -> Void) {
         
         let energyType = HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!
         
