@@ -14,6 +14,10 @@
 		F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D029EDB8A900D6E25B /* FoodView.swift */; };
 		F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D229EDB8BE00D6E25B /* WaterView.swift */; };
 		F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D429EDB8CF00D6E25B /* SleepView.swift */; };
+		F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */; };
+		F4FD20342A01A694002154A5 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20332A01A694002154A5 /* MeView.swift */; };
+		F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20362A01D88E002154A5 /* HealthVM.swift */; };
+		F4FD20392A01E180002154A5 /* MeViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20382A01E180002154A5 /* MeViewDataCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,12 @@
 		F405A8D029EDB8A900D6E25B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		F405A8D229EDB8BE00D6E25B /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
 		F405A8D429EDB8CF00D6E25B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifePal.entitlements; sourceTree = "<group>"; };
+		F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
+		F4FD20332A01A694002154A5 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		F4FD20352A01D1F4002154A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F4FD20362A01D88E002154A5 /* HealthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVM.swift; sourceTree = "<group>"; };
+		F4FD20382A01E180002154A5 /* MeViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewDataCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,8 @@
 		F405A8BD29EDB63400D6E25B /* LifePal */ = {
 			isa = PBXGroup;
 			children = (
+				F4FD20352A01D1F4002154A5 /* Info.plist */,
+				F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */,
 				F405A8CF29EDB89800D6E25B /* Helpers */,
 				F405A8CE29EDB89200D6E25B /* Models */,
 				F405A8CD29EDB88C00D6E25B /* ViewModels */,
@@ -83,6 +95,8 @@
 				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
 				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
 				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
+				F4FD20332A01A694002154A5 /* MeView.swift */,
+				F4FD20382A01E180002154A5 /* MeViewDataCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +104,7 @@
 		F405A8CD29EDB88C00D6E25B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F4FD20362A01D88E002154A5 /* HealthVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -97,6 +112,7 @@
 		F405A8CE29EDB89200D6E25B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,10 +194,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FD20342A01A694002154A5 /* MeView.swift in Sources */,
 				F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */,
+				F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */,
 				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,
+				F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */,
 				F405A8C129EDB63400D6E25B /* MainView.swift in Sources */,
 				F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */,
+				F4FD20392A01E180002154A5 /* MeViewDataCell.swift in Sources */,
 				F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,12 +328,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LifePal/LifePal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LifePal/Preview Content\"";
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifePal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LifePal;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LifePal needs to access your health data to provide recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -326,6 +353,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuan-lu.LifePal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -337,12 +367,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LifePal/LifePal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LifePal/Preview Content\"";
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifePal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LifePal;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LifePal needs to access your health data to provide recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,6 +392,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuan-lu.LifePal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

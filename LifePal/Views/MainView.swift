@@ -8,23 +8,33 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObservedObject var healthVM = HealthVM()
+
     var body: some View {
+        
         TabView {
-            FoodView()
+            FoodView(healthVM: healthVM)
                 .tabItem {
                     Label("Food", systemImage: "fork.knife")
                 }
 
-            WaterView()
+            WaterView(healthVM: healthVM)
                 .tabItem {
                     Label("Water", systemImage: "drop")
                 }
             
-            SleepView()
+            SleepView(healthVM: healthVM)
                 .tabItem {
                     Label("Sleep", systemImage: "bed.double")
                 }
+            
+            MeView(healthVM: healthVM)
+                .tabItem {
+                    Label("Me", systemImage: "person.fill")
+                }
         }
+        
     }
 }
 

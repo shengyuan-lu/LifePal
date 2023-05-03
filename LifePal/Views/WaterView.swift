@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct WaterView: View {
+    
+    @StateObject var healthVM: HealthVM
+    
     var body: some View {
         Text("Water Recommendations!")
-    }
-}
-
-struct WaterView_Previews: PreviewProvider {
-    static var previews: some View {
-        WaterView()
     }
 }
