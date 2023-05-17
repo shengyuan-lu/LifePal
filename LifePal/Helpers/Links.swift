@@ -12,9 +12,10 @@ struct Links {
     static let googleSearchURL = "https://www.google.com/search?q="
     
     // Remote Real
+    // static let mlApiEndpoint = "https://lifepal.vercel.app/api?age=%%&weight=%%"
     
     // Remote Demo
 
     // Local Demo
-    static let foodSamples = "FoodSamples"
+    static let foodSamples = "FullMenuSample"
 }

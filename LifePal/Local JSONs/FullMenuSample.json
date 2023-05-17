@@ -88,5 +88,67 @@
                 "isWholeGrain": false
             }
         }]
+    },
+    {
+        "category": "Entree",
+        "items": [{
+            "name": "Cherry Crumb Cupcake",
+            "description": "Freshly baked individual cherry coffee cake with streusel crumb topping and powdered sugar",
+            "nutrition": {
+                "isVegan": false,
+                "isVegetarian": true,
+                "servingSize": "1",
+                "servingUnit": "each",
+                "calories": "150",
+                "caloriesFromFat": "40",
+                "totalFat": "4",
+                "transFat": "0",
+                "cholesterol": "5",
+                "sodium": "160",
+                "totalCarbohydrates": "27",
+                "dietaryFiber": "less than 1",
+                "sugars": "16",
+                "protein": "1",
+                "vitaminA": null,
+                "vitaminC": "2.30",
+                "calcium": "1.03",
+                "iron": "0.66",
+                "saturatedFat": "2",
+                "isEatWell": false,
+                "isPlantForward": false,
+                "isWholeGrain": false
+            }
+        }]
+    },
+    {
+        "category": "Soup",
+        "items": [{
+            "name": "Cherry Crumb Cupcake",
+            "description": "Freshly baked individual cherry coffee cake with streusel crumb topping and powdered sugar",
+            "nutrition": {
+                "isVegan": false,
+                "isVegetarian": true,
+                "servingSize": "1",
+                "servingUnit": "each",
+                "calories": "150",
+                "caloriesFromFat": "40",
+                "totalFat": "4",
+                "transFat": "0",
+                "cholesterol": "5",
+                "sodium": "160",
+                "totalCarbohydrates": "27",
+                "dietaryFiber": "less than 1",
+                "sugars": "16",
+                "protein": "1",
+                "vitaminA": null,
+                "vitaminC": "2.30",
+                "calcium": "1.03",
+                "iron": "0.66",
+                "saturatedFat": "2",
+                "isEatWell": false,
+                "isPlantForward": false,
+                "isWholeGrain": false
+            }
+        }]
     }
 ]

@@ -14,7 +14,7 @@
 		F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D029EDB8A900D6E25B /* FoodView.swift */; };
 		F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D229EDB8BE00D6E25B /* WaterView.swift */; };
 		F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D429EDB8CF00D6E25B /* SleepView.swift */; };
-		F41DB3382A133B56004CC405 /* FoodSamples.json in Resources */ = {isa = PBXBuildFile; fileRef = F41DB3372A133B56004CC405 /* FoodSamples.json */; };
+		F41DB3382A133B56004CC405 /* FullMenuSample.json in Resources */ = {isa = PBXBuildFile; fileRef = F41DB3372A133B56004CC405 /* FullMenuSample.json */; };
 		F4397F592A01FDCF0065BD75 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4397F582A01FDCF0065BD75 /* Tabs.swift */; };
 		F45DFC042A1467F200290975 /* WebSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFBFD2A1467F200290975 /* WebSearchView.swift */; };
 		F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */; };
@@ -27,6 +27,7 @@
 		F45DFC142A1469A200290975 /* GenericButtonWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC102A1469A200290975 /* GenericButtonWithLabelView.swift */; };
 		F45DFC152A1469A200290975 /* GenericButtonWithoutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC112A1469A200290975 /* GenericButtonWithoutLabel.swift */; };
 		F45DFC162A1469A200290975 /* ExpandButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC122A1469A200290975 /* ExpandButtonView.swift */; };
+		F45DFC192A14741200290975 /* MLFoodRecommendationSample.json in Resources */ = {isa = PBXBuildFile; fileRef = F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */; };
 		F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B68FD2A1448AB00DB36A5 /* Category.swift */; };
 		F46B69002A1448D300DB36A5 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B68FF2A1448D300DB36A5 /* Food.swift */; };
 		F46B69022A144AA900DB36A5 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69012A144AA900DB36A5 /* MenuModel.swift */; };
@@ -47,7 +48,7 @@
 		F405A8D029EDB8A900D6E25B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		F405A8D229EDB8BE00D6E25B /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
 		F405A8D429EDB8CF00D6E25B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
-		F41DB3372A133B56004CC405 /* FoodSamples.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodSamples.json; sourceTree = "<group>"; };
+		F41DB3372A133B56004CC405 /* FullMenuSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FullMenuSample.json; sourceTree = "<group>"; };
 		F4397F582A01FDCF0065BD75 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		F45DFBFD2A1467F200290975 /* WebSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSearchView.swift; sourceTree = "<group>"; };
 		F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodNutritionCellView.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		F45DFC102A1469A200290975 /* GenericButtonWithLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericButtonWithLabelView.swift; sourceTree = "<group>"; };
 		F45DFC112A1469A200290975 /* GenericButtonWithoutLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericButtonWithoutLabel.swift; sourceTree = "<group>"; };
 		F45DFC122A1469A200290975 /* ExpandButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandButtonView.swift; sourceTree = "<group>"; };
+		F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MLFoodRecommendationSample.json; sourceTree = "<group>"; };
 		F46B68FD2A1448AB00DB36A5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F46B68FF2A1448D300DB36A5 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		F46B69012A144AA900DB36A5 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -173,7 +175,8 @@
 		F41DB3362A133AEF004CC405 /* Local JSONs */ = {
 			isa = PBXGroup;
 			children = (
-				F41DB3372A133B56004CC405 /* FoodSamples.json */,
+				F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */,
+				F41DB3372A133B56004CC405 /* FullMenuSample.json */,
 			);
 			path = "Local JSONs";
 			sourceTree = "<group>";
@@ -284,7 +287,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F41DB3382A133B56004CC405 /* FoodSamples.json in Resources */,
+				F45DFC192A14741200290975 /* MLFoodRecommendationSample.json in Resources */,
+				F41DB3382A133B56004CC405 /* FullMenuSample.json in Resources */,
 				F405A8C629EDB63500D6E25B /* Preview Assets.xcassets in Resources */,
 				F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */,
 			);
