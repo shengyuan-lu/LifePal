@@ -31,6 +31,10 @@ class HealthVM: ObservableObject {
         // getRestCalories()
     }
     
+    func getAge() -> Void {
+        self.age = 20
+    }
+    
     func getHeight() -> Void {
         
         healthStoreManager.getHeight { result, error in

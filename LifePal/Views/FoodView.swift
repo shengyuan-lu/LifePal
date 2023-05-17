@@ -28,6 +28,7 @@ struct FoodView: View {
                         } label: {
                             Text(food.name)
                         }
+                        
                     }
                 }
                 
