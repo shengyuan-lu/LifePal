@@ -14,11 +14,17 @@
 		F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D029EDB8A900D6E25B /* FoodView.swift */; };
 		F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D229EDB8BE00D6E25B /* WaterView.swift */; };
 		F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D429EDB8CF00D6E25B /* SleepView.swift */; };
+		F41DB3382A133B56004CC405 /* FoodSamples.json in Resources */ = {isa = PBXBuildFile; fileRef = F41DB3372A133B56004CC405 /* FoodSamples.json */; };
 		F4397F592A01FDCF0065BD75 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4397F582A01FDCF0065BD75 /* Tabs.swift */; };
+		F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B68FD2A1448AB00DB36A5 /* Category.swift */; };
+		F46B69002A1448D300DB36A5 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B68FF2A1448D300DB36A5 /* Food.swift */; };
+		F46B69022A144AA900DB36A5 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69012A144AA900DB36A5 /* MenuModel.swift */; };
+		F46B69042A144C1A00DB36A5 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69032A144C1A00DB36A5 /* Links.swift */; };
+		F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69052A144D3300DB36A5 /* DecodingExtension.swift */; };
 		F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */; };
 		F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20332A01A694002154A5 /* ProfileView.swift */; };
 		F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20362A01D88E002154A5 /* HealthVM.swift */; };
-		F4FD20392A01E180002154A5 /* MeViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20382A01E180002154A5 /* MeViewDataCell.swift */; };
+		F4FD20392A01E180002154A5 /* ProfileViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20382A01E180002154A5 /* ProfileViewDataCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,13 +36,19 @@
 		F405A8D029EDB8A900D6E25B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		F405A8D229EDB8BE00D6E25B /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
 		F405A8D429EDB8CF00D6E25B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		F41DB3372A133B56004CC405 /* FoodSamples.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodSamples.json; sourceTree = "<group>"; };
 		F4397F582A01FDCF0065BD75 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		F46B68FD2A1448AB00DB36A5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F46B68FF2A1448D300DB36A5 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F46B69012A144AA900DB36A5 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		F46B69032A144C1A00DB36A5 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		F46B69052A144D3300DB36A5 /* DecodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtension.swift; sourceTree = "<group>"; };
 		F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifePal.entitlements; sourceTree = "<group>"; };
 		F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
 		F4FD20332A01A694002154A5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4FD20352A01D1F4002154A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F4FD20362A01D88E002154A5 /* HealthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVM.swift; sourceTree = "<group>"; };
-		F4FD20382A01E180002154A5 /* MeViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewDataCell.swift; sourceTree = "<group>"; };
+		F4FD20382A01E180002154A5 /* ProfileViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewDataCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +83,13 @@
 			children = (
 				F4FD20352A01D1F4002154A5 /* Info.plist */,
 				F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */,
-				F405A8CF29EDB89800D6E25B /* Helpers */,
-				F405A8CE29EDB89200D6E25B /* Models */,
-				F405A8CD29EDB88C00D6E25B /* ViewModels */,
-				F405A8CC29EDB88200D6E25B /* Views */,
 				F405A8BE29EDB63400D6E25B /* LifePalApp.swift */,
+				F405A8CC29EDB88200D6E25B /* Views */,
+				F405A8CD29EDB88C00D6E25B /* ViewModels */,
+				F405A8CE29EDB89200D6E25B /* Models */,
+				F46B68FC2A14488300DB36A5 /* Data Structure */,
+				F405A8CF29EDB89800D6E25B /* Helpers */,
+				F41DB3362A133AEF004CC405 /* Local JSONs */,
 				F405A8C229EDB63500D6E25B /* Assets.xcassets */,
 				F405A8C429EDB63500D6E25B /* Preview Content */,
 			);
@@ -98,7 +112,7 @@
 				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
 				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
 				F4FD20332A01A694002154A5 /* ProfileView.swift */,
-				F4FD20382A01E180002154A5 /* MeViewDataCell.swift */,
+				F4FD20382A01E180002154A5 /* ProfileViewDataCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */,
+				F46B69012A144AA900DB36A5 /* MenuModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,8 +138,27 @@
 			isa = PBXGroup;
 			children = (
 				F4397F582A01FDCF0065BD75 /* Tabs.swift */,
+				F46B69032A144C1A00DB36A5 /* Links.swift */,
+				F46B69052A144D3300DB36A5 /* DecodingExtension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F41DB3362A133AEF004CC405 /* Local JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				F41DB3372A133B56004CC405 /* FoodSamples.json */,
+			);
+			path = "Local JSONs";
+			sourceTree = "<group>";
+		};
+		F46B68FC2A14488300DB36A5 /* Data Structure */ = {
+			isa = PBXGroup;
+			children = (
+				F46B68FD2A1448AB00DB36A5 /* Category.swift */,
+				F46B68FF2A1448D300DB36A5 /* Food.swift */,
+			);
+			path = "Data Structure";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41DB3382A133B56004CC405 /* FoodSamples.json in Resources */,
 				F405A8C629EDB63500D6E25B /* Preview Assets.xcassets in Resources */,
 				F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */,
 			);
@@ -202,11 +237,16 @@
 				F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */,
 				F4397F592A01FDCF0065BD75 /* Tabs.swift in Sources */,
 				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,
+				F46B69002A1448D300DB36A5 /* Food.swift in Sources */,
 				F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */,
 				F405A8C129EDB63400D6E25B /* MainView.swift in Sources */,
 				F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */,
-				F4FD20392A01E180002154A5 /* MeViewDataCell.swift in Sources */,
+				F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */,
+				F4FD20392A01E180002154A5 /* ProfileViewDataCell.swift in Sources */,
+				F46B69022A144AA900DB36A5 /* MenuModel.swift in Sources */,
+				F46B69042A144C1A00DB36A5 /* Links.swift in Sources */,
 				F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */,
+				F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

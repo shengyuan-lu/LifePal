@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct LifePalApp: App {
+    
+    @StateObject var healthVM = HealthVM()
+    @StateObject var menuModel: MenuModel = MenuModel()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(healthVM)
+                .environmentObject(menuModel)
         }
     }
 }

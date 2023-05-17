@@ -1,5 +1,5 @@
 //
-//  MeView.swift
+//  ProfileView.swift
 //  LifePal
 //
 //  Created by Shengyuan Lu on 5/2/23.
@@ -15,9 +15,10 @@ struct ProfileView: View {
         
         VStack {
             ScrollView {
-                MeViewDataCell(label: "Height", data: healthVM.height, unit: "CM")
-                MeViewDataCell(label: "Weight", data: healthVM.weight, unit: "KG")
-                MeViewDataCell(label: "Calorie", data: healthVM.calories, unit: "Calories")
+                ProfileViewDataCell(label: "Height", data: healthVM.height, unit: "CM")
+                ProfileViewDataCell(label: "Weight", data: healthVM.weight, unit: "KG")
+                ProfileViewDataCell(label: "Active Calories", data: healthVM.activeCalories, unit: "KCal")
+                ProfileViewDataCell(label: "Rest Calories", data: healthVM.restCalories, unit: "KCal")
             }
             .padding()
         }

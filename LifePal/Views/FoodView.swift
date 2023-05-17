@@ -11,7 +11,28 @@ struct FoodView: View {
     
     @StateObject var healthVM: HealthVM
     
+    @StateObject var menu: MenuModel
+    
     var body: some View {
-        Text("Food Recommendations!")
+        
+        List {
+            
+            ForEach(menu.categories, id: \.id) { category in
+                
+                Section(header: Text(category.categoryName)) {
+                    
+                    ForEach(category.foods, id: \.id) { food in
+                        
+                        Text(food.name)
+                        
+                    }
+                }
+                
+                
+            }
+            
+            
+        }
+        
     }
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var healthVM = HealthVM()
+    @EnvironmentObject var menuModel: MenuModel
+    @EnvironmentObject var healthVM: HealthVM
     
     @State var selectedTab: Tabs = .profile
 
@@ -18,7 +19,7 @@ struct MainView: View {
         NavigationView {
             
             TabView(selection: $selectedTab) {
-                FoodView(healthVM: healthVM)
+                FoodView(healthVM: healthVM, menu: menuModel)
                     .tabItem {
                         Label("Food", systemImage: "fork.knife")
                     }
@@ -45,11 +46,5 @@ struct MainView: View {
             .navigationTitle(selectedTab.rawValue.capitalized)
         }
     
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }

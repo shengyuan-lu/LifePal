@@ -1,5 +1,5 @@
 //
-//  MeViewDataCell.swift
+//  ProfileViewDataCell.swift
 //  LifePal
 //
 //  Created by Shengyuan Lu on 5/2/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeViewDataCell: View {
+struct ProfileViewDataCell: View {
     
     let label: String
     let data: Double

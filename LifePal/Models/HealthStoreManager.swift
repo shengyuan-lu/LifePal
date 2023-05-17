@@ -12,17 +12,23 @@ class HealthStoreManager {
     
     var healthStore: HKHealthStore?
     
+    // A set of HKSampleType that you request authorization for share
     let shareType: Set<HealthKit.HKSampleType> = Set<HealthKit.HKSampleType>()
     
-    let readType: Set<HealthKit.HKSampleType> = [
+    // A set of HKSampleType that you request authorization for read
+    let readType: Set<HealthKit.HKObjectType> = [
         HKSampleType.quantityType(forIdentifier: .height)!,
-        HKObjectType.quantityType(forIdentifier: .bodyMass)!,
-        HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!
+        HKSampleType.quantityType(forIdentifier: .bodyMass)!,
+        HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!,
+        HKSampleType.quantityType(forIdentifier: .basalEnergyBurned)!,
+        HKSampleType.characteristicType(forIdentifier: .dateOfBirth)!
     ]
     
     init() {
         if HKHealthStore.isHealthDataAvailable() {
             healthStore = HKHealthStore()
+        } else {
+            print("Health Data is not available")
         }
         
         self.requestAuthorization { success in
@@ -44,6 +50,19 @@ class HealthStoreManager {
         
     }
     
+    func getAge() {
+        
+        do {
+            let dobComponents = try healthStore?.dateOfBirthComponents()
+            
+            dobComponents?.date
+            
+        } catch {
+            
+        }
+       
+    }
+    
     func getHeight(unit: HKUnit = HKUnit.meterUnit(with: .centi), completion: @escaping (Double?, Error?) -> Void) {
         
         let heightType = HKSampleType.quantityType(forIdentifier: .height)!
@@ -59,7 +78,7 @@ class HealthStoreManager {
             
             let height = sample.quantity.doubleValue(for: unit)
             
-            print("getHeight: \(height)")
+            print("Height: \(height)")
             
             completion(height, error)
         }
@@ -82,7 +101,7 @@ class HealthStoreManager {
             
             let weight = result.quantity.doubleValue(for: unit)
             
-            print("getWeight: \(weight)")
+            print("Weight: \(weight)")
 
             completion(weight, error)
         }
@@ -99,13 +118,36 @@ class HealthStoreManager {
         let query = HKSampleQuery(sampleType: energyType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, results, error) in
             
             guard let result = results?.first as? HKQuantitySample else {
-                print("No calorie data available")
+                print("No actvie calorie data available")
                 return
             }
             
             let calories = result.quantity.doubleValue(for: unit) * 1000
             
-            print("getCalories: \(calories)")
+            print("Active Calories: \(calories)")
+            
+            completion(calories, error)
+        }
+        
+        healthStore?.execute(query)
+    }
+    
+    func getRestCalories(unit: HKUnit = HKUnit.largeCalorie(), completion: @escaping (Double?, Error?) -> Void) {
+        
+        let energyType = HKSampleType.quantityType(forIdentifier: .basalEnergyBurned)!
+        
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+        
+        let query = HKSampleQuery(sampleType: energyType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, results, error) in
+            
+            guard let result = results?.first as? HKQuantitySample else {
+                print("No rest calorie data available")
+                return
+            }
+            
+            let calories = result.quantity.doubleValue(for: unit) * 1000
+            
+            print("Rest Calories: \(calories)")
             
             completion(calories, error)
         }

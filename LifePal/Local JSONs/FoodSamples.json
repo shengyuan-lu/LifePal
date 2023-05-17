@@ -1,0 +1,92 @@
+[{
+        "category": "Breads",
+        "items": [{
+                "name": "Donut Bites",
+                "description": "A variety of fresh baked donuts coated with cocoa, cinnamon sugar or powdered sugar",
+                "nutrition": {
+                    "isVegan": false,
+                    "isVegetarian": true,
+                    "servingSize": "4",
+                    "servingUnit": "each",
+                    "calories": "210",
+                    "caloriesFromFat": "110",
+                    "totalFat": "12",
+                    "transFat": "0",
+                    "cholesterol": "10",
+                    "sodium": "300",
+                    "totalCarbohydrates": "24",
+                    "dietaryFiber": "less than 1",
+                    "sugars": "10",
+                    "protein": "2",
+                    "vitaminA": null,
+                    "vitaminC": "0.01",
+                    "calcium": "7.92",
+                    "iron": "1.20",
+                    "saturatedFat": "6",
+                    "isEatWell": false,
+                    "isPlantForward": false,
+                    "isWholeGrain": false
+                }
+            },
+            {
+                "name": "Whole Grain Blueberry Mini Muffin",
+                "description": "Freshly baked miniature whole grain muffin with blueberries",
+                "nutrition": {
+                    "isVegan": false,
+                    "isVegetarian": true,
+                    "servingSize": "1",
+                    "servingUnit": "muffin",
+                    "calories": "80",
+                    "caloriesFromFat": "20",
+                    "totalFat": "2",
+                    "transFat": "0",
+                    "cholesterol": "0",
+                    "sodium": "115",
+                    "totalCarbohydrates": "14",
+                    "dietaryFiber": "less than 1",
+                    "sugars": "7",
+                    "protein": "1",
+                    "vitaminA": null,
+                    "vitaminC": "0.09",
+                    "calcium": "0.60",
+                    "iron": "0.18",
+                    "saturatedFat": "1",
+                    "isEatWell": false,
+                    "isPlantForward": false,
+                    "isWholeGrain": true
+                }
+            }
+        ]
+    },
+    {
+        "category": "Desserts",
+        "items": [{
+            "name": "Cherry Crumb Cupcake",
+            "description": "Freshly baked individual cherry coffee cake with streusel crumb topping and powdered sugar",
+            "nutrition": {
+                "isVegan": false,
+                "isVegetarian": true,
+                "servingSize": "1",
+                "servingUnit": "each",
+                "calories": "150",
+                "caloriesFromFat": "40",
+                "totalFat": "4",
+                "transFat": "0",
+                "cholesterol": "5",
+                "sodium": "160",
+                "totalCarbohydrates": "27",
+                "dietaryFiber": "less than 1",
+                "sugars": "16",
+                "protein": "1",
+                "vitaminA": null,
+                "vitaminC": "2.30",
+                "calcium": "1.03",
+                "iron": "0.66",
+                "saturatedFat": "2",
+                "isEatWell": false,
+                "isPlantForward": false,
+                "isWholeGrain": false
+            }
+        }]
+    }
+]

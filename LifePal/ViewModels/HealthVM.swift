@@ -14,8 +14,11 @@ class HealthVM: ObservableObject {
     let healthStoreManager = HealthStoreManager()
     
     @Published var height: Double = 0
-    @Published var calories: Double = 0
+    @Published var age: Double = 0
     @Published var weight: Double = 0
+    
+    @Published var activeCalories: Double = 0
+    @Published var restCalories: Double = 0
     
     init() {
         loadData()
@@ -24,7 +27,8 @@ class HealthVM: ObservableObject {
     func loadData() {
         getHeight()
         getWeight()
-        getCalories()
+        getActiveCalories()
+        // getRestCalories()
     }
     
     func getHeight() -> Void {
@@ -49,12 +53,24 @@ class HealthVM: ObservableObject {
         }
     }
     
-    func getCalories() -> Void {
+    func getActiveCalories() -> Void {
         
         healthStoreManager.getActiveCalories { result, error in
             
             if let r = result {
-                self.calories = r
+                self.activeCalories = r
+            }
+
+        }
+    }
+    
+    
+    func getRestCalories() -> Void {
+        
+        healthStoreManager.getRestCalories { result, error in
+            
+            if let r = result {
+                self.restCalories = r
             }
 
         }
