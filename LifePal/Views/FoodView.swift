@@ -23,8 +23,11 @@ struct FoodView: View {
                     
                     ForEach(category.foods, id: \.id) { food in
                         
-                        Text(food.name)
-                        
+                        NavigationLink {
+                            SingleDetailedFoodCell(food: food)
+                        } label: {
+                            Text(food.name)
+                        }
                     }
                 }
                 
