@@ -9,9 +9,9 @@ import SwiftUI
 
 struct FoodView: View {
     
-    @StateObject var healthVM: HealthVM
+    @ObservedObject var healthVM: HealthVM
     
-    @StateObject var menu: MenuModel
+    @ObservedObject var menu: MenuModel
     
     var body: some View {
         

@@ -28,7 +28,7 @@ class HealthVM: ObservableObject {
         getHeight()
         getWeight()
         getActiveCalories()
-        // getRestCalories()
+        getRestCalories()
     }
     
     func getAge() -> Void {
@@ -39,8 +39,10 @@ class HealthVM: ObservableObject {
         
         healthStoreManager.getHeight { result, error in
             
-            if let r = result {
-                self.height = r
+            DispatchQueue.main.async {
+                if let r = result {
+                    self.height = r
+                }
             }
             
         }
@@ -50,8 +52,10 @@ class HealthVM: ObservableObject {
         
         healthStoreManager.getWeight { result, error in
             
-            if let r = result {
-                self.weight = r
+            DispatchQueue.main.async {
+                if let r = result {
+                    self.weight = r
+                }
             }
             
         }
@@ -61,8 +65,10 @@ class HealthVM: ObservableObject {
         
         healthStoreManager.getActiveCalories { result, error in
             
-            if let r = result {
-                self.activeCalories = r
+            DispatchQueue.main.async {
+                if let r = result {
+                    self.activeCalories = r
+                }
             }
 
         }
@@ -73,10 +79,11 @@ class HealthVM: ObservableObject {
         
         healthStoreManager.getRestCalories { result, error in
             
-            if let r = result {
-                self.restCalories = r
+            DispatchQueue.main.async {
+                if let r = result {
+                    self.restCalories = r
+                }
             }
-
         }
     }
     

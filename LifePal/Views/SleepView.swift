@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SleepView: View {
     
-    @StateObject var healthVM: HealthVM
+    @ObservedObject var healthVM: HealthVM
     
     var body: some View {
         Text("Sleep Recommendations!")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WaterView: View {
     
-    @StateObject var healthVM: HealthVM
+    @ObservedObject var healthVM: HealthVM
     
     var body: some View {
         Text("Water Recommendations!")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @StateObject var healthVM: HealthVM
+    @ObservedObject var healthVM: HealthVM
     
     var body: some View {
         
