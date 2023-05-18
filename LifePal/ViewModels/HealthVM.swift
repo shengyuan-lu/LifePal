@@ -14,26 +14,27 @@ class HealthVM: ObservableObject {
     let healthStoreManager = HealthStoreManager()
     
     @Published var height: Double = 0
-    @Published var age: Double = 0
+    @Published var age: Int = 0
     @Published var weight: Double = 0
     
     @Published var activeCalories: Double = 0
     @Published var restCalories: Double = 0
     
+    private var birthDateComponents: DateComponents = DateComponents()
+    
     init() {
         loadData()
     }
+    
     
     func loadData() {
         getHeight()
         getWeight()
         getActiveCalories()
         getRestCalories()
+        getBirthDateComponents()
     }
     
-    func getAge() -> Void {
-        self.age = 20
-    }
     
     func getHeight() -> Void {
         
@@ -48,6 +49,7 @@ class HealthVM: ObservableObject {
         }
     }
     
+    
     func getWeight() -> Void {
         
         healthStoreManager.getWeight { result, error in
@@ -61,11 +63,13 @@ class HealthVM: ObservableObject {
         }
     }
     
+    
     func getActiveCalories() -> Void {
         
         healthStoreManager.getActiveCalories { result, error in
             
             DispatchQueue.main.async {
+                
                 if let r = result {
                     self.activeCalories = r
                 }
@@ -85,6 +89,27 @@ class HealthVM: ObservableObject {
                 }
             }
         }
+    }
+    
+    
+    func getAge() -> Void {
+        let calendar = Calendar.current
+        let ageComponents = calendar.dateComponents([.year], from: self.birthDateComponents.date!, to: Date())
+        self.age = ageComponents.year ?? 0
+    }
+    
+    
+    func getBirthDateComponents() -> Void {
+        
+        healthStoreManager.getBirthDate { dateComponent in
+            DispatchQueue.main.async {
+                if let dc = dateComponent {
+                    self.birthDateComponents = dc
+                    self.getAge()
+                }
+            }
+        }
+        
     }
     
     

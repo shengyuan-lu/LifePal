@@ -15,6 +15,7 @@ class HealthStoreManager {
     // A set of HKSampleType that you request authorization for share
     let shareType: Set<HealthKit.HKSampleType> = Set<HealthKit.HKSampleType>()
     
+    
     // A set of HKSampleType that you request authorization for read
     let readType: Set<HealthKit.HKObjectType> = [
         HKSampleType.quantityType(forIdentifier: .height)!,
@@ -40,6 +41,7 @@ class HealthStoreManager {
         }
     }
     
+    
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
         
         guard let healthStore = self.healthStore else { return completion(false) }
@@ -50,18 +52,18 @@ class HealthStoreManager {
         
     }
     
-    func getAge() {
+    
+    func getBirthDate(completion: @escaping (DateComponents?) -> Void) {
         
         do {
-            let dobComponents = try healthStore?.dateOfBirthComponents()
-            
-            dobComponents?.date
-            
+            let birthDate = try healthStore?.dateOfBirthComponents()
+            completion(birthDate)
         } catch {
-            
+            print("Error retrieving birthdate: \(error)")
         }
        
     }
+    
     
     func getHeight(unit: HKUnit = HKUnit.meterUnit(with: .centi), completion: @escaping (Double?, Error?) -> Void) {
         
@@ -86,6 +88,7 @@ class HealthStoreManager {
         healthStore?.execute(query)
     }
     
+    
     func getWeight(unit: HKUnit = HKUnit.gramUnit(with: .kilo), completion: @escaping (Double?, Error?) -> Void) {
         
         let weightType = HKSampleType.quantityType(forIdentifier: .bodyMass)!
@@ -109,47 +112,81 @@ class HealthStoreManager {
         healthStore?.execute(query)
     }
 
-    func getActiveCalories(unit: HKUnit = HKUnit.largeCalorie(), completion: @escaping (Double?, Error?) -> Void) {
+    
+    func getActiveCalories(completion: @escaping (Double?, Error?) -> Void) {
         
-        let energyType = HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!
-        
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
-        
-        let query = HKSampleQuery(sampleType: energyType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, results, error) in
-            
-            guard let result = results?.first as? HKQuantitySample else {
-                print("No actvie calorie data available")
+        let calendar = Calendar.current
+        let now = Date()
+
+        // Define the start and end dates for the current day
+        let startDate = calendar.startOfDay(for: now)
+        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
+
+        // Create the quantity type for active energy burned
+        let activeEnergyType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)
+
+        // Create the query
+        let query = HKStatisticsCollectionQuery(quantityType: activeEnergyType!, quantitySamplePredicate: nil, options: .cumulativeSum, anchorDate: startDate, intervalComponents: DateComponents(day: 1)) 
+
+        // Set the initial results handler for the query
+        query.initialResultsHandler = { query, collection, error in
+            if let error = error {
+                print("Query error: \(error.localizedDescription)")
                 return
             }
-            
-            let calories = result.quantity.doubleValue(for: unit) * 1000
-            
-            print("Active Calories: \(calories)")
-            
-            completion(calories, error)
+
+            // Iterate over the collection's statistics
+            if let statisticsCollection = collection {
+                statisticsCollection.enumerateStatistics(from: startDate, to: endDate!, with: { statistics, stop in
+                    if let sum = statistics.sumQuantity() {
+                        let activityLevel = sum.doubleValue(for: HKUnit.kilocalorie())
+                        
+                        print("Energy Burned Today: \(activityLevel)")
+                        
+                        completion(activityLevel, error)
+                    }
+                })
+            }
         }
         
         healthStore?.execute(query)
     }
     
-    func getRestCalories(unit: HKUnit = HKUnit.largeCalorie(), completion: @escaping (Double?, Error?) -> Void) {
+    
+    func getRestCalories(completion: @escaping (Double?, Error?) -> Void) {
         
-        let energyType = HKSampleType.quantityType(forIdentifier: .basalEnergyBurned)!
-        
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
-        
-        let query = HKSampleQuery(sampleType: energyType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, results, error) in
-            
-            guard let result = results?.first as? HKQuantitySample else {
-                print("No rest calorie data available")
+        let calendar = Calendar.current
+        let now = Date()
+
+        // Define the start and end dates for the current day
+        let startDate = calendar.startOfDay(for: now)
+        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
+
+        // Create the quantity type for base energy burned
+        let baseEnergyType = HKObjectType.quantityType(forIdentifier: .basalEnergyBurned)
+
+        // Create the query
+        let query = HKStatisticsCollectionQuery(quantityType: baseEnergyType!, quantitySamplePredicate: nil, options: .cumulativeSum, anchorDate: startDate, intervalComponents: DateComponents(day: 1))
+
+        // Set the initial results handler for the query
+        query.initialResultsHandler = { query, collection, error in
+            if let error = error {
+                print("Query error: \(error.localizedDescription)")
                 return
             }
-            
-            let calories = result.quantity.doubleValue(for: unit) * 1000
-            
-            print("Rest Calories: \(calories)")
-            
-            completion(calories, error)
+
+            // Iterate over the collection's statistics
+            if let statisticsCollection = collection {
+                statisticsCollection.enumerateStatistics(from: startDate, to: endDate!, with: { statistics, stop in
+                    if let sum = statistics.sumQuantity() {
+                        let activityLevel = sum.doubleValue(for: HKUnit.kilocalorie())
+                        
+                        print("Energy Burned Today: \(activityLevel)")
+                        
+                        completion(activityLevel, error)
+                    }
+                })
+            }
         }
         
         healthStore?.execute(query)

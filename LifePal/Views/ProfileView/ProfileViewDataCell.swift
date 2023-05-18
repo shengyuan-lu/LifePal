@@ -21,7 +21,15 @@ struct ProfileViewDataCell: View {
             
             Spacer()
             
-            Text("\(String(format: "%.2f", data)) \(unit)")
+            if (data == 0) {
+                
+                Text("Loading...")
+                
+            } else {
+                
+                Text("\(String(format: "%.1f", data)) \(unit)")
+            }
+
         }
         
     }

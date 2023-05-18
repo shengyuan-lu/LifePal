@@ -17,8 +17,9 @@ struct ProfileView: View {
             ScrollView {
                 ProfileViewDataCell(label: "Height", data: healthVM.height, unit: "CM")
                 ProfileViewDataCell(label: "Weight", data: healthVM.weight, unit: "KG")
-                ProfileViewDataCell(label: "Active Calories", data: healthVM.activeCalories, unit: "KCal")
-                ProfileViewDataCell(label: "Rest Calories", data: healthVM.restCalories, unit: "KCal")
+                ProfileViewDataCell(label: "Age", data: Double(healthVM.age), unit: "Year")
+                ProfileViewDataCell(label: "Active Energy", data: healthVM.activeCalories, unit: "KCal")
+                ProfileViewDataCell(label: "Rest Energy", data: healthVM.restCalories, unit: "KCal")
             }
             .padding()
         }
