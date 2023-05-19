@@ -120,7 +120,6 @@
 				F405A8CC29EDB88200D6E25B /* Views */,
 				F405A8CD29EDB88C00D6E25B /* ViewModels */,
 				F405A8CE29EDB89200D6E25B /* Models */,
-				F46B68FC2A14488300DB36A5 /* Data Structure */,
 				F405A8CF29EDB89800D6E25B /* Helpers */,
 				F41DB3362A133AEF004CC405 /* Local JSONs */,
 				F405A8C229EDB63500D6E25B /* Assets.xcassets */,
@@ -164,6 +163,8 @@
 		F405A8CE29EDB89200D6E25B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F46B68FD2A1448AB00DB36A5 /* Category.swift */,
+				F46B68FF2A1448D300DB36A5 /* Food.swift */,
 				F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */,
 			);
 			path = Models;
@@ -242,15 +243,6 @@
 				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
 			);
 			path = SleepViews;
-			sourceTree = "<group>";
-		};
-		F46B68FC2A14488300DB36A5 /* Data Structure */ = {
-			isa = PBXGroup;
-			children = (
-				F46B68FD2A1448AB00DB36A5 /* Category.swift */,
-				F46B68FF2A1448D300DB36A5 /* Food.swift */,
-			);
-			path = "Data Structure";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
