@@ -22,7 +22,9 @@ class HealthStoreManager {
         HKSampleType.quantityType(forIdentifier: .bodyMass)!,
         HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!,
         HKSampleType.quantityType(forIdentifier: .basalEnergyBurned)!,
-        HKSampleType.characteristicType(forIdentifier: .dateOfBirth)!
+        HKSampleType.characteristicType(forIdentifier: .dateOfBirth)!,
+        HKSampleType.quantityType(forIdentifier: .bodyFatPercentage)!,
+        HKSampleType.quantityType(forIdentifier: .bodyMassIndex)!
     ]
     
     init() {
@@ -62,6 +64,22 @@ class HealthStoreManager {
             print("Error retrieving birthdate: \(error)")
         }
        
+    }
+    
+    
+    func getBiologicalSex(completion: @escaping (HKBiologicalSexObject?) -> Void) {
+        
+        
+        do {
+            let bioSex = try healthStore?.biologicalSex()
+            
+            completion(bioSex)
+
+        } catch {
+            print("Error retrieving biological sex: \(error)")
+        }
+       
+        
     }
     
     

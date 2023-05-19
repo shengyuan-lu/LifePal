@@ -20,7 +20,12 @@ class HealthVM: ObservableObject {
     @Published var activeCalories: Double = -1
     @Published var restCalories: Double = -1
     
+    @Published var bodyFatPercentage: Double = -1
+    
+    @Published var bioSex: String = "Loading..."
+    
     private var birthDateComponents: DateComponents = DateComponents()
+    private var bioSexObject: HKBiologicalSexObject = HKBiologicalSexObject()
     
     init() {
         loadData()
@@ -32,7 +37,8 @@ class HealthVM: ObservableObject {
         getWeight()
         getActiveCalories()
         getRestCalories()
-        getBirthDateComponents()
+        getBirthDate()
+        getBioSex()
     }
     
     
@@ -43,6 +49,8 @@ class HealthVM: ObservableObject {
             DispatchQueue.main.async {
                 if let r = result {
                     self.height = r
+                } else {
+                    self.height = -2
                 }
             }
             
@@ -57,6 +65,8 @@ class HealthVM: ObservableObject {
             DispatchQueue.main.async {
                 if let r = result {
                     self.weight = r
+                } else {
+                    self.weight = -2
                 }
             }
             
@@ -72,6 +82,8 @@ class HealthVM: ObservableObject {
                 
                 if let r = result {
                     self.activeCalories = r
+                } else {
+                    self.activeCalories = -2
                 }
             }
 
@@ -86,6 +98,8 @@ class HealthVM: ObservableObject {
             DispatchQueue.main.async {
                 if let r = result {
                     self.restCalories = r
+                } else {
+                    self.restCalories = -2
                 }
             }
         }
@@ -95,11 +109,11 @@ class HealthVM: ObservableObject {
     func getAge() -> Void {
         let calendar = Calendar.current
         let ageComponents = calendar.dateComponents([.year], from: self.birthDateComponents.date!, to: Date())
-        self.age = ageComponents.year ?? 0
+        self.age = ageComponents.year ?? -2
     }
     
     
-    func getBirthDateComponents() -> Void {
+    func getBirthDate() -> Void {
         
         healthStoreManager.getBirthDate { dateComponent in
             DispatchQueue.main.async {
@@ -110,6 +124,36 @@ class HealthVM: ObservableObject {
             }
         }
         
+    }
+    
+    
+    func getBioSexString() -> Void {
+        
+        switch self.bioSexObject.biologicalSex {
+        case .female:
+            self.bioSex = "Female"
+        case .male:
+            self.bioSex = "Male"
+        case .other:
+            self.bioSex = "Other"
+        case .notSet:
+            self.bioSex = "Not Set"
+        @unknown default:
+            self.bioSex = "Unknown"
+        }
+        
+    }
+    
+    
+    func getBioSex() -> Void {
+        healthStoreManager.getBiologicalSex(completion: { bioSexObject in
+            DispatchQueue.main.async {
+                if let bso = bioSexObject {
+                    self.bioSexObject = bso
+                    self.getBioSexString()
+                }
+            }
+        })
     }
     
     

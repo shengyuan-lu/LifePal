@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct FullMenuView: View {
-    let menu: MenuModel
+    
+    @ObservedObject var menu: MenuModel
     
     var body: some View {
+        
         List {
             
             ForEach(menu.categories, id: \.id) { category in
@@ -23,25 +25,12 @@ struct FullMenuView: View {
                             SingleDetailedFoodCell(food: food)
                         } label: {
                             Text(food.name)
-                                .foregroundColor(.primary) // TODO: Make color darker
-                                
                         }
                         
                     }
                 }
-                
-                
             }
             
-            
         }
-    }
-}
-
-struct FullMenuView_Previews: PreviewProvider {
-    static var menu = MenuModel()
-    
-    static var previews: some View {
-        FullMenuView(menu: menu)
     }
 }

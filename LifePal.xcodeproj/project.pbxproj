@@ -91,6 +91,8 @@
 		DC27233B2A16FDD1002E1386 /* FoodViews */ = {
 			isa = PBXGroup;
 			children = (
+				F45DFBFC2A1467F200290975 /* DetailedFoodCellView */,
+				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
 				DC27233E2A16FE5A002E1386 /* FullMenuView.swift */,
 			);
 			path = FoodViews;
@@ -142,14 +144,12 @@
 		F405A8CC29EDB88200D6E25B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F45DFC0F2A1469A200290975 /* Buttons */,
-				F45DFBFC2A1467F200290975 /* DetailedFoodCellView */,
-				F45550B12A16D60800629A66 /* ProfileView */,
 				F405A8C029EDB63400D6E25B /* MainView.swift */,
-				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
+				F45550B12A16D60800629A66 /* ProfileViews */,
 				DC27233B2A16FDD1002E1386 /* FoodViews */,
 				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
 				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
+				F45DFC0F2A1469A200290975 /* Buttons */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,22 +191,22 @@
 			path = "Local JSONs";
 			sourceTree = "<group>";
 		};
-		F45550B12A16D60800629A66 /* ProfileView */ = {
+		F45550B12A16D60800629A66 /* ProfileViews */ = {
 			isa = PBXGroup;
 			children = (
 				F4FD20332A01A694002154A5 /* ProfileView.swift */,
 				F4FD20382A01E180002154A5 /* ProfileViewDataCell.swift */,
 			);
-			path = ProfileView;
+			path = ProfileViews;
 			sourceTree = "<group>";
 		};
 		F45DFBFC2A1467F200290975 /* DetailedFoodCellView */ = {
 			isa = PBXGroup;
 			children = (
+				F45DFBFE2A1467F200290975 /* FoodNutritionView */,
 				F45DFC032A1467F200290975 /* SingleDetailedFoodCell.swift */,
 				F45DFC022A1467F200290975 /* DetailedFoodCell.swift */,
 				F45DFBFD2A1467F200290975 /* WebSearchView.swift */,
-				F45DFBFE2A1467F200290975 /* FoodNutritionView */,
 			);
 			path = DetailedFoodCellView;
 			sourceTree = "<group>";
