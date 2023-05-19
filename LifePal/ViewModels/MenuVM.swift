@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class MenuModel: ObservableObject {
+class MenuVM: ObservableObject {
     
     @Published var categories: [Category] = [Category]()
     @Published var isLoadingFailed: Bool = false

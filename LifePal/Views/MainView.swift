@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     
-    @EnvironmentObject var fullMenu: MenuModel
-    @EnvironmentObject var recommendedMenu: MenuModel
+    @StateObject var recommendedMenu: MenuVM = MenuVM(isRecommeded: true)
+    @StateObject var fullMenu: MenuVM = MenuVM(isRecommeded: false)
     
-    @EnvironmentObject var healthVM: HealthVM
+    @StateObject var healthVM: HealthVM = HealthVM()
     
     @State var selectedTab: Tabs = .profile
 
@@ -46,6 +46,8 @@ struct MainView: View {
                     .tag(Tabs.profile)
             }
             .navigationTitle(selectedTab.rawValue.capitalized)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationViewStyle(.stack)
             .onAppear {
                 // correct the transparency bug for Tab bars
                 let tabBarAppearance = UITabBarAppearance()

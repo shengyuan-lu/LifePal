@@ -17,9 +17,6 @@ struct LifePalApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environmentObject(healthVM)
-                .environmentObject(fullMenu)
-                .environmentObject(recommendedMenu)
         }
     }
 }

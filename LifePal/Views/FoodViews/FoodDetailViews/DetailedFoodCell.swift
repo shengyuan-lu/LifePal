@@ -5,8 +5,6 @@ struct DetailedFoodCell: View {
     @State var food: Food
     @State var isExpanded: Bool
     
-    @State private var showingWebSearch = false
-    
     var body: some View {
         
         VStack(spacing: 8) {
@@ -29,12 +27,6 @@ struct DetailedFoodCell: View {
                     }
                 }
                 
-                GenericButtonWithoutLabel(action: {
-                    self.showingWebSearch.toggle()
-                }, systemName: "magnifyingglass.circle.fill", imageColor: Color.blue)
-            }
-            .sheet(isPresented: $showingWebSearch) {
-                WebSearchView(url: getURLfromName(name: food.name))
             }
             
             Divider()
@@ -104,12 +96,6 @@ struct DetailedFoodCell: View {
         } else {
             return food.description
         }
-    }
-    
-    
-    func getURLfromName(name: String) -> URL{
-        let url = Links.googleSearchURL + processName(name: name)
-        return URL(string: url)!
     }
     
     

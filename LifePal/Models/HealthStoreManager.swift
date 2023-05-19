@@ -73,9 +73,7 @@ class HealthStoreManager {
         
         do {
             let bioSex = try healthStore?.biologicalSex()
-            
             completion(bioSex)
-
         } catch {
             print("Error retrieving biological sex: \(error)")
         }
