@@ -13,30 +13,54 @@ struct FoodView: View {
     
     @ObservedObject var menu: MenuModel
     
+    @State private var selection = "Recommendations"
+    let options = ["Recommendations", "Full Menu"]
+    
     var body: some View {
-        
-        List {
+        VStack {
+            Picker("Select Food Display", selection: $selection) {
+                ForEach(options, id: \.self) {
+                    Text($0)
+                }
+            }
+            .pickerStyle(.segmented)
             
-            ForEach(menu.categories, id: \.id) { category in
+            
+            List {
                 
-                Section(header: Text(category.categoryName)) {
+                ForEach(menu.categories, id: \.id) { category in
                     
-                    ForEach(category.foods, id: \.id) { food in
+                    Section(header: Text(category.categoryName)) {
                         
-                        NavigationLink {
-                            SingleDetailedFoodCell(food: food)
-                        } label: {
-                            Text(food.name)
+                        ForEach(category.foods, id: \.id) { food in
+                            
+                            NavigationLink {
+                                SingleDetailedFoodCell(food: food)
+                            } label: {
+                                Text(food.name)
+                                    .foregroundColor(.primary) // TODO: Make color darker
+                                    
+                            }
+                            
                         }
-                        
                     }
+                    
+                    
                 }
                 
                 
             }
-            
-            
         }
         
+        
+        
+    }
+}
+
+// Preview for view
+struct FoodView_Previews: PreviewProvider {
+    static var previews: some View {
+        FoodView(healthVM: HealthVM(), menu: MenuModel())
+            
     }
 }
