@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC27233F2A16FE5A002E1386 /* FullMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27233E2A16FE5A002E1386 /* FullMenuView.swift */; };
+		DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27233E2A16FE5A002E1386 /* MenuView.swift */; };
 		F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8BE29EDB63400D6E25B /* LifePalApp.swift */; };
 		F405A8C129EDB63400D6E25B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8C029EDB63400D6E25B /* MainView.swift */; };
 		F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F405A8C229EDB63500D6E25B /* Assets.xcassets */; };
@@ -29,6 +29,7 @@
 		F45DFC152A1469A200290975 /* GenericButtonWithoutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC112A1469A200290975 /* GenericButtonWithoutLabel.swift */; };
 		F45DFC162A1469A200290975 /* ExpandButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC122A1469A200290975 /* ExpandButtonView.swift */; };
 		F45DFC192A14741200290975 /* MLFoodRecommendationSample.json in Resources */ = {isa = PBXBuildFile; fileRef = F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */; };
+		F46A54F12A171FD900D114C8 /* MenuFoodCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A54F02A171FD900D114C8 /* MenuFoodCellView.swift */; };
 		F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B68FD2A1448AB00DB36A5 /* Category.swift */; };
 		F46B69002A1448D300DB36A5 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B68FF2A1448D300DB36A5 /* Food.swift */; };
 		F46B69022A144AA900DB36A5 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69012A144AA900DB36A5 /* MenuModel.swift */; };
@@ -41,7 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC27233E2A16FE5A002E1386 /* FullMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMenuView.swift; sourceTree = "<group>"; };
+		DC27233E2A16FE5A002E1386 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		F405A8BB29EDB63400D6E25B /* LifePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405A8BE29EDB63400D6E25B /* LifePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePalApp.swift; sourceTree = "<group>"; };
 		F405A8C029EDB63400D6E25B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		F45DFC112A1469A200290975 /* GenericButtonWithoutLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericButtonWithoutLabel.swift; sourceTree = "<group>"; };
 		F45DFC122A1469A200290975 /* ExpandButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandButtonView.swift; sourceTree = "<group>"; };
 		F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MLFoodRecommendationSample.json; sourceTree = "<group>"; };
+		F46A54F02A171FD900D114C8 /* MenuFoodCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFoodCellView.swift; sourceTree = "<group>"; };
 		F46B68FD2A1448AB00DB36A5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F46B68FF2A1448D300DB36A5 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		F46B69012A144AA900DB36A5 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -91,9 +93,10 @@
 		DC27233B2A16FDD1002E1386 /* FoodViews */ = {
 			isa = PBXGroup;
 			children = (
-				F45DFBFC2A1467F200290975 /* DetailedFoodCellView */,
+				F45DFBFC2A1467F200290975 /* FoodDetailViews */,
 				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
-				DC27233E2A16FE5A002E1386 /* FullMenuView.swift */,
+				DC27233E2A16FE5A002E1386 /* MenuView.swift */,
+				F46A54F02A171FD900D114C8 /* MenuFoodCellView.swift */,
 			);
 			path = FoodViews;
 			sourceTree = "<group>";
@@ -200,7 +203,7 @@
 			path = ProfileViews;
 			sourceTree = "<group>";
 		};
-		F45DFBFC2A1467F200290975 /* DetailedFoodCellView */ = {
+		F45DFBFC2A1467F200290975 /* FoodDetailViews */ = {
 			isa = PBXGroup;
 			children = (
 				F45DFBFE2A1467F200290975 /* FoodNutritionView */,
@@ -208,7 +211,7 @@
 				F45DFC022A1467F200290975 /* DetailedFoodCell.swift */,
 				F45DFBFD2A1467F200290975 /* WebSearchView.swift */,
 			);
-			path = DetailedFoodCellView;
+			path = FoodDetailViews;
 			sourceTree = "<group>";
 		};
 		F45DFBFE2A1467F200290975 /* FoodNutritionView */ = {
@@ -353,6 +356,7 @@
 				F45DFC162A1469A200290975 /* ExpandButtonView.swift in Sources */,
 				F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */,
 				F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */,
+				F46A54F12A171FD900D114C8 /* MenuFoodCellView.swift in Sources */,
 				F4FD20392A01E180002154A5 /* ProfileViewDataCell.swift in Sources */,
 				F46B69022A144AA900DB36A5 /* MenuModel.swift in Sources */,
 				F46B69042A144C1A00DB36A5 /* Links.swift in Sources */,
@@ -361,7 +365,7 @@
 				F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */,
 				F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */,
 				F45DFC0B2A14692500290975 /* StringExtension.swift in Sources */,
-				DC27233F2A16FE5A002E1386 /* FullMenuView.swift in Sources */,
+				DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */,
 				F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

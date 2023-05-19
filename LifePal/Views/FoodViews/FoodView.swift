@@ -13,7 +13,7 @@ struct FoodView: View {
     @ObservedObject var menu: MenuModel
     
     var body: some View {
-        FullMenuView(menu: menu)
+        MenuView(menu: menu)
     }
     
 }

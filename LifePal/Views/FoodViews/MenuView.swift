@@ -1,5 +1,5 @@
 //
-//  FullMenuView.swift
+//  MenuView.swift
 //  LifePal
 //
 //  Created by Arkin Jai Singh Verma on 5/18/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FullMenuView: View {
+struct MenuView: View {
     
     @ObservedObject var menu: MenuModel
     
@@ -22,9 +22,12 @@ struct FullMenuView: View {
                     ForEach(category.foods, id: \.id) { food in
                         
                         NavigationLink {
+                            
                             SingleDetailedFoodCell(food: food)
+                            
                         } label: {
-                            Text(food.name)
+                            
+                            MenuFoodCellView(food: food)
                         }
                         
                     }
