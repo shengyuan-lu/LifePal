@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27233E2A16FE5A002E1386 /* MenuView.swift */; };
 		F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8BE29EDB63400D6E25B /* LifePalApp.swift */; };
 		F405A8C129EDB63400D6E25B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8C029EDB63400D6E25B /* MainView.swift */; };
 		F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F405A8C229EDB63500D6E25B /* Assets.xcassets */; };
@@ -14,9 +15,32 @@
 		F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D029EDB8A900D6E25B /* FoodView.swift */; };
 		F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D229EDB8BE00D6E25B /* WaterView.swift */; };
 		F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D429EDB8CF00D6E25B /* SleepView.swift */; };
+		F41DB3382A133B56004CC405 /* FullMenuSample.json in Resources */ = {isa = PBXBuildFile; fileRef = F41DB3372A133B56004CC405 /* FullMenuSample.json */; };
+		F4397F592A01FDCF0065BD75 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4397F582A01FDCF0065BD75 /* Enums.swift */; };
+		F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */; };
+		F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC002A1467F200290975 /* FoodBadgeView.swift */; };
+		F45DFC072A1467F200290975 /* FoodNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC012A1467F200290975 /* FoodNutritionView.swift */; };
+		F45DFC082A1467F200290975 /* DetailedFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC022A1467F200290975 /* DetailedFoodCell.swift */; };
+		F45DFC092A1467F200290975 /* SingleDetailedFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC032A1467F200290975 /* SingleDetailedFoodCell.swift */; };
+		F45DFC0B2A14692500290975 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC0A2A14692500290975 /* StringExtension.swift */; };
+		F45DFC142A1469A200290975 /* GenericButtonWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC102A1469A200290975 /* GenericButtonWithLabelView.swift */; };
+		F45DFC152A1469A200290975 /* GenericButtonWithoutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC112A1469A200290975 /* GenericButtonWithoutLabel.swift */; };
+		F45DFC162A1469A200290975 /* ExpandButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC122A1469A200290975 /* ExpandButtonView.swift */; };
+		F45DFC192A14741200290975 /* MLFoodRecommendationSample.json in Resources */ = {isa = PBXBuildFile; fileRef = F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */; };
+		F46A54F12A171FD900D114C8 /* MenuFoodCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A54F02A171FD900D114C8 /* MenuFoodCellView.swift */; };
+		F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B68FD2A1448AB00DB36A5 /* Category.swift */; };
+		F46B69002A1448D300DB36A5 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B68FF2A1448D300DB36A5 /* Food.swift */; };
+		F46B69022A144AA900DB36A5 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69012A144AA900DB36A5 /* MenuVM.swift */; };
+		F46B69042A144C1A00DB36A5 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69032A144C1A00DB36A5 /* Links.swift */; };
+		F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69052A144D3300DB36A5 /* DecodingExtension.swift */; };
+		F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */; };
+		F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20332A01A694002154A5 /* ProfileView.swift */; };
+		F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20362A01D88E002154A5 /* HealthVM.swift */; };
+		F4FD20392A01E180002154A5 /* ProfileViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20382A01E180002154A5 /* ProfileViewDataCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC27233E2A16FE5A002E1386 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		F405A8BB29EDB63400D6E25B /* LifePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405A8BE29EDB63400D6E25B /* LifePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePalApp.swift; sourceTree = "<group>"; };
 		F405A8C029EDB63400D6E25B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -25,6 +49,30 @@
 		F405A8D029EDB8A900D6E25B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		F405A8D229EDB8BE00D6E25B /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
 		F405A8D429EDB8CF00D6E25B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		F41DB3372A133B56004CC405 /* FullMenuSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FullMenuSample.json; sourceTree = "<group>"; };
+		F4397F582A01FDCF0065BD75 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodNutritionCellView.swift; sourceTree = "<group>"; };
+		F45DFC002A1467F200290975 /* FoodBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodBadgeView.swift; sourceTree = "<group>"; };
+		F45DFC012A1467F200290975 /* FoodNutritionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodNutritionView.swift; sourceTree = "<group>"; };
+		F45DFC022A1467F200290975 /* DetailedFoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedFoodCell.swift; sourceTree = "<group>"; };
+		F45DFC032A1467F200290975 /* SingleDetailedFoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleDetailedFoodCell.swift; sourceTree = "<group>"; };
+		F45DFC0A2A14692500290975 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F45DFC102A1469A200290975 /* GenericButtonWithLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericButtonWithLabelView.swift; sourceTree = "<group>"; };
+		F45DFC112A1469A200290975 /* GenericButtonWithoutLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericButtonWithoutLabel.swift; sourceTree = "<group>"; };
+		F45DFC122A1469A200290975 /* ExpandButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandButtonView.swift; sourceTree = "<group>"; };
+		F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MLFoodRecommendationSample.json; sourceTree = "<group>"; };
+		F46A54F02A171FD900D114C8 /* MenuFoodCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFoodCellView.swift; sourceTree = "<group>"; };
+		F46B68FD2A1448AB00DB36A5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F46B68FF2A1448D300DB36A5 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F46B69012A144AA900DB36A5 /* MenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
+		F46B69032A144C1A00DB36A5 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		F46B69052A144D3300DB36A5 /* DecodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtension.swift; sourceTree = "<group>"; };
+		F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifePal.entitlements; sourceTree = "<group>"; };
+		F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
+		F4FD20332A01A694002154A5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F4FD20352A01D1F4002154A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F4FD20362A01D88E002154A5 /* HealthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthVM.swift; sourceTree = "<group>"; };
+		F4FD20382A01E180002154A5 /* ProfileViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewDataCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +86,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC27233B2A16FDD1002E1386 /* FoodViews */ = {
+			isa = PBXGroup;
+			children = (
+				F45DFBFC2A1467F200290975 /* FoodDetailViews */,
+				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
+				DC27233E2A16FE5A002E1386 /* MenuView.swift */,
+				F46A54F02A171FD900D114C8 /* MenuFoodCellView.swift */,
+			);
+			path = FoodViews;
+			sourceTree = "<group>";
+		};
 		F405A8B229EDB63400D6E25B = {
 			isa = PBXGroup;
 			children = (
@@ -57,11 +116,15 @@
 		F405A8BD29EDB63400D6E25B /* LifePal */ = {
 			isa = PBXGroup;
 			children = (
-				F405A8CF29EDB89800D6E25B /* Helpers */,
-				F405A8CE29EDB89200D6E25B /* Models */,
-				F405A8CD29EDB88C00D6E25B /* ViewModels */,
-				F405A8CC29EDB88200D6E25B /* Views */,
+				F4FD20352A01D1F4002154A5 /* Info.plist */,
+				F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */,
 				F405A8BE29EDB63400D6E25B /* LifePalApp.swift */,
+				F405A8CC29EDB88200D6E25B /* Views */,
+				F405A8CD29EDB88C00D6E25B /* ViewModels */,
+				F405A8CE29EDB89200D6E25B /* Models */,
+				F46B68FC2A14488300DB36A5 /* Data Structure */,
+				F405A8CF29EDB89800D6E25B /* Helpers */,
+				F41DB3362A133AEF004CC405 /* Local JSONs */,
 				F405A8C229EDB63500D6E25B /* Assets.xcassets */,
 				F405A8C429EDB63500D6E25B /* Preview Content */,
 			);
@@ -80,9 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				F405A8C029EDB63400D6E25B /* MainView.swift */,
-				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
-				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
-				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
+				DC27233B2A16FDD1002E1386 /* FoodViews */,
+				F46A54EE2A171CE500D114C8 /* WaterViews */,
+				F46A54EF2A171CEE00D114C8 /* SleepViews */,
+				F45550B12A16D60800629A66 /* ProfileViews */,
+				F45DFC0F2A1469A200290975 /* Buttons */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +155,8 @@
 		F405A8CD29EDB88C00D6E25B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F4FD20362A01D88E002154A5 /* HealthVM.swift */,
+				F46B69012A144AA900DB36A5 /* MenuVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -97,6 +164,7 @@
 		F405A8CE29EDB89200D6E25B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,8 +172,85 @@
 		F405A8CF29EDB89800D6E25B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F45DFC0A2A14692500290975 /* StringExtension.swift */,
+				F4397F582A01FDCF0065BD75 /* Enums.swift */,
+				F46B69032A144C1A00DB36A5 /* Links.swift */,
+				F46B69052A144D3300DB36A5 /* DecodingExtension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F41DB3362A133AEF004CC405 /* Local JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */,
+				F41DB3372A133B56004CC405 /* FullMenuSample.json */,
+			);
+			path = "Local JSONs";
+			sourceTree = "<group>";
+		};
+		F45550B12A16D60800629A66 /* ProfileViews */ = {
+			isa = PBXGroup;
+			children = (
+				F4FD20332A01A694002154A5 /* ProfileView.swift */,
+				F4FD20382A01E180002154A5 /* ProfileViewDataCell.swift */,
+			);
+			path = ProfileViews;
+			sourceTree = "<group>";
+		};
+		F45DFBFC2A1467F200290975 /* FoodDetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				F45DFBFE2A1467F200290975 /* FoodNutritionView */,
+				F45DFC032A1467F200290975 /* SingleDetailedFoodCell.swift */,
+				F45DFC022A1467F200290975 /* DetailedFoodCell.swift */,
+			);
+			path = FoodDetailViews;
+			sourceTree = "<group>";
+		};
+		F45DFBFE2A1467F200290975 /* FoodNutritionView */ = {
+			isa = PBXGroup;
+			children = (
+				F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */,
+				F45DFC002A1467F200290975 /* FoodBadgeView.swift */,
+				F45DFC012A1467F200290975 /* FoodNutritionView.swift */,
+			);
+			path = FoodNutritionView;
+			sourceTree = "<group>";
+		};
+		F45DFC0F2A1469A200290975 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F45DFC102A1469A200290975 /* GenericButtonWithLabelView.swift */,
+				F45DFC112A1469A200290975 /* GenericButtonWithoutLabel.swift */,
+				F45DFC122A1469A200290975 /* ExpandButtonView.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F46A54EE2A171CE500D114C8 /* WaterViews */ = {
+			isa = PBXGroup;
+			children = (
+				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
+			);
+			path = WaterViews;
+			sourceTree = "<group>";
+		};
+		F46A54EF2A171CEE00D114C8 /* SleepViews */ = {
+			isa = PBXGroup;
+			children = (
+				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
+			);
+			path = SleepViews;
+			sourceTree = "<group>";
+		};
+		F46B68FC2A14488300DB36A5 /* Data Structure */ = {
+			isa = PBXGroup;
+			children = (
+				F46B68FD2A1448AB00DB36A5 /* Category.swift */,
+				F46B68FF2A1448D300DB36A5 /* Food.swift */,
+			);
+			path = "Data Structure";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +311,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45DFC192A14741200290975 /* MLFoodRecommendationSample.json in Resources */,
+				F41DB3382A133B56004CC405 /* FullMenuSample.json in Resources */,
 				F405A8C629EDB63500D6E25B /* Preview Assets.xcassets in Resources */,
 				F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */,
 			);
@@ -178,11 +325,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */,
+				F45DFC082A1467F200290975 /* DetailedFoodCell.swift in Sources */,
 				F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */,
+				F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */,
+				F4397F592A01FDCF0065BD75 /* Enums.swift in Sources */,
+				F45DFC142A1469A200290975 /* GenericButtonWithLabelView.swift in Sources */,
 				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,
+				F46B69002A1448D300DB36A5 /* Food.swift in Sources */,
+				F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */,
+				F45DFC152A1469A200290975 /* GenericButtonWithoutLabel.swift in Sources */,
 				F405A8C129EDB63400D6E25B /* MainView.swift in Sources */,
 				F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */,
+				F45DFC092A1467F200290975 /* SingleDetailedFoodCell.swift in Sources */,
+				F45DFC162A1469A200290975 /* ExpandButtonView.swift in Sources */,
+				F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */,
+				F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */,
+				F46A54F12A171FD900D114C8 /* MenuFoodCellView.swift in Sources */,
+				F4FD20392A01E180002154A5 /* ProfileViewDataCell.swift in Sources */,
+				F46B69022A144AA900DB36A5 /* MenuVM.swift in Sources */,
+				F46B69042A144C1A00DB36A5 /* Links.swift in Sources */,
+				F45DFC072A1467F200290975 /* FoodNutritionView.swift in Sources */,
+				F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */,
 				F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */,
+				F45DFC0B2A14692500290975 /* StringExtension.swift in Sources */,
+				DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */,
+				F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,17 +476,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LifePal/LifePal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LifePal/Preview Content\"";
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifePal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LifePal;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "LifePal needs to access your microphone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,9 +501,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuan-lu.LifePal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -337,17 +515,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LifePal/LifePal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LifePal/Preview Content\"";
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifePal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LifePal;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LifePal needs to access your health data to provide recommendations.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "LifePal needs to access your microphone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,9 +540,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuan-lu.LifePal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

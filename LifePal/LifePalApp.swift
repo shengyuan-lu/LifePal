@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct LifePalApp: App {
+    
     var body: some Scene {
         WindowGroup {
             MainView()

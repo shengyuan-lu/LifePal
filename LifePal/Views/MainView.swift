@@ -8,28 +8,60 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @StateObject var recommendedMenu: MenuVM = MenuVM(isRecommeded: true)
+    @StateObject var fullMenu: MenuVM = MenuVM(isRecommeded: false)
+    
+    @StateObject var healthVM: HealthVM = HealthVM()
+    
+    @State var selectedTab: Tabs = .profile
+
     var body: some View {
-        TabView {
-            FoodView()
-                .tabItem {
-                    Label("Food", systemImage: "fork.knife")
-                }
-
-            WaterView()
-                .tabItem {
-                    Label("Water", systemImage: "drop")
-                }
+        
+        NavigationView {
             
-            SleepView()
-                .tabItem {
-                    Label("Sleep", systemImage: "bed.double")
-                }
-        }
-    }
-}
+            TabView(selection: $selectedTab) {
+                FoodView(healthVM: healthVM, fullMenu: fullMenu, recommendedMenu: recommendedMenu)
+                    .tabItem {
+                        Label("Food", systemImage: "fork.knife")
+                    }
+                    .tag(Tabs.food)
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
+                WaterView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Water", systemImage: "drop")
+                    }
+                    .tag(Tabs.water)
+                
+                SleepView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Sleep", systemImage: "bed.double")
+                    }
+                    .tag(Tabs.sleep)
+                
+                ProfileView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+                    .tag(Tabs.profile)
+            }
+            .navigationTitle(selectedTab.rawValue.capitalized)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationViewStyle(.stack)
+            .onAppear {
+                // correct the transparency bug for Tab bars
+                let tabBarAppearance = UITabBarAppearance()
+                tabBarAppearance.configureWithOpaqueBackground()
+                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+                
+                // correct the transparency bug for Navigation bars
+                let navigationBarAppearance = UINavigationBarAppearance()
+                navigationBarAppearance.configureWithOpaqueBackground()
+                UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+            }
+
+        }
+        .navigationViewStyle(.stack)
+    
     }
 }
