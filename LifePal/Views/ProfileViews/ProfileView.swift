@@ -18,7 +18,7 @@ struct ProfileView: View {
             Section(header: Text("Your Body")) {
                 ProfileViewDataCell(label: "Height", data: healthVM.height, unit: "CM")
                 ProfileViewDataCell(label: "Weight", data: healthVM.weight, unit: "KG")
-                ProfileViewDataCell(label: "Age", data: Double(healthVM.age), unit: "Year")
+                ProfileViewDataCell(label: "Age", data: healthVM.age, unit: "")
                 ProfileViewDataCell(label: "Biological Sex", data: healthVM.bioSex, unit: "")
             }
             
@@ -28,6 +28,9 @@ struct ProfileView: View {
             }
             
             
+        }
+        .onAppear {
+            healthVM.loadData()
         }
         .navigationTitle("My Profile")
         .navigationBarTitleDisplayMode(.large)

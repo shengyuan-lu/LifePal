@@ -22,10 +22,12 @@ struct ProfileViewDataCell: View {
             Spacer()
             
             switch data {
+                
             case is Double:
+                
                 if data as! Double == -1.0 {
                     
-                    Text("Loading...")
+                    ProgressView()
                     
                 } else if data as! Double == -2.0 {
                     
@@ -36,14 +38,38 @@ struct ProfileViewDataCell: View {
                     Text("\(String(format: "%.1f", data as! Double)) \(unit)")
                 }
                 
+                
+            case is Int:
+                
+                if data as! Int == -1 {
+                    
+                    ProgressView()
+                    
+                } else if data as! Int == -2 {
+                    
+                    Text("Unavailable")
+                    
+                } else {
+                    
+                    Text("\(data as! Int) \(unit)")
+                }
+                
             case is String:
-                Text(data as! String)
+                
+                if data as! String == "Loading" {
+                    
+                    ProgressView()
+                    
+                } else {
+                    
+                    Text(data as! String)
+                }
+                
             default:
                 Text("Unknown Type")
+                
             }
             
-            
-
         }
         
     }
