@@ -1,5 +1,5 @@
 //
-//  Tabs.swift
+//  Enums.swift
 //  LifePal
 //
 //  Created by Shengyuan Lu on 5/2/23.
@@ -12,4 +12,9 @@ enum Tabs: String {
     case water
     case sleep
     case profile
+}
+
+enum Menus: String, CaseIterable {
+    case full = "Full"
+    case recommended = "Recommended"
 }

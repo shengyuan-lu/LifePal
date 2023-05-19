@@ -17,5 +17,6 @@ struct Links {
     // Remote Demo
 
     // Local Demo
-    static let foodSamples = "FullMenuSample"
+    static let fullMenuSample = "FullMenuSample"
+    static let recommendedMenuSample = "MLFoodRecommendationSample"
 }

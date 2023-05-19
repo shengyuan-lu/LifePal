@@ -16,7 +16,7 @@
 		F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D229EDB8BE00D6E25B /* WaterView.swift */; };
 		F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D429EDB8CF00D6E25B /* SleepView.swift */; };
 		F41DB3382A133B56004CC405 /* FullMenuSample.json in Resources */ = {isa = PBXBuildFile; fileRef = F41DB3372A133B56004CC405 /* FullMenuSample.json */; };
-		F4397F592A01FDCF0065BD75 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4397F582A01FDCF0065BD75 /* Tabs.swift */; };
+		F4397F592A01FDCF0065BD75 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4397F582A01FDCF0065BD75 /* Enums.swift */; };
 		F45DFC042A1467F200290975 /* WebSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFBFD2A1467F200290975 /* WebSearchView.swift */; };
 		F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */; };
 		F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC002A1467F200290975 /* FoodBadgeView.swift */; };
@@ -52,7 +52,7 @@
 		F405A8D229EDB8BE00D6E25B /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
 		F405A8D429EDB8CF00D6E25B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 		F41DB3372A133B56004CC405 /* FullMenuSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FullMenuSample.json; sourceTree = "<group>"; };
-		F4397F582A01FDCF0065BD75 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		F4397F582A01FDCF0065BD75 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		F45DFBFD2A1467F200290975 /* WebSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSearchView.swift; sourceTree = "<group>"; };
 		F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodNutritionCellView.swift; sourceTree = "<group>"; };
 		F45DFC002A1467F200290975 /* FoodBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodBadgeView.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				F45DFC0A2A14692500290975 /* StringExtension.swift */,
-				F4397F582A01FDCF0065BD75 /* Tabs.swift */,
+				F4397F582A01FDCF0065BD75 /* Enums.swift */,
 				F46B69032A144C1A00DB36A5 /* Links.swift */,
 				F46B69052A144D3300DB36A5 /* DecodingExtension.swift */,
 			);
@@ -344,7 +344,7 @@
 				F45DFC082A1467F200290975 /* DetailedFoodCell.swift in Sources */,
 				F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */,
 				F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */,
-				F4397F592A01FDCF0065BD75 /* Tabs.swift in Sources */,
+				F4397F592A01FDCF0065BD75 /* Enums.swift in Sources */,
 				F45DFC142A1469A200290975 /* GenericButtonWithLabelView.swift in Sources */,
 				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,
 				F46B69002A1448D300DB36A5 /* Food.swift in Sources */,

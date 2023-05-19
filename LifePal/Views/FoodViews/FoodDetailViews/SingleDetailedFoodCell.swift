@@ -7,7 +7,7 @@ struct SingleDetailedFoodCell: View {
     var body: some View {
 
         ScrollView {
-            DetailedFoodCell(food: food, isExpanded: true)
+            DetailedFoodCell(food: food, isExpanded: false)
                 .padding(24)
         }
         .background(Color(UIColor(named: "categoryBG")!))

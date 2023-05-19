@@ -10,10 +10,42 @@ import SwiftUI
 struct FoodView: View {
     
     @ObservedObject var healthVM: HealthVM
-    @ObservedObject var menu: MenuModel
+    @ObservedObject var fullMenu: MenuModel
+    @ObservedObject var recommendedMenu: MenuModel
+    
+    @State private var selectedMenu: Menus = .recommended
     
     var body: some View {
-        MenuView(menu: menu)
+        
+        VStack {
+            
+            Picker(selection: $selectedMenu) {
+                
+                ForEach(Menus.allCases, id: \.self) { option in
+                    Text(option.rawValue)
+                        .tag(option)
+                }
+                
+            } label: {
+                Text("Menu")
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            
+            
+            if selectedMenu == .full {
+                // Full menu here
+                
+                MenuView(menu: fullMenu)
+                
+            } else {
+                // Display recommended
+                
+                MenuView(menu: recommendedMenu)
+            }
+
+        }
+        
+
     }
     
 }

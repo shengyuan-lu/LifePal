@@ -13,10 +13,14 @@ class MenuModel: ObservableObject {
     @Published var categories: [Category] = [Category]()
     @Published var isLoadingFailed: Bool = false
     
-    let remoteJSONnames: [String] = [""] // FIXME: - put in real remote JSON endpoints
-    let localJSONnames: [String] = [Links.foodSamples]
+    let remoteJSONnames: [String] = [String]() // FIXME: - put in real remote JSON endpoints
     
-    init() {
+    private var isRecommeded: Bool
+    
+    init(isRecommeded: Bool) {
+        
+        self.isRecommeded = isRecommeded
+
         self.load()
     }
     
@@ -47,9 +51,15 @@ class MenuModel: ObservableObject {
         self.categories.removeAll()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            for name in self.localJSONnames {
+            
+            if self.isRecommeded {
                 
-                let data: Data? =  self.loadLocalJSON(forName: name)
+                let data: Data? =  self.loadLocalJSON(forName: Links.recommendedMenuSample)
+                
+                self.loadMenu(data: data)
+                
+            } else {
+                let data: Data? =  self.loadLocalJSON(forName: Links.fullMenuSample)
                 
                 self.loadMenu(data: data)
             }

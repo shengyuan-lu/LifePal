@@ -9,7 +9,9 @@ import SwiftUI
 
 struct MainView: View {
     
-    @EnvironmentObject var menuModel: MenuModel
+    @EnvironmentObject var fullMenu: MenuModel
+    @EnvironmentObject var recommendedMenu: MenuModel
+    
     @EnvironmentObject var healthVM: HealthVM
     
     @State var selectedTab: Tabs = .profile
@@ -19,7 +21,7 @@ struct MainView: View {
         NavigationView {
             
             TabView(selection: $selectedTab) {
-                FoodView(healthVM: healthVM, menu: menuModel)
+                FoodView(healthVM: healthVM, fullMenu: fullMenu, recommendedMenu: recommendedMenu)
                     .tabItem {
                         Label("Food", systemImage: "fork.knife")
                     }
@@ -44,7 +46,10 @@ struct MainView: View {
                     .tag(Tabs.profile)
             }
             .navigationTitle(selectedTab.rawValue.capitalized)
+            .navigationBarTitleDisplayMode(.inline)
+
         }
+        .navigationViewStyle(.stack)
     
     }
 }

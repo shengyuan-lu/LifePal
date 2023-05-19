@@ -18,6 +18,8 @@ struct ProfileView: View {
                 ProfileViewDataCell(label: "Height", data: healthVM.height, unit: "CM")
                 ProfileViewDataCell(label: "Weight", data: healthVM.weight, unit: "KG")
                 ProfileViewDataCell(label: "Age", data: Double(healthVM.age), unit: "Year")
+                ProfileViewDataCell(label: "Biological Sex", data: healthVM.bioSex, unit: "")
+                
                 ProfileViewDataCell(label: "Active Energy", data: healthVM.activeCalories, unit: "KCal")
                 ProfileViewDataCell(label: "Rest Energy", data: healthVM.restCalories, unit: "KCal")
             }

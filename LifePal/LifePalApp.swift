@@ -11,13 +11,15 @@ import SwiftUI
 struct LifePalApp: App {
     
     @StateObject var healthVM = HealthVM()
-    @StateObject var menuModel: MenuModel = MenuModel()
+    @StateObject var recommendedMenu: MenuModel = MenuModel(isRecommeded: true)
+    @StateObject var fullMenu: MenuModel = MenuModel(isRecommeded: false)
     
     var body: some Scene {
         WindowGroup {
             MainView()
                 .environmentObject(healthVM)
-                .environmentObject(menuModel)
+                .environmentObject(fullMenu)
+                .environmentObject(recommendedMenu)
         }
     }
 }

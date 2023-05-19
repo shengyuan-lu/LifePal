@@ -23,6 +23,7 @@ class HealthStoreManager {
         HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!,
         HKSampleType.quantityType(forIdentifier: .basalEnergyBurned)!,
         HKSampleType.characteristicType(forIdentifier: .dateOfBirth)!,
+        HKSampleType.characteristicType(forIdentifier: .biologicalSex)!,
         HKSampleType.quantityType(forIdentifier: .bodyFatPercentage)!,
         HKSampleType.quantityType(forIdentifier: .bodyMassIndex)!
     ]
