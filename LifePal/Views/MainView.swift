@@ -46,6 +46,8 @@ struct MainView: View {
                     .tag(Tabs.profile)
             }
             .navigationTitle(selectedTab.rawValue.capitalized)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationViewStyle(.stack)
             .onAppear {
                 // correct the transparency bug for Tab bars
                 let tabBarAppearance = UITabBarAppearance()

@@ -30,11 +30,8 @@ struct DetailedFoodCell: View {
                 }
                 
                 GenericButtonWithoutLabel(action: {
-                    self.showingWebSearch.toggle()
+                    self.showingWebSearch = true
                 }, systemName: "magnifyingglass.circle.fill", imageColor: Color.blue)
-            }
-            .sheet(isPresented: $showingWebSearch) {
-                WebSearchView(url: getURLfromName(name: food.name))
             }
             
             Divider()
@@ -83,6 +80,9 @@ struct DetailedFoodCell: View {
             }
             
             Divider()
+        }
+        .sheet(isPresented: $showingWebSearch) {
+            WebSearchView(url: getURLfromName(name: food.name))
         }
     }
     
