@@ -15,11 +15,11 @@ class MenuModel: ObservableObject {
     
     let remoteJSONnames: [String] = [String]() // FIXME: - put in real remote JSON endpoints
     
-    private var isRecommeded: Bool
+    var isRecommended: Bool
     
-    init(isRecommeded: Bool) {
+    init(isRecommended: Bool) {
         
-        self.isRecommeded = isRecommeded
+        self.isRecommended = isRecommended
 
         self.load()
     }
@@ -40,7 +40,7 @@ class MenuModel: ObservableObject {
                         self.loadMenu(data: d)
                     }
                 }
-                print("Success: load remote JSON (URL: \(url) to data succeessfully)")
+                print("Success: load remote JSON (URL: \(url) to data successfully)")
             }
         }
     }
@@ -52,7 +52,7 @@ class MenuModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             
-            if self.isRecommeded {
+            if self.isRecommended {
                 
                 let data: Data? =  self.loadLocalJSON(forName: Links.recommendedMenuSample)
                 
