@@ -48,17 +48,6 @@ struct MainView: View {
             .navigationTitle(selectedTab.rawValue.capitalized)
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(.stack)
-            .onAppear {
-                // correct the transparency bug for Tab bars
-                let tabBarAppearance = UITabBarAppearance()
-                tabBarAppearance.configureWithOpaqueBackground()
-                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-                
-                // correct the transparency bug for Navigation bars
-                let navigationBarAppearance = UINavigationBarAppearance()
-                navigationBarAppearance.configureWithOpaqueBackground()
-                UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-            }
 
         }
         .navigationViewStyle(.stack)

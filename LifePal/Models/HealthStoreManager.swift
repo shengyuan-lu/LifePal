@@ -222,7 +222,7 @@ class HealthStoreManager {
             
             let bodyFatPercentage = lastSample.quantity.doubleValue(for: HKUnit.percent())
             
-            print("Body Fat Percentage: \(bodyFatPercentage * 100) %")
+            print("Body Fat Percentage: \(bodyFatPercentage * 100)%")
             
             completion(bodyFatPercentage, error)
 
