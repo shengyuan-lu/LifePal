@@ -10,7 +10,7 @@ import SwiftUI
 struct FoodView: View {
     
     @ObservedObject var healthVM: HealthVM
-    
+
     @ObservedObject var menu: MenuModel
     
     @State private var selection = "Recommendations"
@@ -25,31 +25,6 @@ struct FoodView: View {
             }
             .pickerStyle(.segmented)
             
-            
-            List {
-                
-                ForEach(menu.categories, id: \.id) { category in
-                    
-                    Section(header: Text(category.categoryName)) {
-                        
-                        ForEach(category.foods, id: \.id) { food in
-                            
-                            NavigationLink {
-                                SingleDetailedFoodCell(food: food)
-                            } label: {
-                                Text(food.name)
-                                    .foregroundColor(.primary) // TODO: Make color darker
-                                    
-                            }
-                            
-                        }
-                    }
-                    
-                    
-                }
-                
-                
-            }
         }
         
         

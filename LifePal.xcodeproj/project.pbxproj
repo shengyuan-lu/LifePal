@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC27233F2A16FE5A002E1386 /* FullMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27233E2A16FE5A002E1386 /* FullMenuView.swift */; };
 		F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8BE29EDB63400D6E25B /* LifePalApp.swift */; };
 		F405A8C129EDB63400D6E25B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8C029EDB63400D6E25B /* MainView.swift */; };
 		F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F405A8C229EDB63500D6E25B /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC27233E2A16FE5A002E1386 /* FullMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMenuView.swift; sourceTree = "<group>"; };
 		F405A8BB29EDB63400D6E25B /* LifePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405A8BE29EDB63400D6E25B /* LifePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePalApp.swift; sourceTree = "<group>"; };
 		F405A8C029EDB63400D6E25B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC27233B2A16FDD1002E1386 /* FoodViews */ = {
+			isa = PBXGroup;
+			children = (
+				DC27233E2A16FE5A002E1386 /* FullMenuView.swift */,
+			);
+			path = FoodViews;
+			sourceTree = "<group>";
+		};
 		F405A8B229EDB63400D6E25B = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 				F45550B12A16D60800629A66 /* ProfileView */,
 				F405A8C029EDB63400D6E25B /* MainView.swift */,
 				F405A8D029EDB8A900D6E25B /* FoodView.swift */,
+				DC27233B2A16FDD1002E1386 /* FoodViews */,
 				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
 				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
 			);
@@ -334,6 +345,7 @@
 				F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */,
 				F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */,
 				F45DFC0B2A14692500290975 /* StringExtension.swift in Sources */,
+				DC27233F2A16FE5A002E1386 /* FullMenuView.swift in Sources */,
 				F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
