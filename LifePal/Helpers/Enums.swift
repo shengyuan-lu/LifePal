@@ -8,10 +8,10 @@
 import Foundation
 
 enum Tabs: String {
-    case food
-    case water
-    case sleep
-    case profile
+    case foodTab = "Food"
+    case waterTab = "Water"
+    case sleepTab = "Sleep"
+    case profileTab = "Profile"
 }
 
 enum Menus: String, CaseIterable {

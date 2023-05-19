@@ -9,31 +9,47 @@ import SwiftUI
 
 struct MenuView: View {
     
-    @ObservedObject var menu: MenuVM
+    @ObservedObject var menuVM: MenuVM
     
     var body: some View {
         
-        List {
+        if !menuVM.categories.isEmpty {
             
-            ForEach(menu.categories, id: \.id) { category in
+            List {
                 
-                Section(header: Text(category.categoryName)) {
+                ForEach(menuVM.categories, id: \.id) { category in
                     
-                    ForEach(category.foods, id: \.id) { food in
+                    Section(header: Text(category.categoryName)) {
                         
-                        NavigationLink {
+                        ForEach(category.foods, id: \.id) { food in
                             
-                            SingleDetailedFoodCell(food: food)
+                            NavigationLink {
+                                
+                                SingleDetailedFoodCell(food: food)
+                                
+                            } label: {
+                                
+                                MenuFoodCellView(food: food)
+                            }
                             
-                        } label: {
-                            
-                            MenuFoodCellView(food: food)
                         }
-                        
                     }
                 }
+                
             }
             
+        } else {
+            
+            VStack {
+                Spacer()
+                
+                ProgressView()
+                
+                Spacer()
+            }
+            
+
         }
+        
     }
 }

@@ -50,7 +50,7 @@ class MenuVM: ObservableObject {
         
         self.categories.removeAll()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             
             if self.isRecommeded {
                 

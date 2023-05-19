@@ -3,7 +3,6 @@ import SwiftUI
 struct DetailedFoodCell: View {
     
     @State var food: Food
-    @State var isExpanded: Bool
     
     var body: some View {
         
@@ -59,13 +58,11 @@ struct DetailedFoodCell: View {
                     
                     Spacer()
                     
-                    ExpandButtonView(isExpanded: $isExpanded)
                 }
             }
+                
+            FoodNutritionView(food: food)
             
-            if isExpanded {
-                FoodNutritionView(food: food)
-            }
             
             if food.hasBadge() {
                 
@@ -149,7 +146,7 @@ struct DetailedFoodCell: View {
 
 struct DetailedFoodCell_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedFoodCell(food: getSampleFood(), isExpanded: true)
+        DetailedFoodCell(food: getSampleFood())
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")
     }

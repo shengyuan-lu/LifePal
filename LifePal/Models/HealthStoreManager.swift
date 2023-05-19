@@ -12,6 +12,9 @@ class HealthStoreManager {
     
     var healthStore: HKHealthStore?
     
+    let calendar = Calendar.current
+    let now = Date()
+    
     // A set of HKSampleType that you request authorization for share
     let shareType: Set<HealthKit.HKSampleType> = Set<HealthKit.HKSampleType>()
     
@@ -131,9 +134,6 @@ class HealthStoreManager {
 
     
     func getActiveCalories(completion: @escaping (Double?, Error?) -> Void) {
-        
-        let calendar = Calendar.current
-        let now = Date()
 
         // Define the start and end dates for the current day
         let startDate = calendar.startOfDay(for: now)
@@ -172,9 +172,6 @@ class HealthStoreManager {
     
     func getRestCalories(completion: @escaping (Double?, Error?) -> Void) {
         
-        let calendar = Calendar.current
-        let now = Date()
-
         // Define the start and end dates for the current day
         let startDate = calendar.startOfDay(for: now)
         let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
