@@ -158,7 +158,7 @@ class HealthStoreManager {
                     if let sum = statistics.sumQuantity() {
                         let activityLevel = sum.doubleValue(for: HKUnit.kilocalorie())
                         
-                        print("Energy Burned Today: \(activityLevel)")
+                        print("Active Energy Burned Today: \(activityLevel)")
                         
                         completion(activityLevel, error)
                     }
@@ -198,7 +198,7 @@ class HealthStoreManager {
                     if let sum = statistics.sumQuantity() {
                         let activityLevel = sum.doubleValue(for: HKUnit.kilocalorie())
                         
-                        print("Energy Burned Today: \(activityLevel)")
+                        print("Rest Energy Burned Today: \(activityLevel)")
                         
                         completion(activityLevel, error)
                     }
