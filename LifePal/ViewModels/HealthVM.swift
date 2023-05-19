@@ -21,6 +21,7 @@ class HealthVM: ObservableObject {
     @Published var restCalories: Double = -1
     
     @Published var bodyFatPercentage: Double = -1
+    @Published var bodyMassIndex: Double = -1
     
     @Published var bioSex: String = "Loading..."
     
@@ -31,7 +32,6 @@ class HealthVM: ObservableObject {
         loadData()
     }
     
-    
     func loadData() {
         getHeight()
         getWeight()
@@ -39,6 +39,8 @@ class HealthVM: ObservableObject {
         getRestCalories()
         getBirthDate()
         getBioSex()
+        getBodyFat()
+        getBodyMassIndex()
     }
     
     
@@ -82,8 +84,6 @@ class HealthVM: ObservableObject {
                 
                 if let r = result {
                     self.activeCalories = r
-                    
-                    print(r)
                     
                 } else {
                     self.activeCalories = -2
@@ -156,6 +156,42 @@ class HealthVM: ObservableObject {
                     self.getBioSexString()
                 }
             }
+        })
+    }
+    
+    
+    func getBodyFat() -> Void {
+        healthStoreManager.getBodyfat(completion: { result, error in
+            DispatchQueue.main.async {
+                
+                if let r = result {
+                    self.bodyFatPercentage = r
+                    
+                    print(r)
+                    
+                } else {
+                    self.bodyFatPercentage = -2
+                }
+            }
+
+        })
+    }
+    
+    
+    func getBodyMassIndex() -> Void {
+        healthStoreManager.getBodyMassIndex(completion: { result, error in
+            DispatchQueue.main.async {
+                
+                if let r = result {
+                    self.bodyMassIndex = r
+                    
+                    print(r)
+                    
+                } else {
+                    self.bodyMassIndex = -2
+                }
+            }
+
         })
     }
     
