@@ -40,17 +40,23 @@ struct ProfileView: View {
             }
             
             
-            Section(header: Text("Your Body")) {
-                ProfileViewDataCell(label: "Height", data: healthVM.height, unit: "CM")
-                ProfileViewDataCell(label: "Weight", data: healthVM.weight, unit: "KG")
+            Section(header: Text("Basic Information")) {
                 ProfileViewDataCell(label: "Age", data: healthVM.age, unit: "")
                 ProfileViewDataCell(label: "Biological Sex", data: healthVM.bioSex, unit: "")
             }
             
             
-            Section(header: Text("Your Activity Level Today")) {
-                ProfileViewDataCell(label: "Active Energy", data: healthVM.activeCalories, unit: "KCal")
-                ProfileViewDataCell(label: "Rest Energy", data: healthVM.restCalories, unit: "KCal")
+            Section(header: Text("Your Body")) {
+                ProfileViewDataCell(label: "Height", data: healthVM.height, unit: "CM")
+                ProfileViewDataCell(label: "Weight", data: healthVM.weight, unit: "KG")
+                ProfileViewDataCell(label: "Body Fat Percentage", data: healthVM.bodyFatPercentage * 100, unit: "%")
+                ProfileViewDataCell(label: "Body Mass Index", data: healthVM.bodyMassIndex, unit: "")
+            }
+            
+            
+            Section(header: Text("Activity Level")) {
+                ProfileViewDataCell(label: "Active Energy (Today)", data: healthVM.activeCalories, unit: "KCal")
+                ProfileViewDataCell(label: "Rest Energy (Today)", data: healthVM.restCalories, unit: "KCal")
             }
             
             

@@ -12,8 +12,10 @@ class HealthStoreManager {
     
     var healthStore: HKHealthStore?
     
+    
     let calendar = Calendar.current
     let now = Date()
+    
     
     // A set of HKSampleType that you request authorization for share
     let shareType: Set<HealthKit.HKSampleType> = Set<HealthKit.HKSampleType>()
@@ -73,14 +75,12 @@ class HealthStoreManager {
     
     func getBiologicalSex(completion: @escaping (HKBiologicalSexObject?) -> Void) {
         
-        
         do {
             let bioSex = try healthStore?.biologicalSex()
             completion(bioSex)
         } catch {
             print("Error retrieving biological sex: \(error)")
         }
-       
         
     }
     
@@ -201,6 +201,56 @@ class HealthStoreManager {
                     }
                 })
             }
+        }
+        
+        healthStore?.execute(query)
+    }
+    
+    
+    func getBodyfat(completion: @escaping (Double?, Error?) -> Void) {
+        
+        let bodyFatType = HKObjectType.quantityType(forIdentifier: .bodyFatPercentage)!
+        
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        
+        let query = HKSampleQuery(sampleType: bodyFatType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: [sortDescriptor]) { (query, results, error) in
+            
+            guard let samples = results as? [HKQuantitySample], let lastSample = samples.first, error == nil else {
+                print("Query failed with error: \(error?.localizedDescription ?? "")")
+                return
+            }
+            
+            let bodyFatPercentage = lastSample.quantity.doubleValue(for: HKUnit.percent())
+            
+            print("Body Fat Percentage: \(bodyFatPercentage * 100) %")
+            
+            completion(bodyFatPercentage, error)
+
+        }
+        
+        healthStore?.execute(query)
+    }
+    
+    
+    func getBodyMassIndex(completion: @escaping (Double?, Error?) -> Void) {
+        
+        let bodyFatType = HKObjectType.quantityType(forIdentifier: .bodyMassIndex)!
+        
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        
+        let query = HKSampleQuery(sampleType: bodyFatType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: [sortDescriptor]) { (query, results, error) in
+            
+            guard let samples = results as? [HKQuantitySample], let lastSample = samples.first, error == nil else {
+                print("Query failed with error: \(error?.localizedDescription ?? "")")
+                return
+            }
+            
+            let bodyMassIndex = lastSample.quantity.doubleValue(for: HKUnit.percent())
+            
+            print("Body Mass Index: \(bodyMassIndex)")
+            
+            completion(bodyMassIndex, error)
+
         }
         
         healthStore?.execute(query)
