@@ -21,7 +21,7 @@ struct ProfileViewDataCell: View {
             
             Spacer()
             
-            if (data == 0) {
+            if (data == -1) {
                 
                 Text("Loading...")
                 

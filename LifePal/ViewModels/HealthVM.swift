@@ -13,12 +13,12 @@ class HealthVM: ObservableObject {
     
     let healthStoreManager = HealthStoreManager()
     
-    @Published var height: Double = 0
-    @Published var age: Int = 0
-    @Published var weight: Double = 0
+    @Published var height: Double = -1
+    @Published var age: Int = -1
+    @Published var weight: Double = -1
     
-    @Published var activeCalories: Double = 0
-    @Published var restCalories: Double = 0
+    @Published var activeCalories: Double = -1
+    @Published var restCalories: Double = -1
     
     private var birthDateComponents: DateComponents = DateComponents()
     
