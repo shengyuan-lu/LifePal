@@ -145,10 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				F405A8C029EDB63400D6E25B /* MainView.swift */,
-				F45550B12A16D60800629A66 /* ProfileViews */,
 				DC27233B2A16FDD1002E1386 /* FoodViews */,
-				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
-				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
+				F46A54EE2A171CE500D114C8 /* WaterViews */,
+				F46A54EF2A171CEE00D114C8 /* SleepViews */,
+				F45550B12A16D60800629A66 /* ProfileViews */,
 				F45DFC0F2A1469A200290975 /* Buttons */,
 			);
 			path = Views;
@@ -237,6 +237,22 @@
 				F45DFC122A1469A200290975 /* ExpandButtonView.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F46A54EE2A171CE500D114C8 /* WaterViews */ = {
+			isa = PBXGroup;
+			children = (
+				F405A8D229EDB8BE00D6E25B /* WaterView.swift */,
+			);
+			path = WaterViews;
+			sourceTree = "<group>";
+		};
+		F46A54EF2A171CEE00D114C8 /* SleepViews */ = {
+			isa = PBXGroup;
+			children = (
+				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
+			);
+			path = SleepViews;
 			sourceTree = "<group>";
 		};
 		F46B68FC2A14488300DB36A5 /* Data Structure */ = {
