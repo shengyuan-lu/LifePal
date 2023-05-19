@@ -116,8 +116,6 @@
 		F405A8BD29EDB63400D6E25B /* LifePal */ = {
 			isa = PBXGroup;
 			children = (
-				F4FD20352A01D1F4002154A5 /* Info.plist */,
-				F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */,
 				F405A8BE29EDB63400D6E25B /* LifePalApp.swift */,
 				F405A8CC29EDB88200D6E25B /* Views */,
 				F405A8CD29EDB88C00D6E25B /* ViewModels */,
@@ -126,6 +124,8 @@
 				F405A8CF29EDB89800D6E25B /* Helpers */,
 				F41DB3362A133AEF004CC405 /* Local JSONs */,
 				F405A8C229EDB63500D6E25B /* Assets.xcassets */,
+				F4FD20352A01D1F4002154A5 /* Info.plist */,
+				F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */,
 				F405A8C429EDB63500D6E25B /* Preview Content */,
 			);
 			path = LifePal;

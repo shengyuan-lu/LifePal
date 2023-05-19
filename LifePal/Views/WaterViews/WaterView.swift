@@ -12,6 +12,6 @@ struct WaterView: View {
     @ObservedObject var healthVM: HealthVM
     
     var body: some View {
-        Text("Water Recommendations!")
+        Text("Under Construction")
     }
 }

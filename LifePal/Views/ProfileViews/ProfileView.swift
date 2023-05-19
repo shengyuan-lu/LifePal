@@ -48,7 +48,7 @@ struct ProfileView: View {
             }
             
             
-            Section(header: Text("Your Activity Level Today")) {
+            Section(header: Text("Activity Level Today")) {
                 ProfileViewDataCell(label: "Active Energy", data: healthVM.activeCalories, unit: "KCal")
                 ProfileViewDataCell(label: "Rest Energy", data: healthVM.restCalories, unit: "KCal")
             }

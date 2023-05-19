@@ -12,6 +12,6 @@ struct SleepView: View {
     @ObservedObject var healthVM: HealthVM
     
     var body: some View {
-        Text("Sleep Recommendations!")
+        Text("Under Construction")
     }
 }
