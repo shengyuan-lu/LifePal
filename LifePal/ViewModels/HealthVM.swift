@@ -82,6 +82,9 @@ class HealthVM: ObservableObject {
                 
                 if let r = result {
                     self.activeCalories = r
+                    
+                    print(r)
+                    
                 } else {
                     self.activeCalories = -2
                 }

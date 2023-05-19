@@ -15,6 +15,6 @@ enum Tabs: String {
 }
 
 enum Menus: String, CaseIterable {
-    case full = "Full"
     case recommended = "Recommended"
+    case full = "Full"
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuView: View {
     
-    @ObservedObject var menu: MenuModel
+    @ObservedObject var menu: MenuVM
     
     var body: some View {
         
