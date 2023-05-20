@@ -206,6 +206,45 @@ class HealthStoreManager {
         healthStore?.execute(query)
     }
     
+    func getAvgActiveCalories(totalDays: Int = 7, completion: @escaping (Double?, Error?) -> Void) {
+        
+        let startDate = calendar.date(byAdding: .day, value: -totalDays, to: now) // Start date is 7 days ago
+
+        // Create the predicate for the query
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: now, options: .strictStartDate)
+
+        // Create the query
+        let activeEnergyType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!
+        
+        let query = HKStatisticsCollectionQuery(quantityType: activeEnergyType, quantitySamplePredicate: predicate, options: .cumulativeSum, anchorDate: startDate!, intervalComponents: DateComponents(day: 1))
+
+        // Set the initial and update handler for the query
+        query.initialResultsHandler = { query, statisticsCollection, error in
+            guard let statisticsCollection = statisticsCollection else {
+                print("Failed to fetch initial results with error: \(error?.localizedDescription ?? "")")
+                return
+            }
+            
+            var totalActiveEnergy: Double = 0
+            
+            statisticsCollection.enumerateStatistics(from: startDate!, to: self.now) { statistics, stop in
+                if let activeEnergyQuantity = statistics.sumQuantity() {
+                    let activeEnergy = activeEnergyQuantity.doubleValue(for: HKUnit.kilocalorie())
+                    totalActiveEnergy += activeEnergy
+                }
+            }
+            
+            let averageActiveEnergy = totalActiveEnergy / Double(totalDays)
+            
+            print("Average Active Energy Burned (last \(totalDays) days): \(averageActiveEnergy) kcal")
+            
+            completion(averageActiveEnergy, error)
+        }
+
+        // Execute the query
+        healthStore?.execute(query)
+    }
+    
     
     func getBodyfat(completion: @escaping (Double?, Error?) -> Void) {
         
