@@ -25,7 +25,7 @@ struct ProfileViewDataCell: View {
                 
             case is Double:
                 
-                if data as! Double == -1.0 {
+                if data as! Double == -1.0 || data as! Double == -100 {
                     
                     ProgressView()
                     

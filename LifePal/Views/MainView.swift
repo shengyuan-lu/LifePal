@@ -14,7 +14,7 @@ struct MainView: View {
     
     @StateObject var healthVM: HealthVM = HealthVM()
     
-    @State var selectedTab: Tabs = .foodTab
+    @State var selectedTab: Tabs = .profileTab
     
     var body: some View {
         
