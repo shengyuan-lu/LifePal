@@ -33,14 +33,18 @@ class HealthVM: ObservableObject {
     private var bioSexObject: HKBiologicalSexObject = HKBiologicalSexObject()
     
     init() {
-        load()
+        
+        healthStoreManager.requestAuthorization(completion: { success in
+            if success {
+                self.load()
+            }
+        })
     }
     
     func load() {
         
         self.loadedInfoCount = 0
-        self.isLoadingComplete = false
-        
+
         getHeight()
         getWeight()
         
@@ -59,6 +63,10 @@ class HealthVM: ObservableObject {
         
         if self.loadedInfoCount == 9 {
             self.isLoadingComplete = true
+        }
+        
+        if self.loadedInfoCount < 9 && self.isLoadingComplete == true {
+            self.isLoadingComplete = false
         }
     }
     
@@ -126,7 +134,7 @@ class HealthVM: ObservableObject {
                     self.activeCalories = -2
                 }
             }
-
+            
         }
     }
     
@@ -249,9 +257,9 @@ class HealthVM: ObservableObject {
                 }
                 
                 self.loadOneMoreInfo()
-
+                
             }
-
+            
         })
     }
     

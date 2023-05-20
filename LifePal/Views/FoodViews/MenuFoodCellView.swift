@@ -15,7 +15,7 @@ struct MenuFoodCellView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(food.name)
                 .bold()
-                
+            
             Text("\(food.getNutritionCalorieValue(key: .calories)) Calories")
         }
     }

@@ -31,7 +31,7 @@ struct GenericButtonWithLabelView: View {
             .cornerRadius(8)
         }
         
-
+        
     }
 }
 
@@ -40,8 +40,8 @@ struct GenericButtonWithLabelView_Previews: PreviewProvider {
         GenericButtonWithLabelView(action: {
             // DO NOTHING FOR PREVIEW
         }, buttonText: String("View All"), systemName: "", bgColor: Color.blue, textColor: Color.black, edgeInsets: EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-            .padding()
-            .previewLayout(PreviewLayout.sizeThatFits)
-            .previewDisplayName("Default preview")
+        .padding()
+        .previewLayout(PreviewLayout.sizeThatFits)
+        .previewDisplayName("Default preview")
     }
 }

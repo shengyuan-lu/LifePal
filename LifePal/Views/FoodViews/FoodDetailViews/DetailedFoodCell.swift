@@ -60,7 +60,7 @@ struct DetailedFoodCell: View {
                     
                 }
             }
-                
+            
             FoodNutritionView(food: food)
             
             

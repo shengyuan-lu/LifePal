@@ -11,6 +11,8 @@ struct ProfileView: View {
     
     @ObservedObject var healthVM: HealthVM
     
+    @State private var showAlert: Bool = false
+    
     var body: some View {
         
         List {
@@ -64,7 +66,36 @@ struct ProfileView: View {
                 ProfileViewDataCell(label: "Active Energy (Last 7 Days)", data: healthVM.avgActiveCalories, unit: "KCal")
             }
             
+            Section {
+                
+                Button {
+                    self.healthVM.load()
+                    
+                    self.showAlert.toggle()
+                    
+                } label: {
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Text("Sync Data")
+                            .bold()
+                        
+                        Spacer()
+                    }
+                    .padding(16)
+                    .padding(.horizontal, 16)
+                    .foregroundColor(.white)
+                    .background(Color.accentColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                .buttonStyle(.plain)
+
+            }
             
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Success"), message: Text("Sync Data From Apple HealthKit Succeeded"), dismissButton: .default(Text("Got it")))
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("My Profile")

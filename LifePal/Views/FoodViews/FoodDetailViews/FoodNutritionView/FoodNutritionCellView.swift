@@ -38,7 +38,7 @@ struct FoodNutritionCellView: View {
             }
             .font(.footnote)
         }
-
+        
     }
     
     func getNutritionValue() -> String {

@@ -5,7 +5,7 @@ struct SingleDetailedFoodCell: View {
     @State var food: Food
     
     var body: some View {
-
+        
         ScrollView {
             DetailedFoodCell(food: food)
                 .padding(24)
