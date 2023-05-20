@@ -69,7 +69,7 @@ class HealthStoreManager {
         } catch {
             print("Error retrieving birthdate: \(error)")
         }
-       
+        
     }
     
     
@@ -125,33 +125,33 @@ class HealthStoreManager {
             let weight = result.quantity.doubleValue(for: unit)
             
             print("Weight: \(weight)")
-
+            
             completion(weight, error)
         }
         
         healthStore?.execute(query)
     }
-
+    
     
     func getActiveCalories(completion: @escaping (Double?, Error?) -> Void) {
-
+        
         // Define the start and end dates for the current day
         let startDate = calendar.startOfDay(for: now)
         let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
-
+        
         // Create the quantity type for active energy burned
         let activeEnergyType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)
-
+        
         // Create the query
-        let query = HKStatisticsCollectionQuery(quantityType: activeEnergyType!, quantitySamplePredicate: nil, options: .cumulativeSum, anchorDate: startDate, intervalComponents: DateComponents(day: 1)) 
-
+        let query = HKStatisticsCollectionQuery(quantityType: activeEnergyType!, quantitySamplePredicate: nil, options: .cumulativeSum, anchorDate: startDate, intervalComponents: DateComponents(day: 1))
+        
         // Set the initial results handler for the query
         query.initialResultsHandler = { query, collection, error in
             if let error = error {
                 print("Query error: \(error.localizedDescription)")
                 return
             }
-
+            
             // Iterate over the collection's statistics
             if let statisticsCollection = collection {
                 statisticsCollection.enumerateStatistics(from: startDate, to: endDate!, with: { statistics, stop in
@@ -175,20 +175,20 @@ class HealthStoreManager {
         // Define the start and end dates for the current day
         let startDate = calendar.startOfDay(for: now)
         let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
-
+        
         // Create the quantity type for base energy burned
         let baseEnergyType = HKObjectType.quantityType(forIdentifier: .basalEnergyBurned)
-
+        
         // Create the query
         let query = HKStatisticsCollectionQuery(quantityType: baseEnergyType!, quantitySamplePredicate: nil, options: .cumulativeSum, anchorDate: startDate, intervalComponents: DateComponents(day: 1))
-
+        
         // Set the initial results handler for the query
         query.initialResultsHandler = { query, collection, error in
             if let error = error {
                 print("Query error: \(error.localizedDescription)")
                 return
             }
-
+            
             // Iterate over the collection's statistics
             if let statisticsCollection = collection {
                 statisticsCollection.enumerateStatistics(from: startDate, to: endDate!, with: { statistics, stop in
@@ -209,15 +209,15 @@ class HealthStoreManager {
     func getAvgActiveCalories(totalDays: Int = 7, completion: @escaping (Double?, Error?) -> Void) {
         
         let startDate = calendar.date(byAdding: .day, value: -totalDays, to: now) // Start date is 7 days ago
-
+        
         // Create the predicate for the query
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: now, options: .strictStartDate)
-
+        
         // Create the query
         let activeEnergyType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!
         
         let query = HKStatisticsCollectionQuery(quantityType: activeEnergyType, quantitySamplePredicate: predicate, options: .cumulativeSum, anchorDate: startDate!, intervalComponents: DateComponents(day: 1))
-
+        
         // Set the initial and update handler for the query
         query.initialResultsHandler = { query, statisticsCollection, error in
             guard let statisticsCollection = statisticsCollection else {
@@ -240,7 +240,7 @@ class HealthStoreManager {
             
             completion(averageActiveEnergy, error)
         }
-
+        
         // Execute the query
         healthStore?.execute(query)
     }
@@ -264,7 +264,7 @@ class HealthStoreManager {
             print("Body Fat Percentage: \(bodyFatPercentage * 100)%")
             
             completion(bodyFatPercentage, error)
-
+            
         }
         
         healthStore?.execute(query)
@@ -289,7 +289,7 @@ class HealthStoreManager {
             print("Body Mass Index: \(bodyMassIndex)")
             
             completion(bodyMassIndex, error)
-
+            
         }
         
         healthStore?.execute(query)

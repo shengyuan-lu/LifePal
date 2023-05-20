@@ -96,7 +96,7 @@ struct Food: Decodable, Hashable {
     
     func getNutritionCalorieValue(key: NutritionCalorieValueKey) -> Int {
         guard let value = self.nutrition[key.rawValue] else { return 0 }
-
+        
         if value as! String == "" {
             return 0
         }
@@ -153,7 +153,7 @@ struct Food: Decodable, Hashable {
         // self.nutrition = self.nutrition.filter( { !(($0.value as? String)?.isEmpty ?? false) })
     }
     
-
+    
 }
 
 func getSampleFood() -> Food {

@@ -126,7 +126,7 @@ class HealthVM: ObservableObject {
                     self.activeCalories = -2
                 }
             }
-
+            
         }
     }
     
@@ -249,9 +249,9 @@ class HealthVM: ObservableObject {
                 }
                 
                 self.loadOneMoreInfo()
-
+                
             }
-
+            
         })
     }
     

@@ -25,7 +25,7 @@ struct GenericButtonWithoutLabel_Previews: PreviewProvider {
         GenericButtonWithoutLabel(action: {
             // DO NOTHING FOR PREVIEW
         }, systemName: "magnifyingglass.circle.fill", imageColor: Color.blue)
-            .previewLayout(PreviewLayout.sizeThatFits)
-                        .previewDisplayName("Default preview")
+        .previewLayout(PreviewLayout.sizeThatFits)
+        .previewDisplayName("Default preview")
     }
 }

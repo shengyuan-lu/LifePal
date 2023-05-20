@@ -15,7 +15,7 @@ struct MainView: View {
     @StateObject var healthVM: HealthVM = HealthVM()
     
     @State var selectedTab: Tabs = .foodTab
-
+    
     var body: some View {
         
         NavigationView {
@@ -26,7 +26,7 @@ struct MainView: View {
                         Label("Food", systemImage: "fork.knife")
                     }
                     .tag(Tabs.foodTab)
-
+                
                 WaterView(healthVM: healthVM)
                     .tabItem {
                         Label("Water", systemImage: "drop")
@@ -48,9 +48,6 @@ struct MainView: View {
             .navigationTitle(selectedTab.rawValue.capitalized)
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(.stack)
-            .onAppear {
-                healthVM.load()
-            }
             .onChange(of: healthVM.isLoadingComplete) { complete in
                 
                 if complete {
@@ -65,9 +62,9 @@ struct MainView: View {
                 }
                 
             }
-
+            
         }
         .navigationViewStyle(.stack)
-    
+        
     }
 }

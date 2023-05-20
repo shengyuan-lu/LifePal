@@ -40,13 +40,13 @@ struct FoodView: View {
                 MenuView(menuVM: fullMenuVM)
                 
             } else {
-
+                
                 MenuView(menuVM: recommendedMenuVm)
             }
-
+            
         }
         
-
+        
     }
     
 }
