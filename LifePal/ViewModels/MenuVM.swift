@@ -16,14 +16,10 @@ class MenuVM: ObservableObject {
     private var isRecommeded: Bool
     
     init(isRecommeded: Bool) {
-        
         self.isRecommeded = isRecommeded
-        
-        self.load()
     }
     
     func load() {
-        // FIXME: - Load real data in production
         self.loadRemoteRealData()
     }
     
@@ -35,7 +31,7 @@ class MenuVM: ObservableObject {
             
             if self.isRecommeded {
                 
-                self.loadRemoteJSON(forURL: Links.fullMenuAPI) { data in
+                self.loadRemoteJSON(forURL: Links.menuRecommendationAPISample) { data in
                     if let d = data {
                         self.loadMenu(data: d)
                     }
@@ -62,12 +58,12 @@ class MenuVM: ObservableObject {
             
             if self.isRecommeded {
                 
-                let data: Data? =  self.loadLocalJSON(forName: Links.recommendedMenuSample)
+                let data: Data? =  self.loadLocalJSON(forName: Links.menuRecommendLocalSample)
                 
                 self.loadMenu(data: data)
                 
             } else {
-                let data: Data? =  self.loadLocalJSON(forName: Links.fullMenuSample)
+                let data: Data? =  self.loadLocalJSON(forName: Links.fullMenuLocalSample)
                 
                 self.loadMenu(data: data)
             }

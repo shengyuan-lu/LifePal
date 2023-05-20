@@ -67,7 +67,7 @@ struct ProfileView: View {
             
         }
         .onAppear {
-            healthVM.loadData()
+            healthVM.load()
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("My Profile")
