@@ -59,6 +59,7 @@ struct ProfileView: View {
                 ProfileViewDataCell(label: "Rest Energy", data: healthVM.restCalories, unit: "KCal")
             }
             
+            
             Section(header: Text("Activity Level (Average)")) {
                 ProfileViewDataCell(label: "Active Energy (Last 7 Days)", data: healthVM.avgActiveCalories, unit: "KCal")
             }

@@ -13,20 +13,18 @@ class MenuVM: ObservableObject {
     @Published var categories: [Category] = [Category]()
     @Published var isLoadingFailed: Bool = false
     
-    let remoteJSONnames: [String] = [String]() // FIXME: - put in real remote JSON endpoints
-    
     private var isRecommeded: Bool
     
     init(isRecommeded: Bool) {
         
         self.isRecommeded = isRecommeded
-
+        
         self.load()
     }
     
     func load() {
         // FIXME: - Load real data in production
-        self.loadLocalDemoData()
+        self.loadRemoteRealData()
     }
     
     func loadRemoteRealData() {
@@ -34,17 +32,27 @@ class MenuVM: ObservableObject {
         self.categories.removeAll()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            for url in self.remoteJSONnames {
-                self.loadRemoteJSON(forURL: url) { data in
+            
+            if self.isRecommeded {
+                
+                self.loadRemoteJSON(forURL: Links.fullMenuAPI) { data in
                     if let d = data {
                         self.loadMenu(data: d)
                     }
                 }
-                print("Success: load remote JSON (URL: \(url) to data succeessfully)")
+                
+            } else {
+                
+                self.loadRemoteJSON(forURL: Links.fullMenuAPI) { data in
+                    if let d = data {
+                        self.loadMenu(data: d)
+                    }
+                }
+                
             }
         }
     }
-
+    
     
     func loadLocalDemoData() {
         
