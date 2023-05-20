@@ -30,10 +30,10 @@ class HealthVM: ObservableObject {
     private var bioSexObject: HKBiologicalSexObject = HKBiologicalSexObject()
     
     init() {
-        loadData()
+        load()
     }
     
-    func loadData() {
+    func load() {
         getHeight()
         getWeight()
         

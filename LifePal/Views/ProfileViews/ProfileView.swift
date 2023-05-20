@@ -20,13 +20,13 @@ struct ProfileView: View {
                 Image("peter")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 80, height: 80)
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.white, lineWidth: 4))
                     .padding(4)
                     .padding(.trailing, 4)
                 
-                VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 8) {
                     Text("Welcome 👋")
                         .font(.title3)
                         .lineLimit(1)
@@ -59,6 +59,7 @@ struct ProfileView: View {
                 ProfileViewDataCell(label: "Rest Energy", data: healthVM.restCalories, unit: "KCal")
             }
             
+            
             Section(header: Text("Activity Level (Average)")) {
                 ProfileViewDataCell(label: "Active Energy (Last 7 Days)", data: healthVM.avgActiveCalories, unit: "KCal")
             }
@@ -66,7 +67,7 @@ struct ProfileView: View {
             
         }
         .onAppear {
-            healthVM.loadData()
+            healthVM.load()
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("My Profile")

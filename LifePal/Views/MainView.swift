@@ -48,6 +48,14 @@ struct MainView: View {
             .navigationTitle(selectedTab.rawValue.capitalized)
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(.stack)
+            .onAppear {
+                
+                healthVM.load()
+                
+                recommendedMenuVM.load()
+                
+                fullMenuVM.load()
+            }
 
         }
         .navigationViewStyle(.stack)
