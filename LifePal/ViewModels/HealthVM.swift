@@ -26,6 +26,9 @@ class HealthVM: ObservableObject {
     
     @Published var bioSex: String = "Loading..."
     
+    private var loadedInfoCount: Int = 0
+    @Published var isLoadingComplete: Bool = false
+    
     private var birthDateComponents: DateComponents = DateComponents()
     private var bioSexObject: HKBiologicalSexObject = HKBiologicalSexObject()
     
@@ -34,6 +37,10 @@ class HealthVM: ObservableObject {
     }
     
     func load() {
+        
+        self.loadedInfoCount = 0
+        self.isLoadingComplete = false
+        
         getHeight()
         getWeight()
         
@@ -47,6 +54,24 @@ class HealthVM: ObservableObject {
         getBodyMassIndex()
     }
     
+    func loadOneMoreInfo() {
+        self.loadedInfoCount += 1
+        
+        if self.loadedInfoCount == 9 {
+            self.isLoadingComplete = true
+        }
+    }
+    
+    func getMenuRecommendationAPIString() -> String {
+        
+        var apiString = Links.menuRecommendationAPI
+        
+        apiString = apiString.replacingOccurrences(of: "$weight$", with: String(Int(weight)))
+        apiString = apiString.replacingOccurrences(of: "$bodyfat$", with: String(bodyFatPercentage))
+        apiString = apiString.replacingOccurrences(of: "$avg_activity$", with: String(Int(avgActiveCalories)))
+        
+        return apiString
+    }
     
     func getHeight() -> Void {
         
@@ -55,6 +80,9 @@ class HealthVM: ObservableObject {
             DispatchQueue.main.async {
                 if let r = result {
                     self.height = r
+                    
+                    self.loadOneMoreInfo()
+                    
                 } else {
                     self.height = -2
                 }
@@ -71,6 +99,9 @@ class HealthVM: ObservableObject {
             DispatchQueue.main.async {
                 if let r = result {
                     self.weight = r
+                    
+                    self.loadOneMoreInfo()
+                    
                 } else {
                     self.weight = -2
                 }
@@ -88,6 +119,8 @@ class HealthVM: ObservableObject {
                 
                 if let r = result {
                     self.activeCalories = r
+                    
+                    self.loadOneMoreInfo()
                     
                 } else {
                     self.activeCalories = -2
@@ -108,6 +141,8 @@ class HealthVM: ObservableObject {
                 } else {
                     self.restCalories = -2
                 }
+                
+                self.loadOneMoreInfo()
             }
         }
     }
@@ -122,6 +157,8 @@ class HealthVM: ObservableObject {
                 } else {
                     self.avgActiveCalories = -2
                 }
+                
+                self.loadOneMoreInfo()
             }
         }
         
@@ -142,6 +179,8 @@ class HealthVM: ObservableObject {
                     self.birthDateComponents = dc
                     self.getAge()
                 }
+                
+                self.loadOneMoreInfo()
             }
         }
         
@@ -173,6 +212,8 @@ class HealthVM: ObservableObject {
                     self.bioSexObject = bso
                     self.getBioSexString()
                 }
+                
+                self.loadOneMoreInfo()
             }
         })
     }
@@ -181,15 +222,14 @@ class HealthVM: ObservableObject {
     func getBodyFat() -> Void {
         healthStoreManager.getBodyfat(completion: { result, error in
             DispatchQueue.main.async {
-                
                 if let r = result {
                     self.bodyFatPercentage = r
-                    
                 } else {
                     self.bodyFatPercentage = -2
                 }
+                
+                self.loadOneMoreInfo()
             }
-
         })
     }
     
@@ -207,6 +247,9 @@ class HealthVM: ObservableObject {
                     self.bodyMassIndex = -2
                     
                 }
+                
+                self.loadOneMoreInfo()
+
             }
 
         })
