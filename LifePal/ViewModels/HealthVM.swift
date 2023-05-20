@@ -19,6 +19,7 @@ class HealthVM: ObservableObject {
     
     @Published var activeCalories: Double = -1
     @Published var restCalories: Double = -1
+    @Published var avgActiveCalories: Double = -1
     
     @Published var bodyFatPercentage: Double = -1
     @Published var bodyMassIndex: Double = -1
@@ -35,8 +36,11 @@ class HealthVM: ObservableObject {
     func loadData() {
         getHeight()
         getWeight()
+        
         getActiveCalories()
         getRestCalories()
+        getAvgActiveCalories()
+        
         getBirthDate()
         getBioSex()
         getBodyFat()
@@ -108,6 +112,20 @@ class HealthVM: ObservableObject {
         }
     }
     
+    func getAvgActiveCalories() -> Void {
+        
+        healthStoreManager.getAvgActiveCalories { result, error in
+            
+            DispatchQueue.main.async {
+                if let r = result {
+                    self.avgActiveCalories = r
+                } else {
+                    self.avgActiveCalories = -2
+                }
+            }
+        }
+        
+    }
     
     func getAge() -> Void {
         let calendar = Calendar.current
@@ -167,8 +185,6 @@ class HealthVM: ObservableObject {
                 if let r = result {
                     self.bodyFatPercentage = r
                     
-                    print(r)
-                    
                 } else {
                     self.bodyFatPercentage = -2
                 }
@@ -183,12 +199,13 @@ class HealthVM: ObservableObject {
             DispatchQueue.main.async {
                 
                 if let r = result {
+                    
                     self.bodyMassIndex = r
                     
-                    print(r)
-                    
                 } else {
+                    
                     self.bodyMassIndex = -2
+                    
                 }
             }
 
