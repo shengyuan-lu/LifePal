@@ -19,11 +19,11 @@ class MenuVM: ObservableObject {
         self.isRecommeded = isRecommeded
     }
     
-    func load() {
-        self.loadRemoteRealData()
+    func load(url: String) {
+        self.loadRemoteRealData(url: url)
     }
     
-    func loadRemoteRealData() {
+    func loadRemoteRealData(url: String) {
         
         self.categories.removeAll()
         
@@ -31,7 +31,7 @@ class MenuVM: ObservableObject {
             
             if self.isRecommeded {
                 
-                self.loadRemoteJSON(forURL: Links.menuRecommendationAPISample) { data in
+                self.loadRemoteJSON(forURL: url) { data in
                     if let d = data {
                         self.loadMenu(data: d)
                     }

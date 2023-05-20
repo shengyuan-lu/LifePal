@@ -49,12 +49,21 @@ struct MainView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(.stack)
             .onAppear {
-                
                 healthVM.load()
+            }
+            .onChange(of: healthVM.isLoadingComplete) { complete in
                 
-                recommendedMenuVM.load()
+                if complete {
+                    
+                    let url = healthVM.getMenuRecommendationAPIString()
+                    
+                    print(url)
+                    
+                    recommendedMenuVM.load(url: url)
+                    
+                    fullMenuVM.load(url: url)
+                }
                 
-                fullMenuVM.load()
             }
 
         }
