@@ -10,7 +10,7 @@ import Foundation
 struct Links {
     
     // Remote Real API Endpoints
-    static let menuRecommendationAPI = "http://3.15.22.210:8000/api/recommendfood?weight=$weight$&bodyfat=$bodyfat$&avg_activity=$avg_activity$"
+    static let menuRecommendationAPI = "http://3.15.22.210:8000/api/recommendfood?weight=$weight$&bodyfat=$bodyfat$&avg_activity=$avg_activity$&cb=2&cl=2&cd=2"
     static let fullMenuAPI = "http://3.15.22.210:8000/api/menu"
     
     // Remote Demo API Endpoints
