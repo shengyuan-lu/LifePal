@@ -95,7 +95,7 @@ struct ProfileView: View {
             
         }
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("Success"), message: Text("Sync Data From Apple HealthKit Succeeded"), dismissButton: .default(Text("Got it")))
+            Alert(title: Text("Success"), message: Text("Synced Data From Apple HealthKit"), dismissButton: .default(Text("OK")))
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("My Profile")
