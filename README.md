@@ -3,7 +3,9 @@ CS 125 Next Generation Search Systems Project (iOS App)
 
 ## Links
 [Machine Learning Repo](https://github.com/Somdit/LifePal_Backend)
+
 [Server & Host Repo](https://github.com/thoonuy/LifePalBackend)
+
 [Apple TestFlight](https://testflight.apple.com/join/Rky0c3kW)
 
 ## Screenshots
