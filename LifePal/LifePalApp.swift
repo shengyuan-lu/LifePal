@@ -11,8 +11,8 @@ import SwiftUI
 struct LifePalApp: App {
     
     @StateObject var healthVM = HealthVM()
-    @StateObject var recommendedMenu: MenuModel = MenuModel(isRecommended: true)
-    @StateObject var fullMenu: MenuModel = MenuModel(isRecommended: false)
+    @StateObject var recommendedMenu: MenuVM = MenuVM(isRecommeded: true)
+    @StateObject var fullMenu: MenuVM = MenuVM(isRecommeded: false)
     
     var body: some Scene {
         WindowGroup {

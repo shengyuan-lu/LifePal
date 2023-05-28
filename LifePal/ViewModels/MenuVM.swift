@@ -56,7 +56,7 @@ class MenuVM: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             
-            if self.isRecommended {
+            if self.isRecommeded {
                 
                 let data: Data? =  self.loadLocalJSON(forName: Links.menuRecommendLocalSample)
                 
