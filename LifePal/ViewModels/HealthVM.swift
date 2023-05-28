@@ -19,28 +19,67 @@ class HealthVM: ObservableObject {
     
     @Published var activeCalories: Double = -1
     @Published var restCalories: Double = -1
+    @Published var avgActiveCalories: Double = -1
     
     @Published var bodyFatPercentage: Double = -1
+    @Published var bodyMassIndex: Double = -1
     
     @Published var bioSex: String = "Loading..."
+    
+    private var loadedInfoCount: Int = 0
+    @Published var isLoadingComplete: Bool = false
     
     private var birthDateComponents: DateComponents = DateComponents()
     private var bioSexObject: HKBiologicalSexObject = HKBiologicalSexObject()
     
     init() {
-        loadData()
+        
+        healthStoreManager.requestAuthorization(completion: { success in
+            if success {
+                self.load()
+            }
+        })
     }
     
-    
-    func loadData() {
+    func load() {
+        
+        self.loadedInfoCount = 0
+
         getHeight()
         getWeight()
+        
         getActiveCalories()
         getRestCalories()
+        getAvgActiveCalories()
+        
         getBirthDate()
         getBioSex()
+        getBodyFat()
+        getBodyMassIndex()
     }
     
+    func loadOneMoreInfo() {
+        self.loadedInfoCount += 1
+        
+        if self.loadedInfoCount == 9 {
+            self.isLoadingComplete = true
+        }
+        
+        if self.loadedInfoCount < 9 && self.isLoadingComplete == true {
+            self.isLoadingComplete = false
+        }
+    }
+    
+    func getMenuRecommendationAPIString() -> String {
+        
+        var apiString = Links.menuRecommendationAPI
+        
+        apiString = apiString.replacingOccurrences(of: "$weight$", with: String(Int(weight)))
+        apiString = apiString.replacingOccurrences(of: "$bodyfat$", with: String(bodyFatPercentage))
+        apiString = apiString.replacingOccurrences(of: "$avg_activity$", with: String(Int(avgActiveCalories)))
+        
+        return apiString
+    }
     
     func getHeight() -> Void {
         
@@ -49,6 +88,9 @@ class HealthVM: ObservableObject {
             DispatchQueue.main.async {
                 if let r = result {
                     self.height = r
+                    
+                    self.loadOneMoreInfo()
+                    
                 } else {
                     self.height = -2
                 }
@@ -65,6 +107,9 @@ class HealthVM: ObservableObject {
             DispatchQueue.main.async {
                 if let r = result {
                     self.weight = r
+                    
+                    self.loadOneMoreInfo()
+                    
                 } else {
                     self.weight = -2
                 }
@@ -83,13 +128,13 @@ class HealthVM: ObservableObject {
                 if let r = result {
                     self.activeCalories = r
                     
-                    print(r)
+                    self.loadOneMoreInfo()
                     
                 } else {
                     self.activeCalories = -2
                 }
             }
-
+            
         }
     }
     
@@ -104,10 +149,28 @@ class HealthVM: ObservableObject {
                 } else {
                     self.restCalories = -2
                 }
+                
+                self.loadOneMoreInfo()
             }
         }
     }
     
+    func getAvgActiveCalories() -> Void {
+        
+        healthStoreManager.getAvgActiveCalories { result, error in
+            
+            DispatchQueue.main.async {
+                if let r = result {
+                    self.avgActiveCalories = r
+                } else {
+                    self.avgActiveCalories = -2
+                }
+                
+                self.loadOneMoreInfo()
+            }
+        }
+        
+    }
     
     func getAge() -> Void {
         let calendar = Calendar.current
@@ -124,6 +187,8 @@ class HealthVM: ObservableObject {
                     self.birthDateComponents = dc
                     self.getAge()
                 }
+                
+                self.loadOneMoreInfo()
             }
         }
         
@@ -155,7 +220,46 @@ class HealthVM: ObservableObject {
                     self.bioSexObject = bso
                     self.getBioSexString()
                 }
+                
+                self.loadOneMoreInfo()
             }
+        })
+    }
+    
+    
+    func getBodyFat() -> Void {
+        healthStoreManager.getBodyfat(completion: { result, error in
+            DispatchQueue.main.async {
+                if let r = result {
+                    self.bodyFatPercentage = r
+                } else {
+                    self.bodyFatPercentage = -2
+                }
+                
+                self.loadOneMoreInfo()
+            }
+        })
+    }
+    
+    
+    func getBodyMassIndex() -> Void {
+        healthStoreManager.getBodyMassIndex(completion: { result, error in
+            DispatchQueue.main.async {
+                
+                if let r = result {
+                    
+                    self.bodyMassIndex = r
+                    
+                } else {
+                    
+                    self.bodyMassIndex = -2
+                    
+                }
+                
+                self.loadOneMoreInfo()
+                
+            }
+            
         })
     }
     

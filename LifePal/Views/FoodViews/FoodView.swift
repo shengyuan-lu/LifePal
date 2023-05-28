@@ -10,8 +10,9 @@ import SwiftUI
 struct FoodView: View {
     
     @ObservedObject var healthVM: HealthVM
-    @ObservedObject var fullMenu: MenuVM
-    @ObservedObject var recommendedMenu: MenuVM
+    
+    @ObservedObject var fullMenuVM: MenuVM
+    @ObservedObject var recommendedMenuVm: MenuVM
     
     @State private var selectedMenu: Menus = .recommended
     
@@ -32,21 +33,20 @@ struct FoodView: View {
             .pickerStyle(SegmentedPickerStyle())
             .padding(.horizontal, 12)
             .padding(.vertical, 4)
-            
-            
+            .padding(.top, 8)
             
             if selectedMenu == .full {
                 
-                MenuView(menu: fullMenu)
+                MenuView(menuVM: fullMenuVM)
                 
             } else {
-
-                MenuView(menu: recommendedMenu)
+                
+                MenuView(menuVM: recommendedMenuVm)
             }
-
+            
         }
         
-
+        
     }
     
 }

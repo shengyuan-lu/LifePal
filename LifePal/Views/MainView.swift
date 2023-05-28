@@ -9,59 +9,62 @@ import SwiftUI
 
 struct MainView: View {
     
-    @StateObject var recommendedMenu: MenuVM = MenuVM(isRecommeded: true)
-    @StateObject var fullMenu: MenuVM = MenuVM(isRecommeded: false)
+    @StateObject var recommendedMenuVM: MenuVM = MenuVM(isRecommeded: true)
+    @StateObject var fullMenuVM: MenuVM = MenuVM(isRecommeded: false)
     
     @StateObject var healthVM: HealthVM = HealthVM()
     
-    @State var selectedTab: Tabs = .profile
-
+    @State var selectedTab: Tabs = .profileTab
+    
     var body: some View {
         
         NavigationView {
             
             TabView(selection: $selectedTab) {
-                FoodView(healthVM: healthVM, fullMenu: fullMenu, recommendedMenu: recommendedMenu)
+                FoodView(healthVM: healthVM, fullMenuVM: fullMenuVM, recommendedMenuVm: recommendedMenuVM)
                     .tabItem {
                         Label("Food", systemImage: "fork.knife")
                     }
-                    .tag(Tabs.food)
-
+                    .tag(Tabs.foodTab)
+                
                 WaterView(healthVM: healthVM)
                     .tabItem {
                         Label("Water", systemImage: "drop")
                     }
-                    .tag(Tabs.water)
+                    .tag(Tabs.waterTab)
                 
                 SleepView(healthVM: healthVM)
                     .tabItem {
                         Label("Sleep", systemImage: "bed.double")
                     }
-                    .tag(Tabs.sleep)
+                    .tag(Tabs.sleepTab)
                 
                 ProfileView(healthVM: healthVM)
                     .tabItem {
                         Label("Profile", systemImage: "person.fill")
                     }
-                    .tag(Tabs.profile)
+                    .tag(Tabs.profileTab)
             }
             .navigationTitle(selectedTab.rawValue.capitalized)
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(.stack)
-            .onAppear {
-                // correct the transparency bug for Tab bars
-                let tabBarAppearance = UITabBarAppearance()
-                tabBarAppearance.configureWithOpaqueBackground()
-                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            .onChange(of: healthVM.isLoadingComplete) { complete in
                 
-                // correct the transparency bug for Navigation bars
-                let navigationBarAppearance = UINavigationBarAppearance()
-                navigationBarAppearance.configureWithOpaqueBackground()
-                UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+                if complete {
+                    
+                    let url = healthVM.getMenuRecommendationAPIString()
+                    
+                    print(url)
+                    
+                    recommendedMenuVM.load(url: url)
+                    
+                    fullMenuVM.load(url: url)
+                }
+                
             }
-
+            
         }
         .navigationViewStyle(.stack)
-    
+        
     }
 }

@@ -5,9 +5,9 @@ struct SingleDetailedFoodCell: View {
     @State var food: Food
     
     var body: some View {
-
+        
         ScrollView {
-            DetailedFoodCell(food: food, isExpanded: false)
+            DetailedFoodCell(food: food)
                 .padding(24)
         }
         .background(Color(UIColor(named: "categoryBG")!))
