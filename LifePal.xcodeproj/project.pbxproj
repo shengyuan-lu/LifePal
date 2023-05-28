@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27233E2A16FE5A002E1386 /* MenuView.swift */; };
+		DC9F04372A22F91E00A7024E /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F04362A22F91E00A7024E /* Water.swift */; };
 		F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8BE29EDB63400D6E25B /* LifePalApp.swift */; };
 		F405A8C129EDB63400D6E25B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8C029EDB63400D6E25B /* MainView.swift */; };
 		F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F405A8C229EDB63500D6E25B /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		DC27233E2A16FE5A002E1386 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		DC9F04362A22F91E00A7024E /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
 		F405A8BB29EDB63400D6E25B /* LifePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405A8BE29EDB63400D6E25B /* LifePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePalApp.swift; sourceTree = "<group>"; };
 		F405A8C029EDB63400D6E25B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				F46B68FD2A1448AB00DB36A5 /* Category.swift */,
 				F46B68FF2A1448D300DB36A5 /* Food.swift */,
+				DC9F04362A22F91E00A7024E /* Water.swift */,
 				F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */,
 			);
 			path = Models;
@@ -330,6 +333,7 @@
 				F405A8C129EDB63400D6E25B /* MainView.swift in Sources */,
 				F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */,
 				F45DFC092A1467F200290975 /* SingleDetailedFoodCell.swift in Sources */,
+				DC9F04372A22F91E00A7024E /* Water.swift in Sources */,
 				F45DFC162A1469A200290975 /* ExpandButtonView.swift in Sources */,
 				F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */,
 				F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */,
