@@ -10,6 +10,10 @@ import SwiftUI
 @main
 struct LifePalApp: App {
     
+    @StateObject var healthVM = HealthVM()
+    @StateObject var recommendedMenu: MenuVM = MenuVM(isRecommeded: true)
+    @StateObject var fullMenu: MenuVM = MenuVM(isRecommeded: false)
+    
     var body: some Scene {
         WindowGroup {
             MainView()
