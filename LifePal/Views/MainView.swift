@@ -13,6 +13,7 @@ struct MainView: View {
     @StateObject var fullMenuVM: MenuVM = MenuVM(isRecommeded: false)
     
     @StateObject var healthVM: HealthVM = HealthVM()
+    @StateObject var waterVM: WaterVM = WaterVM()
     
     @State var selectedTab: Tabs = .profileTab
     
@@ -27,7 +28,7 @@ struct MainView: View {
                     }
                     .tag(Tabs.foodTab)
                 
-                WaterView(healthVM: healthVM)
+                WaterView(healthVM: healthVM, waterVM: waterVM)
                     .tabItem {
                         Label("Water", systemImage: "drop")
                     }
@@ -52,13 +53,14 @@ struct MainView: View {
                 
                 if complete {
                     
-                    let url = healthVM.getMenuRecommendationAPIString()
+                    let foodApiUrl = healthVM.getMenuRecommendationAPIString()
+                    let waterApiUrl = healthVM.getWaterRecommendationAPIString()
                     
-                    print(url)
+                    recommendedMenuVM.load(url: foodApiUrl)
                     
-                    recommendedMenuVM.load(url: url)
+                    fullMenuVM.load(url: foodApiUrl)
                     
-                    fullMenuVM.load(url: url)
+                    waterVM.load(url: waterApiUrl)
                 }
                 
             }

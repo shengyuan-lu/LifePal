@@ -34,6 +34,11 @@
 		F46B69022A144AA900DB36A5 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69012A144AA900DB36A5 /* MenuVM.swift */; };
 		F46B69042A144C1A00DB36A5 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69032A144C1A00DB36A5 /* Links.swift */; };
 		F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69052A144D3300DB36A5 /* DecodingExtension.swift */; };
+		F4BD468C2A24694200BDBB77 /* WaterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468B2A24694200BDBB77 /* WaterVM.swift */; };
+		F4BD468E2A24861B00BDBB77 /* AnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */; };
+		F4BD46902A248A4C00BDBB77 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */; };
+		F4BD46922A249C2C00BDBB77 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD46912A249C2C00BDBB77 /* LoadingView.swift */; };
+		F4BD46962A24AE5700BDBB77 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F4BD46952A24AE5700BDBB77 /* ConfettiSwiftUI */; };
 		F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */; };
 		F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20332A01A694002154A5 /* ProfileView.swift */; };
 		F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20362A01D88E002154A5 /* HealthVM.swift */; };
@@ -70,6 +75,10 @@
 		F46B69032A144C1A00DB36A5 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		F46B69052A144D3300DB36A5 /* DecodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtension.swift; sourceTree = "<group>"; };
 		F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifePal.entitlements; sourceTree = "<group>"; };
+		F4BD468B2A24694200BDBB77 /* WaterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterVM.swift; sourceTree = "<group>"; };
+		F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtension.swift; sourceTree = "<group>"; };
+		F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		F4BD46912A249C2C00BDBB77 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
 		F4FD20332A01A694002154A5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4FD20352A01D1F4002154A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4BD46962A24AE5700BDBB77 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +159,7 @@
 				F46A54EF2A171CEE00D114C8 /* SleepViews */,
 				F45550B12A16D60800629A66 /* ProfileViews */,
 				F45DFC0F2A1469A200290975 /* Buttons */,
+				F4BD46932A24A1D500BDBB77 /* HelperViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 			children = (
 				F4FD20362A01D88E002154A5 /* HealthVM.swift */,
 				F46B69012A144AA900DB36A5 /* MenuVM.swift */,
+				F4BD468B2A24694200BDBB77 /* WaterVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -180,6 +192,8 @@
 				F4397F582A01FDCF0065BD75 /* Enums.swift */,
 				F46B69032A144C1A00DB36A5 /* Links.swift */,
 				F46B69052A144D3300DB36A5 /* DecodingExtension.swift */,
+				F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */,
+				F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -248,6 +262,14 @@
 			path = SleepViews;
 			sourceTree = "<group>";
 		};
+		F4BD46932A24A1D500BDBB77 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD46912A249C2C00BDBB77 /* LoadingView.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +286,9 @@
 			dependencies = (
 			);
 			name = LifePal;
+			packageProductDependencies = (
+				F4BD46952A24AE5700BDBB77 /* ConfettiSwiftUI */,
+			);
 			productName = LifePal;
 			productReference = F405A8BB29EDB63400D6E25B /* LifePal.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +317,9 @@
 				Base,
 			);
 			mainGroup = F405A8B229EDB63400D6E25B;
+			packageReferences = (
+				F4BD46942A24AE5700BDBB77 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = F405A8BC29EDB63400D6E25B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -322,9 +350,12 @@
 			files = (
 				F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */,
 				F45DFC082A1467F200290975 /* DetailedFoodCell.swift in Sources */,
+				F4BD468C2A24694200BDBB77 /* WaterVM.swift in Sources */,
 				F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */,
+				F4BD46902A248A4C00BDBB77 /* JsonLoader.swift in Sources */,
 				F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */,
 				F4397F592A01FDCF0065BD75 /* Enums.swift in Sources */,
+				F4BD46922A249C2C00BDBB77 /* LoadingView.swift in Sources */,
 				F45DFC142A1469A200290975 /* GenericButtonWithLabelView.swift in Sources */,
 				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,
 				F46B69002A1448D300DB36A5 /* Food.swift in Sources */,
@@ -334,6 +365,7 @@
 				F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */,
 				F45DFC092A1467F200290975 /* SingleDetailedFoodCell.swift in Sources */,
 				DC9F04372A22F91E00A7024E /* Water.swift in Sources */,
+				F4BD468E2A24861B00BDBB77 /* AnimationExtension.swift in Sources */,
 				F45DFC162A1469A200290975 /* ExpandButtonView.swift in Sources */,
 				F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */,
 				F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */,
@@ -567,6 +599,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4BD46942A24AE5700BDBB77 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4BD46952A24AE5700BDBB77 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4BD46942A24AE5700BDBB77 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F405A8B329EDB63400D6E25B /* Project object */;
 }

@@ -40,14 +40,7 @@ struct MenuView: View {
             
         } else {
             
-            VStack {
-                Spacer()
-                
-                ProgressView()
-                
-                Spacer()
-            }
-            
+            LoadingView()
             
         }
         

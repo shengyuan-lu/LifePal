@@ -6,122 +6,134 @@
 //
 
 import SwiftUI
-
-extension Animation {
-    static func ripple() -> Animation {
-        Animation.spring(dampingFraction: 0.5)
-            .speed(1)
-            .delay(0.6)
-    }
-}
+import ConfettiSwiftUI
 
 struct WaterView: View {
     
     @ObservedObject var healthVM: HealthVM
+    @ObservedObject var waterVM: WaterVM
     
-    @State private var waterLeft: Double = 2.5
-    @State private var waterConsumed: Double = 0.0
-    @State private var isShowingInputPopup: Bool = false
-    @State private var inputText: String = ""
-    
-    let recommendedWater: Double = 2.5
-    
-    // FIXME: Change to values obtained from ML model
+    @State private var counter: Int = 0
     
     var body: some View {
-        VStack {
-            Text("Recommended Water Intake")
-                .font(.headline)
-            Text("\(recommendedWater, specifier: "%.2f") L")
-                .font(.largeTitle)
+        
+        
+        if waterVM.waterSuggestion == -1 {
             
-            Spacer()
+            LoadingView()
             
+        } else {
             
-            ZStack {
-                Circle()
-                    .stroke(lineWidth: 20)
-                    .opacity(0.3)
-                    .foregroundColor(Color.gray)
+            VStack {
                 
-                Circle()
-                    .trim(from: 0, to: CGFloat(min(waterConsumed / recommendedWater, 1.0)))
-                    .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                    .foregroundColor(waterLeft <= 0 ? Color.green : Color.blue)
-                    .rotationEffect(.degrees(-90))
-                    .animation(.ripple(), value: CGFloat(min(waterConsumed / recommendedWater, 1.0)))
-                    
-                VStack{
-                    Text("\(waterLeft, specifier: "%.2f") L")
-                        .font(.system(size: 60))
-                    Text("remaining")
-                        .font(.headline)
+                VStack(spacing: 4) {
+                    ProfileViewDataCell(label: "Goal Intake", data: waterVM.waterSuggestion, unit: "L")
+                    Divider()
+                    ProfileViewDataCell(label: "Current Intake", data: waterVM.waterConsumed, unit: "L")
                 }
+
+                Spacer()
                 
-            }
-            
-            Spacer()
-            
-            Button(action: {
-                isShowingInputPopup = true
-            }) {
-                Text("I drank water!")
-                    .font(.title)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .fixedSize(horizontal: true, vertical: true)
-            }
-        }
-        .padding()
-        .sheet(isPresented: $isShowingInputPopup) {
-                    VStack {
-                        Text("Enter Water Consumed")
-                            .font(.headline)
-                            .padding()
+                ZStack {
+                    
+                    Circle()
+                        .stroke(lineWidth: 30)
+                        .opacity(waterVM.waterRemaining != 0 ? 0.3 : 1.0)
+                        .foregroundColor(waterVM.waterRemaining != 0 ? Color.gray : Color.green)
+                    
+                    Circle()
+                        .trim(from: 0, to: CGFloat(waterVM.waterRemaining / waterVM.waterSuggestion))
+                        .stroke(style: StrokeStyle(lineWidth: 30, lineCap: .round, lineJoin: .round))
+                        .foregroundColor(Color.blue)
+                        .rotationEffect(.degrees(-90))
+                        .animation(.ripple(), value: CGFloat(min(waterVM.waterConsumed / waterVM.waterSuggestion, 1.0)))
+                    
+                    VStack(spacing: 8) {
                         
-                        TextField("Amount (in Liters)", text: $inputText)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.decimalPad)
-                            .padding(.horizontal)
-                            .padding(.bottom, 20)
-                        
-                        Button(action: {
-                            subtractWater()
-                            isShowingInputPopup = false
-                        }) {
-                            Text("Done")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.blue)
-                                .cornerRadius(10)
+                        if waterVM.waterRemaining != 0 {
+                            
+                            Text("Remaining")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("\(waterVM.waterRemaining, specifier: "%.2f") L")
+                                .font(.largeTitle)
+                            
+                        } else {
+                            Text("Goal Reached!")
+                                .font(.largeTitle)
+                                .bold()
+                                .confettiCannon(counter: $counter, num: 50, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200, repetitions: 3)
+                        }
+
+                    }
+                    .onChange(of: waterVM.waterRemaining) { newValue in
+                        if waterVM.waterRemaining == 0 {
+                            counter += 1
                         }
                     }
-                    .padding()
-                    .frame(width: 300, height: 200)
-                    .background(Color.white)
-                    .cornerRadius(20)
+                    
                 }
+                .padding(30)
+                
+                Spacer()
+                
+                HStack {
+                    
+                    Button {
+                        self.waterVM.substractWater(size: .mouthful)
+                        
+                    } label: {
+                        
+                        VStack(spacing: 8) {
+                            Image(systemName: "mouth.fill")
+                            Text("Mouthful")
+                                .bold()
+                        }
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(Color.white)
+                        .background(Color.orange)
+                        .clipShape(Circle())
+                    }
+                    
+                    Button {
+                        self.waterVM.substractWater(size: .cup)
+                    } label: {
+                        VStack(spacing: 8) {
+                            Image(systemName: "cup.and.saucer.fill")
+                            Text("Cup")
+                                .bold()
+                        }
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(Color.white)
+                        .background(Color.pink)
+                        .clipShape(Circle())
+                    }
+                    
+                    
+                    Button {
+                        self.waterVM.substractWater(size: .bottle)
+                    } label: {
+                        VStack(spacing: 8) {
+                            Image(systemName: "mug.fill")
+                            Text("Mug")
+                                .bold()
+                        }
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(Color.white)
+                        .background(Color.purple)
+                        .clipShape(Circle())
+                    }
+                    .padding(.bottom, 12)
+                    
+                }
+                
             }
+            .padding()
+        }
         
-            
-            func subtractWater() {
-                guard let consumedWater = Double(inputText) else {
-                    // FIXME: Handle invalid input
-                    return
-                }
-                
-                waterConsumed += consumedWater
-                waterLeft = recommendedWater - waterConsumed
-                
-                // Clear the input text
-                inputText = ""
-            }
-    
-    func remainingWater() -> Double {
-        return recommendedWater - waterConsumed
+        
     }
+    
 }
 

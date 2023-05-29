@@ -18,3 +18,9 @@ enum Menus: String, CaseIterable {
     case recommended = "Recommended"
     case full = "Full Menu"
 }
+
+enum WaterSize: Double {
+    case mouthful = 0.125
+    case cup = 0.250
+    case bottle = 0.500
+}

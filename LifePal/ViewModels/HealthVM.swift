@@ -78,6 +78,22 @@ class HealthVM: ObservableObject {
         apiString = apiString.replacingOccurrences(of: "$bodyfat$", with: String(bodyFatPercentage))
         apiString = apiString.replacingOccurrences(of: "$avg_activity$", with: String(Int(avgActiveCalories)))
         
+        print("Assembled Menu Recommendation API URL: \(apiString)")
+        
+        return apiString
+    }
+    
+    func getWaterRecommendationAPIString() -> String {
+        
+        var apiString = Links.waterRecommendationAPI
+        
+        apiString = apiString.replacingOccurrences(of: "$age$", with: String(age))
+        apiString = apiString.replacingOccurrences(of: "$weight$", with: String(Int(weight)))
+        apiString = apiString.replacingOccurrences(of: "$height$", with: String(Int(height)))
+        apiString = apiString.replacingOccurrences(of: "$avg_activity$", with: String(Int(avgActiveCalories)))
+        
+        print("Assembled Water Recommendation API URL: \(apiString)")
+        
         return apiString
     }
     
