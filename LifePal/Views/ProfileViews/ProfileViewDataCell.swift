@@ -22,63 +22,63 @@ struct ProfileViewDataCell: View {
             Spacer()
             
             switch data {
-                
-            case is Double:
-                
-                if data as! Double == -1.0 || data as! Double == -100 {
                     
-                    ProgressView()
+                case is Double:
                     
-                } else if data as! Double == -2.0 {
-                    
-                    Text("Unavailable")
-                    
-                } else {
-                    
-                    if unit == "" && data as! Double > 100 {
+                    if data as! Double == -1.0 || data as! Double == -100 {
                         
-                        Text((data as! TimeInterval).stringFromTimeInterval())
+                        ProgressView()
+                        
+                    } else if data as! Double == -2.0 {
+                        
+                        Text("Unavailable")
                         
                     } else {
                         
-                        Text("\(String(format: "%.1f", data as! Double)) \(unit)")
+                        if unit == "" && data as! Double > 100 {
+                            
+                            Text((data as! TimeInterval).stringFromTimeInterval())
+                            
+                        } else {
+                            
+                            Text("\(String(format: "%.1f", data as! Double)) \(unit)")
+                        }
+                        
                     }
-
-                }
-                
-                
-            case is Int:
-                
-                if data as! Int == -1 {
                     
-                    ProgressView()
                     
-                } else if data as! Int == -2 {
+                case is Int:
                     
-                    Text("Unavailable")
+                    if data as! Int == -1 {
+                        
+                        ProgressView()
+                        
+                    } else if data as! Int == -2 {
+                        
+                        Text("Unavailable")
+                        
+                    } else {
+                        
+                        Text("\(data as! Int) \(unit)")
+                    }
                     
-                } else {
                     
-                    Text("\(data as! Int) \(unit)")
-                }
-                
-                
-            case is String:
-                
-                if data as! String == "Loading" {
+                case is String:
                     
-                    ProgressView()
+                    if data as! String == "Loading" {
+                        
+                        ProgressView()
+                        
+                    } else {
+                        
+                        Text(data as! String)
+                    }
                     
-                } else {
                     
-                    Text(data as! String)
-                }
-                
-                
-            default:
-                Text("Unknown Type")
-                
-                
+                default:
+                    Text("Unknown Type")
+                    
+                    
             }
             
         }

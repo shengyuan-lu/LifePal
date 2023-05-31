@@ -219,16 +219,16 @@ class HealthVM: ObservableObject {
     func getBioSexString() -> Void {
         
         switch self.bioSexObject.biologicalSex {
-        case .female:
-            self.bioSex = "Female"
-        case .male:
-            self.bioSex = "Male"
-        case .other:
-            self.bioSex = "Other"
-        case .notSet:
-            self.bioSex = "Not Set"
-        @unknown default:
-            self.bioSex = "Unknown"
+            case .female:
+                self.bioSex = "Female"
+            case .male:
+                self.bioSex = "Male"
+            case .other:
+                self.bioSex = "Other"
+            case .notSet:
+                self.bioSex = "Not Set"
+            @unknown default:
+                self.bioSex = "Unknown"
         }
         
     }
