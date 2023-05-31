@@ -39,6 +39,7 @@
 		F4BD46902A248A4C00BDBB77 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */; };
 		F4BD46922A249C2C00BDBB77 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD46912A249C2C00BDBB77 /* LoadingView.swift */; };
 		F4BD46962A24AE5700BDBB77 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F4BD46952A24AE5700BDBB77 /* ConfettiSwiftUI */; };
+		F4C13DEC2A26F3A200EDECAD /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C13DEB2A26F3A200EDECAD /* TimeIntervalExtension.swift */; };
 		F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */; };
 		F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20332A01A694002154A5 /* ProfileView.swift */; };
 		F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20362A01D88E002154A5 /* HealthVM.swift */; };
@@ -79,6 +80,7 @@
 		F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtension.swift; sourceTree = "<group>"; };
 		F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		F4BD46912A249C2C00BDBB77 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F4C13DEB2A26F3A200EDECAD /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
 		F4FD20332A01A694002154A5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4FD20352A01D1F4002154A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				F46B69052A144D3300DB36A5 /* DecodingExtension.swift */,
 				F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */,
 				F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */,
+				F4C13DEB2A26F3A200EDECAD /* TimeIntervalExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				F4BD46902A248A4C00BDBB77 /* JsonLoader.swift in Sources */,
 				F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */,
 				F4397F592A01FDCF0065BD75 /* Enums.swift in Sources */,
+				F4C13DEC2A26F3A200EDECAD /* TimeIntervalExtension.swift in Sources */,
 				F4BD46922A249C2C00BDBB77 /* LoadingView.swift in Sources */,
 				F45DFC142A1469A200290975 /* GenericButtonWithLabelView.swift in Sources */,
 				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,

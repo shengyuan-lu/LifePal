@@ -63,7 +63,12 @@ struct ProfileView: View {
             
             
             Section(header: Text("Activity Level (Average)")) {
-                ProfileViewDataCell(label: "Active Energy (Last 7 Days)", data: healthVM.avgActiveCalories, unit: "KCal")
+                ProfileViewDataCell(label: "Active Energy", data: healthVM.avgActiveCalories, unit: "KCal")
+            }
+            
+            Section(header: Text("Bedtime Statistics")) {
+                ProfileViewDataCell(label: "Average Time In Bed", data: healthVM.avgTimeInBed, unit: "")
+                ProfileViewDataCell(label: "Average Time Asleep", data: healthVM.avgTimeAsleep, unit: "")
             }
             
             Section {

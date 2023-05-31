@@ -18,11 +18,11 @@ class HealthStoreManager {
     
     
     // A set of HKSampleType that you request authorization for share
-    let shareType: Set<HealthKit.HKSampleType> = Set<HealthKit.HKSampleType>()
+    let shareType: Set<HKSampleType> = Set<HKSampleType>()
     
     
     // A set of HKSampleType that you request authorization for read
-    let readType: Set<HealthKit.HKObjectType> = [
+    let readType: Set<HKObjectType> = [
         HKSampleType.quantityType(forIdentifier: .height)!,
         HKSampleType.quantityType(forIdentifier: .bodyMass)!,
         HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!,
@@ -30,7 +30,8 @@ class HealthStoreManager {
         HKSampleType.characteristicType(forIdentifier: .dateOfBirth)!,
         HKSampleType.characteristicType(forIdentifier: .biologicalSex)!,
         HKSampleType.quantityType(forIdentifier: .bodyFatPercentage)!,
-        HKSampleType.quantityType(forIdentifier: .bodyMassIndex)!
+        HKSampleType.quantityType(forIdentifier: .bodyMassIndex)!,
+        HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
     ]
     
     init() {
@@ -295,4 +296,26 @@ class HealthStoreManager {
         healthStore?.execute(query)
     }
     
+    
+    func getSleepSamples(completion: @escaping ([HKCategorySample]?, Error?) -> Void) {
+        
+        let sleepAnalysisType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
+        
+        let startDate = calendar.date(byAdding: .day, value: -7, to: now)!
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: now, options: .strictStartDate)
+        
+        let query = HKSampleQuery(sampleType: sleepAnalysisType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, samples, error) in
+            
+            guard let samples = samples as? [HKCategorySample] else {
+                completion(nil, error)
+                return
+            }
+            
+            completion(samples, nil)
+        }
+        
+        healthStore?.execute(query)
+    }
+
 }

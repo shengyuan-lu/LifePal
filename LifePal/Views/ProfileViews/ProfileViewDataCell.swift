@@ -35,7 +35,15 @@ struct ProfileViewDataCell: View {
                     
                 } else {
                     
-                    Text("\(String(format: "%.1f", data as! Double)) \(unit)")
+                    if unit == "" && data as! Double > 100 {
+                        
+                        Text((data as! TimeInterval).stringFromTimeInterval())
+                        
+                    } else {
+                        
+                        Text("\(String(format: "%.1f", data as! Double)) \(unit)")
+                    }
+
                 }
                 
                 
@@ -54,6 +62,7 @@ struct ProfileViewDataCell: View {
                     Text("\(data as! Int) \(unit)")
                 }
                 
+                
             case is String:
                 
                 if data as! String == "Loading" {
@@ -65,8 +74,10 @@ struct ProfileViewDataCell: View {
                     Text(data as! String)
                 }
                 
+                
             default:
                 Text("Unknown Type")
+                
                 
             }
             

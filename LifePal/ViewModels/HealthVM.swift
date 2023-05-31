@@ -24,6 +24,9 @@ class HealthVM: ObservableObject {
     @Published var bodyFatPercentage: Double = -1
     @Published var bodyMassIndex: Double = -1
     
+    @Published var avgTimeInBed: TimeInterval = -1
+    @Published var avgTimeAsleep: TimeInterval = -1
+    
     @Published var bioSex: String = "Loading..."
     
     private var loadedInfoCount: Int = 0
@@ -44,7 +47,7 @@ class HealthVM: ObservableObject {
     func load() {
         
         self.loadedInfoCount = 0
-
+        
         getHeight()
         getWeight()
         
@@ -56,16 +59,18 @@ class HealthVM: ObservableObject {
         getBioSex()
         getBodyFat()
         getBodyMassIndex()
+        
+        getSleepData()
     }
     
     func loadOneMoreInfo() {
         self.loadedInfoCount += 1
         
-        if self.loadedInfoCount == 9 {
+        if self.loadedInfoCount == 10 {
             self.isLoadingComplete = true
         }
         
-        if self.loadedInfoCount < 9 && self.isLoadingComplete == true {
+        if self.loadedInfoCount < 10 && self.isLoadingComplete == true {
             self.isLoadingComplete = false
         }
     }
@@ -279,5 +284,49 @@ class HealthVM: ObservableObject {
         })
     }
     
+    
+    func getSleepData() -> Void {
+        
+        healthStoreManager.getSleepSamples(completion: { samples, error in
+            
+            DispatchQueue.main.async {
+                
+                if let samples = samples {
+                    let (averageTimeInBed, averageTimeAsleep) = self.calculateAverageTimeInBedAndAsleep(samples: samples)
+                    print("Sample Count: \(samples.count)")
+                    print("Average time in bed: \(averageTimeInBed) seconds")
+                    print("Average time asleep: \(averageTimeAsleep) seconds")
+                    
+                    self.avgTimeAsleep = averageTimeAsleep
+                    self.avgTimeInBed = averageTimeInBed
+                }
+                
+                self.loadOneMoreInfo()
+            }
+            
+        })
+        
+    }
+    
+    
+    func calculateAverageTimeInBedAndAsleep(samples: [HKCategorySample]) -> (TimeInterval, TimeInterval) {
+        
+        var totalDurationInBed: TimeInterval = 0
+        var totalDurationAsleep: TimeInterval = 0
+        
+        for sample in samples {
+            let duration = sample.endDate.timeIntervalSince(sample.startDate)
+            totalDurationInBed += duration
+            
+            if sample.value == HKCategoryValueSleepAnalysis.inBed.rawValue || sample.value == HKCategoryValueSleepAnalysis.asleepUnspecified.rawValue {
+                totalDurationAsleep += duration
+            }
+        }
+        
+        let averageTimeInBed = totalDurationInBed / Double(7)
+        let averageTimeAsleep = totalDurationAsleep / Double(7)
+        
+        return (averageTimeInBed, averageTimeAsleep)
+    }
     
 }
