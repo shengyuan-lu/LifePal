@@ -34,6 +34,7 @@
 		F46B69022A144AA900DB36A5 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69012A144AA900DB36A5 /* MenuVM.swift */; };
 		F46B69042A144C1A00DB36A5 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69032A144C1A00DB36A5 /* Links.swift */; };
 		F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69052A144D3300DB36A5 /* DecodingExtension.swift */; };
+		F47505B12A2AF49F006D3C49 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47505B02A2AF49F006D3C49 /* LoginView.swift */; };
 		F4BD468C2A24694200BDBB77 /* WaterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468B2A24694200BDBB77 /* WaterVM.swift */; };
 		F4BD468E2A24861B00BDBB77 /* AnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */; };
 		F4BD46902A248A4C00BDBB77 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */; };
@@ -75,6 +76,7 @@
 		F46B69012A144AA900DB36A5 /* MenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
 		F46B69032A144C1A00DB36A5 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		F46B69052A144D3300DB36A5 /* DecodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtension.swift; sourceTree = "<group>"; };
+		F47505B02A2AF49F006D3C49 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifePal.entitlements; sourceTree = "<group>"; };
 		F4BD468B2A24694200BDBB77 /* WaterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterVM.swift; sourceTree = "<group>"; };
 		F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtension.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		F405A8CC29EDB88200D6E25B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F47505B02A2AF49F006D3C49 /* LoginView.swift */,
 				F405A8C029EDB63400D6E25B /* MainView.swift */,
 				DC27233B2A16FDD1002E1386 /* FoodViews */,
 				F46A54EE2A171CE500D114C8 /* WaterViews */,
@@ -381,6 +384,7 @@
 				F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */,
 				F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */,
 				F45DFC0B2A14692500290975 /* StringExtension.swift in Sources */,
+				F47505B12A2AF49F006D3C49 /* LoginView.swift in Sources */,
 				DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */,
 				F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */,
 			);
