@@ -53,8 +53,8 @@ struct MainView: View {
                 
                 if complete {
                     
-                    let foodApiUrl = healthVM.getMenuRecommendationAPIString()
-                    let waterApiUrl = healthVM.getWaterRecommendationAPIString()
+                    let foodApiUrl = healthVM.assembleMenuRecommendationAPIString()
+                    let waterApiUrl = healthVM.assembleWaterRecommendationAPIString()
                     
                     recommendedMenuVM.load(url: foodApiUrl)
                     

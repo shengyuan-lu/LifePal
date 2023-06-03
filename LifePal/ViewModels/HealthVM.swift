@@ -75,10 +75,11 @@ class HealthVM: ObservableObject {
         }
     }
     
-    func getMenuRecommendationAPIString() -> String {
+    func assembleMenuRecommendationAPIString() -> String {
         
         var apiString = Links.menuRecommendationAPI
         
+        apiString = apiString.replacingOccurrences(of: "$user$", with: Constants.user)
         apiString = apiString.replacingOccurrences(of: "$weight$", with: String(Int(weight)))
         apiString = apiString.replacingOccurrences(of: "$bodyfat$", with: String(bodyFatPercentage))
         apiString = apiString.replacingOccurrences(of: "$avg_activity$", with: String(Int(avgActiveCalories)))
@@ -88,10 +89,11 @@ class HealthVM: ObservableObject {
         return apiString
     }
     
-    func getWaterRecommendationAPIString() -> String {
+    func assembleWaterRecommendationAPIString() -> String {
         
         var apiString = Links.waterRecommendationAPI
         
+        apiString = apiString.replacingOccurrences(of: "$user$", with: Constants.user)
         apiString = apiString.replacingOccurrences(of: "$age$", with: String(age))
         apiString = apiString.replacingOccurrences(of: "$weight$", with: String(Int(weight)))
         apiString = apiString.replacingOccurrences(of: "$height$", with: String(Int(height)))
@@ -101,6 +103,24 @@ class HealthVM: ObservableObject {
         
         return apiString
     }
+    
+    
+    func assembleSleepRecommendationAPIString(wakeTime: String) -> String {
+        
+        var apiString = Links.sleepRecommendationAPI
+        
+        apiString = apiString.replacingOccurrences(of: "$user$", with: Constants.user)
+        apiString = apiString.replacingOccurrences(of: "$avg_asleep$", with: String(Int(avgTimeAsleep)))
+        apiString = apiString.replacingOccurrences(of: "$avg_inbed$", with: String(Int(avgTimeInBed)))
+        apiString = apiString.replacingOccurrences(of: "$avg_activity$", with: String(Int(avgActiveCalories)))
+        apiString = apiString.replacingOccurrences(of: "$wake_time$", with: wakeTime)
+        
+        print("Assembled Sleep Recommendation API URL: \(apiString)")
+        
+        return apiString
+        
+    }
+    
     
     func getHeight() -> Void {
         

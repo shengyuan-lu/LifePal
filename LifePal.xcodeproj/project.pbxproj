@@ -35,6 +35,7 @@
 		F46B69042A144C1A00DB36A5 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69032A144C1A00DB36A5 /* Links.swift */; };
 		F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69052A144D3300DB36A5 /* DecodingExtension.swift */; };
 		F47505B12A2AF49F006D3C49 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47505B02A2AF49F006D3C49 /* LoginView.swift */; };
+		F47505B32A2B1291006D3C49 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47505B22A2B1291006D3C49 /* Constants.swift */; };
 		F4BD468C2A24694200BDBB77 /* WaterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468B2A24694200BDBB77 /* WaterVM.swift */; };
 		F4BD468E2A24861B00BDBB77 /* AnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */; };
 		F4BD46902A248A4C00BDBB77 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */; };
@@ -77,6 +78,7 @@
 		F46B69032A144C1A00DB36A5 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		F46B69052A144D3300DB36A5 /* DecodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtension.swift; sourceTree = "<group>"; };
 		F47505B02A2AF49F006D3C49 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F47505B22A2B1291006D3C49 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifePal.entitlements; sourceTree = "<group>"; };
 		F4BD468B2A24694200BDBB77 /* WaterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterVM.swift; sourceTree = "<group>"; };
 		F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtension.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */,
 				F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */,
 				F4C13DEB2A26F3A200EDECAD /* TimeIntervalExtension.swift */,
+				F47505B22A2B1291006D3C49 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */,
+				F47505B32A2B1291006D3C49 /* Constants.swift in Sources */,
 				F45DFC082A1467F200290975 /* DetailedFoodCell.swift in Sources */,
 				F4BD468C2A24694200BDBB77 /* WaterVM.swift in Sources */,
 				F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */,
