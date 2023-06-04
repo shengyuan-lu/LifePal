@@ -110,6 +110,7 @@ class HealthVM: ObservableObject {
         var apiString = Links.sleepRecommendationAPI
         
         apiString = apiString.replacingOccurrences(of: "$user$", with: Constants.user)
+        apiString = apiString.replacingOccurrences(of: "$age$", with: String(age))
         apiString = apiString.replacingOccurrences(of: "$avg_asleep$", with: String(Int(avgTimeAsleep)))
         apiString = apiString.replacingOccurrences(of: "$avg_inbed$", with: String(Int(avgTimeInBed)))
         apiString = apiString.replacingOccurrences(of: "$avg_activity$", with: String(Int(avgActiveCalories)))

@@ -16,7 +16,7 @@ struct Links {
     
     static let waterRecommendationAPI = "http://3.15.22.210:8000/api/waterrec/?user=$user$&age=$age$&weight=$weight$&height=$height$&avg_activity=$avg_activity$&temperature=25"
     
-    static let sleepRecommendationAPI = "http://3.15.22.210:8000/api/sleeprec/?user=$user$&avg_asleep=$avg_asleep$&avg_inbed=$avg_inbed$&avg_activity=$avg_activity$&wake_time=$wake_time$"
+    static let sleepRecommendationAPI = "http://3.15.22.210:8000/api/sleeprec/?user=$user$&age=$age$&avg_asleep=$avg_asleep$&avg_inbed=$avg_inbed$&avg_activity=$avg_activity$&wake_time=$wake_time$"
     
     // Remote Demo API Endpoints
     static let menuRecommendationAPISample = "http://3.15.22.210:8000/api/recommendfood?weight=55&bodyfat=0.165&avg_activity=300"
