@@ -14,6 +14,7 @@ struct MainView: View {
     
     @StateObject var healthVM: HealthVM = HealthVM()
     @StateObject var waterVM: WaterVM = WaterVM()
+    @StateObject var sleepVM: SleepVM = SleepVM()
     
     @State var selectedTab: Tabs = .profileTab
     
@@ -34,7 +35,7 @@ struct MainView: View {
                     }
                     .tag(Tabs.waterTab)
                 
-                SleepView(healthVM: healthVM)
+                SleepView(healthVM: healthVM, sleepVM: sleepVM)
                     .tabItem {
                         Label("Sleep", systemImage: "bed.double")
                     }

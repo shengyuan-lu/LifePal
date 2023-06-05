@@ -23,12 +23,13 @@ struct Sleep: Decodable, Hashable {
     
     // Conversion functions
     
-    func getBedTime() -> Date {
+    func getBedTime(_ bedtime: String) -> Date? {
         
         // Convert bedTime to a Date to be displayed in UI
-        // ...
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm a" // Specify the format of the bedtime string
         
-        return Date.now // FIXME
+        return formatter.date(from: bedtime)
     }
     
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27233E2A16FE5A002E1386 /* MenuView.swift */; };
+		DC49FF792A2D318D00228886 /* SleepVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49FF782A2D318C00228886 /* SleepVM.swift */; };
 		DC9F04372A22F91E00A7024E /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F04362A22F91E00A7024E /* Water.swift */; };
 		F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8BE29EDB63400D6E25B /* LifePalApp.swift */; };
 		F405A8C129EDB63400D6E25B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8C029EDB63400D6E25B /* MainView.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		DC27233E2A16FE5A002E1386 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		DC49FF782A2D318C00228886 /* SleepVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepVM.swift; sourceTree = "<group>"; };
 		DC9F04362A22F91E00A7024E /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
 		F405A8BB29EDB63400D6E25B /* LifePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405A8BE29EDB63400D6E25B /* LifePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePalApp.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				F4FD20362A01D88E002154A5 /* HealthVM.swift */,
 				F46B69012A144AA900DB36A5 /* MenuVM.swift */,
 				F4BD468B2A24694200BDBB77 /* WaterVM.swift */,
+				DC49FF782A2D318C00228886 /* SleepVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */,
 				F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */,
 				F46A54F12A171FD900D114C8 /* MenuFoodCellView.swift in Sources */,
+				DC49FF792A2D318D00228886 /* SleepVM.swift in Sources */,
 				F4FD20392A01E180002154A5 /* ProfileViewDataCell.swift in Sources */,
 				F46B69022A144AA900DB36A5 /* MenuVM.swift in Sources */,
 				F45B66E62A2C8391007C21B5 /* Sleep.swift in Sources */,
