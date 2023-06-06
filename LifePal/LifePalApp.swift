@@ -11,8 +11,6 @@ import SwiftUI
 struct LifePalApp: App {
     
     @StateObject var healthVM = HealthVM()
-    @StateObject var recommendedMenu: MenuVM = MenuVM(isRecommeded: true)
-    @StateObject var fullMenu: MenuVM = MenuVM(isRecommeded: false)
     
     @State var isLoggedin = false
     
@@ -20,7 +18,7 @@ struct LifePalApp: App {
         WindowGroup {
             
             if isLoggedin {
-                MainView()
+                MainView(healthVM: healthVM)
                     .onAppear {
                         // correct the transparency bug for Tab bars
                         let tabBarAppearance = UITabBarAppearance()

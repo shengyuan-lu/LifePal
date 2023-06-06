@@ -36,13 +36,18 @@ class HealthVM: ObservableObject {
     private var bioSexObject: HKBiologicalSexObject = HKBiologicalSexObject()
     
     init() {
-        
+        requestAuth()
+    }
+    
+    
+    func requestAuth() {
         healthStoreManager.requestAuthorization(completion: { success in
             if success {
                 self.load()
             }
         })
     }
+    
     
     func load() {
         
@@ -62,6 +67,7 @@ class HealthVM: ObservableObject {
         
         getSleepData()
     }
+    
     
     func loadOneMoreInfo() {
         self.loadedInfoCount += 1
