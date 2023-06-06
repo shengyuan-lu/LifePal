@@ -14,6 +14,7 @@ struct MainView: View {
     
     @StateObject var healthVM: HealthVM = HealthVM()
     @StateObject var waterVM: WaterVM = WaterVM()
+    @StateObject var sleepVM: SleepVM = SleepVM()
     
     @State var selectedTab: Tabs = .profileTab
     
@@ -22,6 +23,13 @@ struct MainView: View {
         NavigationView {
             
             TabView(selection: $selectedTab) {
+                
+                ProfileView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+                    .tag(Tabs.profileTab)
+                
                 FoodView(healthVM: healthVM, fullMenuVM: fullMenuVM, recommendedMenuVm: recommendedMenuVM)
                     .tabItem {
                         Label("Food", systemImage: "fork.knife")
@@ -34,17 +42,11 @@ struct MainView: View {
                     }
                     .tag(Tabs.waterTab)
                 
-                SleepView(healthVM: healthVM)
+                SleepView(healthVM: healthVM, sleepVM: sleepVM)
                     .tabItem {
                         Label("Sleep", systemImage: "bed.double")
                     }
                     .tag(Tabs.sleepTab)
-                
-                ProfileView(healthVM: healthVM)
-                    .tabItem {
-                        Label("Profile", systemImage: "person.fill")
-                    }
-                    .tag(Tabs.profileTab)
             }
             .navigationTitle(selectedTab.rawValue.capitalized)
             .navigationBarTitleDisplayMode(.inline)
@@ -53,14 +55,18 @@ struct MainView: View {
                 
                 if complete {
                     
-                    let foodApiUrl = healthVM.getMenuRecommendationAPIString()
-                    let waterApiUrl = healthVM.getWaterRecommendationAPIString()
+                    let foodApiUrl = healthVM.assembleMenuRecommendationAPIString()
+                    let waterApiUrl = healthVM.assembleWaterRecommendationAPIString()
+                    let sleepApiUrl = healthVM.assembleSleepRecommendationAPIString()
                     
                     recommendedMenuVM.load(url: foodApiUrl)
                     
                     fullMenuVM.load(url: foodApiUrl)
                     
                     waterVM.load(url: waterApiUrl)
+                    
+                    sleepVM.hasHealthKitCompletedLoading = true
+                    sleepVM.apiUrl = sleepApiUrl
                 }
                 
             }

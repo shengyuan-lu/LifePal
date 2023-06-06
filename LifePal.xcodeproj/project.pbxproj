@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC27233E2A16FE5A002E1386 /* MenuView.swift */; };
+		DC49FF792A2D318D00228886 /* SleepVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49FF782A2D318C00228886 /* SleepVM.swift */; };
 		DC9F04372A22F91E00A7024E /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F04362A22F91E00A7024E /* Water.swift */; };
 		F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8BE29EDB63400D6E25B /* LifePalApp.swift */; };
 		F405A8C129EDB63400D6E25B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8C029EDB63400D6E25B /* MainView.swift */; };
@@ -18,6 +19,7 @@
 		F405A8D529EDB8CF00D6E25B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405A8D429EDB8CF00D6E25B /* SleepView.swift */; };
 		F41DB3382A133B56004CC405 /* FullMenuSample.json in Resources */ = {isa = PBXBuildFile; fileRef = F41DB3372A133B56004CC405 /* FullMenuSample.json */; };
 		F4397F592A01FDCF0065BD75 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4397F582A01FDCF0065BD75 /* Enums.swift */; };
+		F45B66E62A2C8391007C21B5 /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B66E52A2C8391007C21B5 /* Sleep.swift */; };
 		F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */; };
 		F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC002A1467F200290975 /* FoodBadgeView.swift */; };
 		F45DFC072A1467F200290975 /* FoodNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFC012A1467F200290975 /* FoodNutritionView.swift */; };
@@ -34,11 +36,16 @@
 		F46B69022A144AA900DB36A5 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69012A144AA900DB36A5 /* MenuVM.swift */; };
 		F46B69042A144C1A00DB36A5 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69032A144C1A00DB36A5 /* Links.swift */; };
 		F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B69052A144D3300DB36A5 /* DecodingExtension.swift */; };
+		F47505B12A2AF49F006D3C49 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47505B02A2AF49F006D3C49 /* LoginView.swift */; };
+		F47505B32A2B1291006D3C49 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47505B22A2B1291006D3C49 /* Constants.swift */; };
 		F4BD468C2A24694200BDBB77 /* WaterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468B2A24694200BDBB77 /* WaterVM.swift */; };
 		F4BD468E2A24861B00BDBB77 /* AnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */; };
 		F4BD46902A248A4C00BDBB77 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */; };
 		F4BD46922A249C2C00BDBB77 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD46912A249C2C00BDBB77 /* LoadingView.swift */; };
 		F4BD46962A24AE5700BDBB77 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F4BD46952A24AE5700BDBB77 /* ConfettiSwiftUI */; };
+		F4C13DEC2A26F3A200EDECAD /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C13DEB2A26F3A200EDECAD /* TimeIntervalExtension.swift */; };
+		F4F34E6C2A2EC48200B03466 /* SleepResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F34E6B2A2EC48200B03466 /* SleepResultView.swift */; };
+		F4F34E6E2A2F04BB00B03466 /* SleepSample.json in Resources */ = {isa = PBXBuildFile; fileRef = F4F34E6D2A2F04BB00B03466 /* SleepSample.json */; };
 		F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */; };
 		F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20332A01A694002154A5 /* ProfileView.swift */; };
 		F4FD20372A01D88E002154A5 /* HealthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD20362A01D88E002154A5 /* HealthVM.swift */; };
@@ -47,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		DC27233E2A16FE5A002E1386 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		DC49FF782A2D318C00228886 /* SleepVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepVM.swift; sourceTree = "<group>"; };
 		DC9F04362A22F91E00A7024E /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
 		F405A8BB29EDB63400D6E25B /* LifePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405A8BE29EDB63400D6E25B /* LifePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePalApp.swift; sourceTree = "<group>"; };
@@ -58,6 +66,7 @@
 		F405A8D429EDB8CF00D6E25B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 		F41DB3372A133B56004CC405 /* FullMenuSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FullMenuSample.json; sourceTree = "<group>"; };
 		F4397F582A01FDCF0065BD75 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F45B66E52A2C8391007C21B5 /* Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep.swift; sourceTree = "<group>"; };
 		F45DFBFF2A1467F200290975 /* FoodNutritionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodNutritionCellView.swift; sourceTree = "<group>"; };
 		F45DFC002A1467F200290975 /* FoodBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodBadgeView.swift; sourceTree = "<group>"; };
 		F45DFC012A1467F200290975 /* FoodNutritionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodNutritionView.swift; sourceTree = "<group>"; };
@@ -74,11 +83,16 @@
 		F46B69012A144AA900DB36A5 /* MenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
 		F46B69032A144C1A00DB36A5 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		F46B69052A144D3300DB36A5 /* DecodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtension.swift; sourceTree = "<group>"; };
+		F47505B02A2AF49F006D3C49 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F47505B22A2B1291006D3C49 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F47A8D1B29F92B55004F6CDF /* LifePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifePal.entitlements; sourceTree = "<group>"; };
 		F4BD468B2A24694200BDBB77 /* WaterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterVM.swift; sourceTree = "<group>"; };
 		F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtension.swift; sourceTree = "<group>"; };
 		F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		F4BD46912A249C2C00BDBB77 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F4C13DEB2A26F3A200EDECAD /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
+		F4F34E6B2A2EC48200B03466 /* SleepResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepResultView.swift; sourceTree = "<group>"; };
+		F4F34E6D2A2F04BB00B03466 /* SleepSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SleepSample.json; sourceTree = "<group>"; };
 		F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
 		F4FD20332A01A694002154A5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4FD20352A01D1F4002154A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +167,7 @@
 		F405A8CC29EDB88200D6E25B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F47505B02A2AF49F006D3C49 /* LoginView.swift */,
 				F405A8C029EDB63400D6E25B /* MainView.swift */,
 				DC27233B2A16FDD1002E1386 /* FoodViews */,
 				F46A54EE2A171CE500D114C8 /* WaterViews */,
@@ -170,6 +185,7 @@
 				F4FD20362A01D88E002154A5 /* HealthVM.swift */,
 				F46B69012A144AA900DB36A5 /* MenuVM.swift */,
 				F4BD468B2A24694200BDBB77 /* WaterVM.swift */,
+				DC49FF782A2D318C00228886 /* SleepVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -181,6 +197,7 @@
 				F46B68FF2A1448D300DB36A5 /* Food.swift */,
 				DC9F04362A22F91E00A7024E /* Water.swift */,
 				F4F6EE2229FA0786002F9F87 /* HealthStoreManager.swift */,
+				F45B66E52A2C8391007C21B5 /* Sleep.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +211,8 @@
 				F46B69052A144D3300DB36A5 /* DecodingExtension.swift */,
 				F4BD468D2A24861B00BDBB77 /* AnimationExtension.swift */,
 				F4BD468F2A248A4C00BDBB77 /* JsonLoader.swift */,
+				F4C13DEB2A26F3A200EDECAD /* TimeIntervalExtension.swift */,
+				F47505B22A2B1291006D3C49 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -203,6 +222,7 @@
 			children = (
 				F45DFC182A14741200290975 /* MLFoodRecommendationSample.json */,
 				F41DB3372A133B56004CC405 /* FullMenuSample.json */,
+				F4F34E6D2A2F04BB00B03466 /* SleepSample.json */,
 			);
 			path = "Local JSONs";
 			sourceTree = "<group>";
@@ -258,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				F405A8D429EDB8CF00D6E25B /* SleepView.swift */,
+				F4F34E6B2A2EC48200B03466 /* SleepResultView.swift */,
 			);
 			path = SleepViews;
 			sourceTree = "<group>";
@@ -337,6 +358,7 @@
 				F45DFC192A14741200290975 /* MLFoodRecommendationSample.json in Resources */,
 				F41DB3382A133B56004CC405 /* FullMenuSample.json in Resources */,
 				F405A8C629EDB63500D6E25B /* Preview Assets.xcassets in Resources */,
+				F4F34E6E2A2F04BB00B03466 /* SleepSample.json in Resources */,
 				F405A8C329EDB63500D6E25B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,12 +371,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FD20342A01A694002154A5 /* ProfileView.swift in Sources */,
+				F47505B32A2B1291006D3C49 /* Constants.swift in Sources */,
 				F45DFC082A1467F200290975 /* DetailedFoodCell.swift in Sources */,
+				F4F34E6C2A2EC48200B03466 /* SleepResultView.swift in Sources */,
 				F4BD468C2A24694200BDBB77 /* WaterVM.swift in Sources */,
 				F405A8D329EDB8BE00D6E25B /* WaterView.swift in Sources */,
 				F4BD46902A248A4C00BDBB77 /* JsonLoader.swift in Sources */,
 				F4F6EE2329FA0786002F9F87 /* HealthStoreManager.swift in Sources */,
 				F4397F592A01FDCF0065BD75 /* Enums.swift in Sources */,
+				F4C13DEC2A26F3A200EDECAD /* TimeIntervalExtension.swift in Sources */,
 				F4BD46922A249C2C00BDBB77 /* LoadingView.swift in Sources */,
 				F45DFC142A1469A200290975 /* GenericButtonWithLabelView.swift in Sources */,
 				F405A8D129EDB8A900D6E25B /* FoodView.swift in Sources */,
@@ -370,13 +395,16 @@
 				F46B69062A144D3300DB36A5 /* DecodingExtension.swift in Sources */,
 				F45DFC062A1467F200290975 /* FoodBadgeView.swift in Sources */,
 				F46A54F12A171FD900D114C8 /* MenuFoodCellView.swift in Sources */,
+				DC49FF792A2D318D00228886 /* SleepVM.swift in Sources */,
 				F4FD20392A01E180002154A5 /* ProfileViewDataCell.swift in Sources */,
 				F46B69022A144AA900DB36A5 /* MenuVM.swift in Sources */,
+				F45B66E62A2C8391007C21B5 /* Sleep.swift in Sources */,
 				F46B69042A144C1A00DB36A5 /* Links.swift in Sources */,
 				F45DFC072A1467F200290975 /* FoodNutritionView.swift in Sources */,
 				F45DFC052A1467F200290975 /* FoodNutritionCellView.swift in Sources */,
 				F405A8BF29EDB63400D6E25B /* LifePalApp.swift in Sources */,
 				F45DFC0B2A14692500290975 /* StringExtension.swift in Sources */,
+				F47505B12A2AF49F006D3C49 /* LoginView.swift in Sources */,
 				DC27233F2A16FE5A002E1386 /* MenuView.swift in Sources */,
 				F46B68FE2A1448AB00DB36A5 /* Category.swift in Sources */,
 			);
