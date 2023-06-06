@@ -68,11 +68,11 @@ struct LoginView: View {
     
     func login() {
         
-        if username.lowercased() == "anteater" && password != "" {
+        if username.lowercased() == "anteater" && password == "12345" {
             
             self.isLoggingin = true
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                  // After 2 seconds, set isLoggedIn back to false and show the login screen
                 self.isLoggedin = true
              }

@@ -23,6 +23,13 @@ struct MainView: View {
         NavigationView {
             
             TabView(selection: $selectedTab) {
+                
+                ProfileView(healthVM: healthVM)
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+                    .tag(Tabs.profileTab)
+                
                 FoodView(healthVM: healthVM, fullMenuVM: fullMenuVM, recommendedMenuVm: recommendedMenuVM)
                     .tabItem {
                         Label("Food", systemImage: "fork.knife")
@@ -40,12 +47,6 @@ struct MainView: View {
                         Label("Sleep", systemImage: "bed.double")
                     }
                     .tag(Tabs.sleepTab)
-                
-                ProfileView(healthVM: healthVM)
-                    .tabItem {
-                        Label("Profile", systemImage: "person.fill")
-                    }
-                    .tag(Tabs.profileTab)
             }
             .navigationTitle(selectedTab.rawValue.capitalized)
             .navigationBarTitleDisplayMode(.inline)
@@ -56,12 +57,16 @@ struct MainView: View {
                     
                     let foodApiUrl = healthVM.assembleMenuRecommendationAPIString()
                     let waterApiUrl = healthVM.assembleWaterRecommendationAPIString()
+                    let sleepApiUrl = healthVM.assembleSleepRecommendationAPIString()
                     
                     recommendedMenuVM.load(url: foodApiUrl)
                     
                     fullMenuVM.load(url: foodApiUrl)
                     
                     waterVM.load(url: waterApiUrl)
+                    
+                    sleepVM.hasHealthKitCompletedLoading = true
+                    sleepVM.apiUrl = sleepApiUrl
                 }
                 
             }

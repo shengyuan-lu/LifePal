@@ -20,29 +20,51 @@ struct Sleep: Decodable, Hashable {
         case day = "date"
     }
     
-    
-    // Conversion functions
-    
-    func getBedTime(_ bedtime: String) -> Date? {
+    func getBedTime() -> String? {
         
-        // Convert bedTime to a Date to be displayed in UI
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm a" // Specify the format of the bedtime string
-        
-        return formatter.date(from: bedtime)
-    }
-    
-    
-    func isSameDay() -> Bool {
-        
-        if day == "same" {
-            return true
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HHmm"
+
+        if let date = dateFormatter.date(from: self.bedTime) {
+            
+            dateFormatter.dateFormat = "h:mm a"
+            
+            let formattedString = dateFormatter.string(from: date)
+
+            return formattedString
+            
         } else {
-            return false
+            return "API Error - ML Result Not Available"
         }
         
     }
     
     
+    func isSameDay() -> Bool {
+        
+        if day == "before" {
+            return false
+        } else {
+            return true
+        }
+        
+    }
+    
+    func isBedtimeValid() -> Bool {
+        if bedTime.count == 4 && !bedTime.hasPrefix("-") {
+            return true
+            
+        } else {
+            
+            return false
+            
+        }
+
+    }
 }
+
+
+
+
+
 
