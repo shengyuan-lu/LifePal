@@ -9,10 +9,11 @@ import SwiftUI
 
 struct MainView: View {
     
+    @ObservedObject var healthVM: HealthVM
+    
     @StateObject var recommendedMenuVM: MenuVM = MenuVM(isRecommeded: true)
     @StateObject var fullMenuVM: MenuVM = MenuVM(isRecommeded: false)
     
-    @StateObject var healthVM: HealthVM = HealthVM()
     @StateObject var waterVM: WaterVM = WaterVM()
     @StateObject var sleepVM: SleepVM = SleepVM()
     
