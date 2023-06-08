@@ -10,15 +10,13 @@ import SwiftUI
 @main
 struct LifePalApp: App {
     
-    @StateObject var healthVM = HealthVM()
-    
     @State var isLoggedin = false
     
     var body: some Scene {
         WindowGroup {
             
             if isLoggedin {
-                MainView(healthVM: healthVM)
+                MainView()
                     .onAppear {
                         // correct the transparency bug for Tab bars
                         let tabBarAppearance = UITabBarAppearance()
