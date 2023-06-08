@@ -1,21 +1,19 @@
 # LifePal
-CS 125 Next Generation Search Systems Project (iOS App)
 
-## Links
+Your Machine Learning Powered Health Companion
+
+Term Project For UC Irvine CS 125 Next Generation Search Systems 
+
+## Features
+![Slide1](https://github.com/shengyuan-lu/LifePal/assets/70995597/be74e3e5-4a2c-43f0-8e23-26b9fc7eceec)
+![Slide2](https://github.com/shengyuan-lu/LifePal/assets/70995597/3c00d43d-1acf-4ee9-8195-883f951945b0)
+![Slide3](https://github.com/shengyuan-lu/LifePal/assets/70995597/164b15a8-5906-483d-b17d-b6320b151e37)
+![Slide4](https://github.com/shengyuan-lu/LifePal/assets/70995597/c2259917-775c-4912-bb3c-e66f7d8bf736)
+
+## Links to other components of LifePal
 [Machine Learning Repo](https://github.com/Somdit/LifePal_Backend)
 
-[Server & Host Repo](https://github.com/thoonuy/LifePalBackend)
+[Server & API Repo](https://github.com/thoonuy/LifePalBackend)
 
+## Link to download
 [Apple TestFlight](https://testflight.apple.com/join/Rky0c3kW)
-
-## Screenshots
-HealthKit Auth |  Profile  | TestFlight Setup
-:-------------------------:|:-------------------------:|:-------------------------:
-![IMG_4278](https://github.com/shengyuan-lu/LifePal/assets/70995597/827e8ec0-1e0d-47b1-8b90-c4ab9d9a1cc4)  |  ![IMG_4280](https://github.com/shengyuan-lu/LifePal/assets/70995597/3b4da7d0-02d3-4453-aa85-ed455d78668c)  | ![IMG_4276](https://github.com/shengyuan-lu/LifePal/assets/70995597/21edd1bb-ec6a-4338-866e-0d21d07fabaa)
-
-
-
-Recommended Menu |  Full Menu | Nutrition Detail  
-:-------------------------:|:-------------------------:|:-------------------------:
-![IMG_4281](https://github.com/shengyuan-lu/LifePal/assets/70995597/124445d0-8200-41d9-8466-23af6f21a97c) |  ![IMG_4282](https://github.com/shengyuan-lu/LifePal/assets/70995597/f14f8ab2-5fef-4d74-b734-529bf30e3c69) | ![IMG_4283](https://github.com/shengyuan-lu/LifePal/assets/70995597/cdbfb969-31c0-4a33-b2a2-a8c22bfb9bbd)
-
