@@ -4,6 +4,9 @@ Your Machine Learning Powered Health Companion
 
 Term Project For UC Irvine CS 125 Next Generation Search Systems 
 
+![Slide1](https://github.com/shengyuan-lu/LifePal/assets/70995597/484ff489-288f-42f8-974c-87ff1c9f80e4)
+
+
 ## Features
 ![Slide1](https://github.com/shengyuan-lu/LifePal/assets/70995597/be74e3e5-4a2c-43f0-8e23-26b9fc7eceec)
 ![Slide2](https://github.com/shengyuan-lu/LifePal/assets/70995597/3c00d43d-1acf-4ee9-8195-883f951945b0)
@@ -17,3 +20,14 @@ Term Project For UC Irvine CS 125 Next Generation Search Systems
 
 ## Link to download
 [Apple TestFlight](https://testflight.apple.com/join/Rky0c3kW)
+
+## Contributors
+- Shengyuan Lu: iOS
+- Arkin Verma: iOS
+- Chi Zhang: Machine Learning
+- Anthony Hou: Server & API
+
+## Technologies
+- Programming Language: Swift, Python
+- Libraries: HealthKit, SwiftUI, Django
+- Technologies: AWS, PostgreSQL
