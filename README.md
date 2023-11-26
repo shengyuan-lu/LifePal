@@ -31,19 +31,21 @@ LifePal enables users to input their desired wake-up time and utilizes their hea
 
 ![Slide4](https://github.com/shengyuan-lu/LifePal/assets/70995597/c2259917-775c-4912-bb3c-e66f7d8bf736)
 
+## Presentation Videos
+[Live Demo](https://youtu.be/et7O5XXJ7MU)
+
+[Full Product Launch Event](https://youtu.be/-TgK9O0Sulc)
+
 ## Technologies
 
 - Programming Language: Swift, Python
 - Libraries: HealthKit, SwiftUI, Django
 - Technologies: AWS, PostgreSQL
 
-## Links to other components of LifePal
-[Machine Learning Repo](https://github.com/Somdit/LifePal_Backend)
+## Other Component of LifePal
+[Machine Learning Component - GitHub Repo](https://github.com/Somdit/LifePal_Backend)
 
-[Server & API Repo](https://github.com/thoonuy/LifePalBackend)
-
-## Try it yourself
-[Apple TestFlight](https://testflight.apple.com/join/Rky0c3kW)
+[Server & API Component - GitHub Repo](https://github.com/thoonuy/LifePalBackend)
 
 ## Contributors
 - Shengyuan Lu: iOS
