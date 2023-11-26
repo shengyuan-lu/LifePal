@@ -1,5 +1,7 @@
 # LifePal
 
+![Slide1](https://github.com/shengyuan-lu/LifePal/assets/70995597/484ff489-288f-42f8-974c-87ff1c9f80e4)
+
 ## Introduction
 
 Introducing LifePal, your machine learning powered life companion. 
@@ -7,8 +9,6 @@ Introducing LifePal, your machine learning powered life companion.
 We believe that maintaining good health is vital for overall well-being. It is essential to prioritize basic needs such as sleep, nutrition, and hydration in order to take care of one's health.
 
 Leveraging Apple's HealthKit, LifePal utilizes the capabilities of machine learning to generate personalized recommendations for food, water intake, and bedtime. This integration enables LifePal to provide tailored suggestions based on individual health data.
-
-![Slide1](https://github.com/shengyuan-lu/LifePal/assets/70995597/484ff489-288f-42f8-974c-87ff1c9f80e4)
 
 ## Features
 ### Food Recommendation
@@ -29,6 +29,12 @@ LifePal enables users to input their desired wake-up time and utilizes their hea
 
 ![Slide3](https://github.com/shengyuan-lu/LifePal/assets/70995597/164b15a8-5906-483d-b17d-b6320b151e37)
 
+### HealthKit Integration
+
+LifePal utilizes Apple's HealthKit to access the user's health data. This integration enables LifePal to provide personalized recommendations based on the user's health data as they are produced in real time. 
+
+Of course, the user's privacy is of utmost importance to us. LifePal only accesses the user's health data with their explicit permission. Furthermore, the user can revoke LifePal's access to their health data at any time.
+
 ![Slide4](https://github.com/shengyuan-lu/LifePal/assets/70995597/c2259917-775c-4912-bb3c-e66f7d8bf736)
 
 ## Presentation Videos
@@ -42,7 +48,7 @@ LifePal enables users to input their desired wake-up time and utilizes their hea
 - Libraries: HealthKit, SwiftUI, Django
 - Technologies: AWS, PostgreSQL
 
-## Other Component of LifePal
+## Other Components of LifePal
 [Machine Learning Component - GitHub Repo](https://github.com/Somdit/LifePal_Backend)
 
 [Server & API Component - GitHub Repo](https://github.com/thoonuy/LifePalBackend)
